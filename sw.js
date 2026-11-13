@@ -1,6 +1,6 @@
 // Speak Up service worker. Pages and lessons: network first (so edits arrive at once), cache when offline.
 // Audio packs: cache first, kept across versions until packs/index.json changes.
-const VER="d27b2fdf4d",CORE="core-"+VER,AUDIO="audio-d913cd97",FONTS="fonts";
+const VER="427735407f",CORE="core-"+VER,AUDIO="audio-d913cd97",FONTS="fonts";
 const PRE=["./","index.html","course.json","manifest.webmanifest","apple-touch-icon.png","icon-192.png","icon-512.png","packs/index.json"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CORE).then(c=>c.addAll(PRE.map(u=>new Request(u,{cache:"reload"})))).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CORE&&k!==AUDIO&&k!==FONTS).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
