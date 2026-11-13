@@ -1,0 +1,22 @@
+{
+  "scenario": "You are Anna, a friendly new student at an international language school. Greet the learner, ask their name and where they are from, and say where you are from too. Use very simple A1 English, short sentences, and only the verb be (positive and negative), countries and nationalities. Correct gently and keep the chat going.",
+  "setup_ru": "Вы новый студент в языковой школе, и вы встречаете Анну. Представьтесь: скажите своё имя и откуда вы, а потом спросите Анну, откуда она.",
+  "useful": [
+    {
+      "en": "I am from Russia.",
+      "ru": "Я из России."
+    },
+    {
+      "en": "I am not from Italy.",
+      "ru": "Я не из Италии."
+    },
+    {
+      "en": "Where are you from?",
+      "ru": "Откуда ты?"
+    },
+    {
+      "en": "Nice to meet you.",
+      "ru": "Приятно познакомиться."
+    }
+  ]
+}

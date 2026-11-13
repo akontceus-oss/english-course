@@ -1,0 +1,109 @@
+{
+  "dialogue": [
+    {
+      "en": "Hello! Can I help you?",
+      "ru": "Здравствуйте! Вам помочь?",
+      "who": "A"
+    },
+    {
+      "en": "Yes, please. What's this?",
+      "ru": "Да, пожалуйста. Что это?",
+      "who": "B"
+    },
+    {
+      "en": "It's a table tennis paddle.",
+      "ru": "Это ракетка для настольного тенниса.",
+      "who": "A"
+    },
+    {
+      "en": "Oh, nice! How much is it?",
+      "ru": "О, классная! Сколько стоит?",
+      "who": "B"
+    },
+    {
+      "en": "It's fifteen pounds.",
+      "ru": "Пятнадцать фунтов.",
+      "who": "A"
+    },
+    {
+      "en": "And those shoes?",
+      "ru": "А те кроссовки?",
+      "who": "B"
+    },
+    {
+      "en": "These? They're twenty pounds.",
+      "ru": "Эти? Двадцать фунтов.",
+      "who": "A"
+    },
+    {
+      "en": "OK. I'll take the paddle!",
+      "ru": "Хорошо. Беру ракетку!",
+      "who": "B"
+    }
+  ],
+  "drill": [
+    {
+      "en": "This is my bag.",
+      "ru": "Это моя сумка."
+    },
+    {
+      "en": "These are my running shoes.",
+      "ru": "Это мои кроссовки."
+    },
+    {
+      "en": "What's that?",
+      "ru": "Что это (там)?"
+    },
+    {
+      "en": "How much is this paddle?",
+      "ru": "Сколько стоит эта ракетка?"
+    },
+    {
+      "en": "Those games are nice.",
+      "ru": "Те игры классные."
+    }
+  ],
+  "goal_ru": "Сегодня ты научишься показывать на вещи и говорить о них: this, that, these, those. Например, на барахолке или в магазине.",
+  "phrases": [
+    {
+      "en": "What's this?",
+      "note_ru": "this: язык между зубами, «ðис».",
+      "ru": "Что это?"
+    },
+    {
+      "en": "This is my new paddle.",
+      "note_ru": "paddle: ракетка для настольного тенниса.",
+      "ru": "Это моя новая ракетка."
+    },
+    {
+      "en": "What's that?",
+      "note_ru": "that — то, что далеко.",
+      "ru": "Что это (там)?"
+    },
+    {
+      "en": "These are my running shoes.",
+      "note_ru": "these — «ðи:з», долгий звук и. this — коротко.",
+      "ru": "Это мои кроссовки для бега."
+    },
+    {
+      "en": "Those are nice!",
+      "note_ru": "those — «ðоуз»: про вещи далеко.",
+      "ru": "Те классные!"
+    },
+    {
+      "en": "How much is this bag?",
+      "note_ru": "",
+      "ru": "Сколько стоит эта сумка?"
+    },
+    {
+      "en": "It's ten pounds.",
+      "note_ru": "",
+      "ru": "Десять фунтов."
+    },
+    {
+      "en": "I'll take it!",
+      "note_ru": "Так говорят, когда решили купить.",
+      "ru": "Беру!"
+    }
+  ]
+}

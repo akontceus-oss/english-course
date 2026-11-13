@@ -1,0 +1,22 @@
+{
+  "scenario": "You are Kate, a British friend from the English club. You want to meet the learner this week for coffee. Ask and tell the time, suggest times, and agree on a time and place. Use o'clock, half past, quarter past/to, at + time. Very short A1 sentences.",
+  "setup_ru": "Подруга Кейт из английского клуба хочет встретиться с тобой на кофе. Договоритесь, во сколько и где.",
+  "useful": [
+    {
+      "en": "What time?",
+      "ru": "Во сколько?"
+    },
+    {
+      "en": "At half past six.",
+      "ru": "В половине седьмого."
+    },
+    {
+      "en": "Is seven OK?",
+      "ru": "Семь подойдёт?"
+    },
+    {
+      "en": "See you at the café!",
+      "ru": "Увидимся в кафе!"
+    }
+  ]
+}

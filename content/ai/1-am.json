@@ -1,0 +1,109 @@
+{
+  "dialogue": [
+    {
+      "en": "Hi! What's your name?",
+      "ru": "Привет! Как тебя зовут?",
+      "who": "A"
+    },
+    {
+      "en": "I'm Andrei. And you?",
+      "ru": "Я Андрей. А тебя?",
+      "who": "B"
+    },
+    {
+      "en": "I'm Tom. Where are you from, Andrei?",
+      "ru": "Я Том. Откуда ты, Андрей?",
+      "who": "A"
+    },
+    {
+      "en": "I'm from Russia. I'm from Moscow.",
+      "ru": "Я из России. Из Москвы.",
+      "who": "B"
+    },
+    {
+      "en": "Cool! What do you do?",
+      "ru": "Круто! Кем ты работаешь?",
+      "who": "A"
+    },
+    {
+      "en": "I'm a designer. And you?",
+      "ru": "Я дизайнер. А ты?",
+      "who": "B"
+    },
+    {
+      "en": "I'm a coach. Are you a runner?",
+      "ru": "Я тренер. Ты бегаешь?",
+      "who": "A"
+    },
+    {
+      "en": "Yep! I run every morning.",
+      "ru": "Ага! Я бегаю каждое утро.",
+      "who": "B"
+    }
+  ],
+  "drill": [
+    {
+      "en": "What's your name?",
+      "ru": "Как тебя зовут?"
+    },
+    {
+      "en": "Where are you from?",
+      "ru": "Откуда ты?"
+    },
+    {
+      "en": "What do you do?",
+      "ru": "Кем ты работаешь?"
+    },
+    {
+      "en": "Are you from London? No, I'm not.",
+      "ru": "Ты из Лондона? Нет."
+    },
+    {
+      "en": "Where's the trainer?",
+      "ru": "Где тренер?"
+    }
+  ],
+  "goal_ru": "Сегодня ты научишься задавать простые вопросы о человеке и отвечать на них: имя, откуда, сколько лет, какая работа.",
+  "phrases": [
+    {
+      "en": "What's your name?",
+      "note_ru": "What's = What is. Интонация вниз в конце.",
+      "ru": "Как тебя зовут?"
+    },
+    {
+      "en": "Where are you from?",
+      "note_ru": "Ударение на where и from: «уэа а ю фром».",
+      "ru": "Откуда ты?"
+    },
+    {
+      "en": "How old are you?",
+      "note_ru": "",
+      "ru": "Сколько тебе лет?"
+    },
+    {
+      "en": "I'm thirty-five.",
+      "note_ru": "Можно добавить years old, но в речи обычно не говорят.",
+      "ru": "Мне тридцать пять."
+    },
+    {
+      "en": "What do you do?",
+      "note_ru": "Это вопрос о работе, а не «что ты делаешь».",
+      "ru": "Кем ты работаешь?"
+    },
+    {
+      "en": "I'm a designer.",
+      "note_ru": "Перед профессией нужен a.",
+      "ru": "Я дизайнер."
+    },
+    {
+      "en": "Are you married?",
+      "note_ru": "Вопрос «да/нет»: интонация вверх в конце.",
+      "ru": "Ты женат?"
+    },
+    {
+      "en": "Yes, I am. / No, I'm not.",
+      "note_ru": "В коротком ответе Yes, I am не сокращаем: не Yes, I'm.",
+      "ru": "Да. / Нет."
+    }
+  ]
+}

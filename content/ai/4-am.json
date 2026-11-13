@@ -1,0 +1,109 @@
+{
+  "dialogue": [
+    {
+      "en": "Hi! I'm Kate. What's your name?",
+      "ru": "Привет! Я Кейт. Как тебя зовут?",
+      "who": "A"
+    },
+    {
+      "en": "I'm Andrei. I'm from Russia.",
+      "ru": "Я Андрей. Я из России.",
+      "who": "B"
+    },
+    {
+      "en": "Nice to meet you! When's your birthday?",
+      "ru": "Приятно познакомиться! Когда у тебя день рождения?",
+      "who": "A"
+    },
+    {
+      "en": "It's on the fifth of May. And yours?",
+      "ru": "Пятого мая. А у тебя?",
+      "who": "B"
+    },
+    {
+      "en": "It's in June, on the tenth.",
+      "ru": "В июне, десятого.",
+      "who": "A"
+    },
+    {
+      "en": "Cool! Are you a runner?",
+      "ru": "Круто! Ты бегаешь?",
+      "who": "B"
+    },
+    {
+      "en": "Yes! My first race is on the first of April.",
+      "ru": "Да! Мой первый забег первого апреля.",
+      "who": "A"
+    },
+    {
+      "en": "Good luck!",
+      "ru": "Удачи!",
+      "who": "B"
+    }
+  ],
+  "drill": [
+    {
+      "en": "When's your birthday?",
+      "ru": "Когда у тебя день рождения?"
+    },
+    {
+      "en": "It's on the fifth of May.",
+      "ru": "Пятого мая."
+    },
+    {
+      "en": "It's my first race.",
+      "ru": "Это мой первый забег."
+    },
+    {
+      "en": "I was third!",
+      "ru": "Я был третьим!"
+    },
+    {
+      "en": "Today is the second of March.",
+      "ru": "Сегодня второе марта."
+    }
+  ],
+  "goal_ru": "Сегодня повторяем весь юнит 1 и учим порядковые числа first–tenth, месяцы и даты: «My birthday is on the fifth of May».",
+  "phrases": [
+    {
+      "en": "When's your birthday?",
+      "note_ru": "",
+      "ru": "Когда у тебя день рождения?"
+    },
+    {
+      "en": "It's on the fifth of May.",
+      "note_ru": "on + дата. fifth: «фифθ».",
+      "ru": "Пятого мая."
+    },
+    {
+      "en": "My birthday is in June.",
+      "note_ru": "in + месяц.",
+      "ru": "Мой день рождения в июне."
+    },
+    {
+      "en": "It's my first race.",
+      "note_ru": "",
+      "ru": "Это мой первый забег."
+    },
+    {
+      "en": "I was third!",
+      "note_ru": "third: «θёд», язык между зубами.",
+      "ru": "Я был третьим!"
+    },
+    {
+      "en": "Today is the second of March.",
+      "note_ru": "",
+      "ru": "Сегодня второе марта."
+    },
+    {
+      "en": "The race is on the twenty-first of September.",
+      "note_ru": "twenty-first, а не twenty-oneth.",
+      "ru": "Забег двадцать первого сентября."
+    },
+    {
+      "en": "Nice to meet you!",
+      "note_ru": "Повтор из 1A.",
+      "ru": "Приятно познакомиться!"
+    }
+  ]
+}

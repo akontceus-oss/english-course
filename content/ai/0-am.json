@@ -1,0 +1,109 @@
+{
+  "dialogue": [
+    {
+      "en": "Hi! I'm Kristina. What's your name?",
+      "ru": "Привет! Я Кристина. Как тебя зовут?",
+      "who": "A"
+    },
+    {
+      "en": "Hi, Kristina! My name's Hector.",
+      "ru": "Привет, Кристина! Меня зовут Гектор.",
+      "who": "B"
+    },
+    {
+      "en": "Nice to meet you, Hector. Where are you from?",
+      "ru": "Приятно познакомиться, Гектор. Ты откуда?",
+      "who": "A"
+    },
+    {
+      "en": "Nice to meet you too. I'm from Russia.",
+      "ru": "Мне тоже приятно. Я из России.",
+      "who": "B"
+    },
+    {
+      "en": "Oh, you're Russian! I'm not Russian. I'm Spanish.",
+      "ru": "О, ты русский! Я не русская. Я испанка.",
+      "who": "A"
+    },
+    {
+      "en": "Great! We're at an English club.",
+      "ru": "Здорово! Мы в английском клубе.",
+      "who": "B"
+    },
+    {
+      "en": "Yes! Are you a runner?",
+      "ru": "Да! Ты бегун?",
+      "who": "A"
+    },
+    {
+      "en": "Yes, I am. I'm proud of running 21 kilometres!",
+      "ru": "Да. Я горжусь тем, что пробежал 21 километр!",
+      "who": "B"
+    }
+  ],
+  "drill": [
+    {
+      "en": "Hi! My name's Hector.",
+      "ru": "Привет! Меня зовут Гектор."
+    },
+    {
+      "en": "I'm from Russia. I'm Russian.",
+      "ru": "Я из России. Я русский."
+    },
+    {
+      "en": "I'm not from London.",
+      "ru": "Я не из Лондона."
+    },
+    {
+      "en": "Kristina's from Spain. She's Spanish.",
+      "ru": "Кристина из Испании. Она испанка."
+    },
+    {
+      "en": "I'm definitely not a good cook.",
+      "ru": "Я точно не хороший повар."
+    }
+  ],
+  "goal_ru": "Сегодня ты сможешь представиться, назвать своё имя, страну и национальность и коротко рассказать о своих увлечениях.",
+  "phrases": [
+    {
+      "en": "Hi! I'm Hector.",
+      "note_ru": "I'm читается как «айм». Говори слитно: I'm, а не I am.",
+      "ru": "Привет! Я Гектор."
+    },
+    {
+      "en": "My name's Hector.",
+      "note_ru": "My name's = My name is. Звук «z» на конце: «май нэймз».",
+      "ru": "Меня зовут Гектор."
+    },
+    {
+      "en": "I'm called Hector.",
+      "note_ru": "Тоже естественно. Часто так говорят про прозвище или короткое имя.",
+      "ru": "Меня зовут Гектор."
+    },
+    {
+      "en": "I'm from Russia.",
+      "note_ru": "from читается слабо: «фрэм». Ударение на Russia: «РАша».",
+      "ru": "Я из России."
+    },
+    {
+      "en": "I'm Russian.",
+      "note_ru": "Национальность пишется с большой буквы: Russian, British.",
+      "ru": "Я русский."
+    },
+    {
+      "en": "I'm not from London.",
+      "note_ru": "I'm not: «айм нот». Здесь нет сокращения для not после I'm.",
+      "ru": "Я не из Лондона."
+    },
+    {
+      "en": "She's from Spain. She's Spanish.",
+      "note_ru": "She's = She is. Читается «шиз».",
+      "ru": "Она из Испании. Она испанка."
+    },
+    {
+      "en": "I'm definitely not a good cook!",
+      "note_ru": "definitely: «ДЕфинитли», три слога в начале. Стоит перед not.",
+      "ru": "Я точно не хороший повар!"
+    }
+  ]
+}

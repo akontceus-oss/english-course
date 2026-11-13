@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f3f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Speak Up">
+<style>html{padding-top:env(safe-area-inset-top,0px)}body{margin:0;-webkit-text-size-adjust:100%}</style>
+<title>Speak Up English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: a single phone column; the course is drawn as a metro line, each day a station. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --ink:#14202e; --muted:#5b6878; --line:#d9dfe6;
+  --accent:#1f5fbf; --accent-ink:#ffffff; --accent-soft:#e3ecfa;
+  --b1:#c8302c; --b2:#1d8a4e; --b3:#7a3fb0;
+  --ok:#1d8a4e; --ok-soft:#e1f3e8; --warn:#a45a00; --warn-soft:#fbeedd; --bad:#b3261e; --bad-soft:#fbe4e2;
+  --display:"Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body:"Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f151c; --surface:#18212b; --ink:#e7edf3; --muted:#9aa8b8; --line:#2b3744;
+  --accent:#6ea2f0; --accent-ink:#0b1420; --accent-soft:#1d2d44;
+  --b1:#ef6b66; --b2:#4cc285; --b3:#b487e3;
+  --ok:#4cc285; --ok-soft:#163626; --warn:#f0a845; --warn-soft:#3a2a13; --bad:#ef6b66; --bad-soft:#3d1c1a;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f151c; --surface:#18212b; --ink:#e7edf3; --muted:#9aa8b8; --line:#2b3744;
+  --accent:#6ea2f0; --accent-ink:#0b1420; --accent-soft:#1d2d44;
+  --b1:#ef6b66; --b2:#4cc285; --b3:#b487e3;
+  --ok:#4cc285; --ok-soft:#163626; --warn:#f0a845; --warn-soft:#3a2a13; --bad:#ef6b66; --bad-soft:#3d1c1a;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px 110px;display:flex;flex-direction:column;gap:16px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.15}
+h1{font-size:28px} h2{font-size:21px} h3{font-size:17px}
+p{margin:0}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:13px;border:0;font-family:var(--body);cursor:pointer}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font:700 16px var(--body);background:var(--accent);color:var(--accent-ink);cursor:pointer;min-height:46px}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn.soft{background:var(--accent-soft);color:var(--accent)}
+.btn.sm{padding:6px 12px;min-height:36px;font-size:14px}
+.btn:disabled{opacity:.5;cursor:default}
+.btn:focus-visible,.chip:focus-visible,.tab:focus-visible,textarea:focus-visible,select:focus-visible,.icon:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.grow{flex:1 1 auto;min-width:0}
+.icon{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--accent);border-radius:10px;width:40px;height:40px;display:inline-grid;place-items:center;cursor:pointer;flex:0 0 auto}
+.icon svg{width:20px;height:20px}
+/* week dots */
+.dots{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.dayc{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;color:var(--muted)}
+.pair{display:flex;gap:3px}
+.pair i{width:14px;height:14px;border-radius:50%;border:2px solid var(--line);display:block}
+.pair i.done{background:var(--ok);border-color:var(--ok)}
+/* session buttons */
+.sess{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:380px){.sess{grid-template-columns:1fr}}
+.sbtn{text-align:left;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:var(--r);padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:4px;font-family:var(--body)}
+.sbtn b{font-family:var(--display);font-size:17px}
+.sbtn.done{border-color:var(--ok);background:var(--ok-soft)}
+.state{font-size:13px;font-weight:700;color:var(--muted)}
+.sbtn.done .state{color:var(--ok)}
+/* metro line */
+.line{display:flex;flex-direction:column}
+.block-h{display:flex;align-items:center;gap:10px;margin:14px 0 6px}
+.block-h span{width:14px;height:14px;border-radius:4px}
+.st{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;padding:6px 0;cursor:pointer;background:none;border:0;text-align:left;color:var(--ink);font-family:var(--body);font-size:15px;width:100%}
+.st .node{position:relative;height:100%;min-height:34px}
+.st .node::before{content:"";position:absolute;left:11px;top:-6px;bottom:-6px;width:6px;background:var(--c)}
+.st .node::after{content:"";position:absolute;left:6px;top:50%;transform:translateY(-50%);width:16px;height:16px;border-radius:50%;background:var(--surface);border:4px solid var(--c)}
+.st.done .node::after{background:var(--c)}
+.st.cur .node::after{width:22px;height:22px;left:3px;box-shadow:0 0 0 4px var(--accent-soft)}
+.st .t{min-width:0}
+.st .w{font-size:12px;color:var(--muted)}
+/* phrases */
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 0;border-top:1px solid var(--line)}
+.phr:first-child{border-top:0;padding-top:0}
+.en{font-weight:700;font-size:17px}
+.ru{color:var(--muted);font-size:15px}
+.note{font-size:14px;color:var(--warn);background:var(--warn-soft);border-radius:8px;padding:6px 10px;grid-column:1/-1}
+.dl{display:flex;flex-direction:column;gap:8px}
+.bub{max-width:88%;padding:10px 12px;border-radius:14px;background:var(--accent-soft);display:flex;flex-direction:column;gap:2px}
+.bub.me{align-self:flex-end;background:var(--surface);border:1px solid var(--line)}
+.bub .who{font-size:12px;font-weight:700;color:var(--muted)}
+.fix{align-self:flex-end;max-width:88%;font-size:14px;background:var(--warn-soft);color:var(--ink);border-radius:12px;padding:8px 12px}
+.fix b{color:var(--warn)}
+textarea,select{width:100%;font:16px var(--body);color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
+textarea{min-height:64px;resize:vertical}
+.res{border-radius:10px;padding:8px 12px;font-size:15px}
+.res.ok{background:var(--ok-soft)} .res.no{background:var(--bad-soft)}
+.steps{display:flex;gap:6px}
+.steps button{flex:1;border:0;background:var(--line);height:6px;border-radius:3px;padding:0;cursor:pointer}
+.steps button.on{background:var(--accent)}
+.steps button.done{background:var(--ok)}
+.flash{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;padding:20px 8px}
+.flash .big{font-size:22px;font-family:var(--display);font-weight:700}
+.tabs{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:center;padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px);z-index:5}
+.tabs .in{display:grid;grid-template-columns:repeat(4,1fr);width:100%;max-width:560px}
+.tab{background:none;border:0;color:var(--muted);font:700 12px var(--body);padding:8px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+.tab svg{width:22px;height:22px}
+.tab.on{color:var(--accent)}
+.hist{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:10px 0;border-top:1px solid var(--line)}
+.hist:first-child{border-top:0}
+.date{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat b{font-family:var(--display);font-size:26px;font-variant-numeric:tabular-nums}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;color:var(--muted)}
+.spin{display:flex;gap:10px;align-items:center;color:var(--muted)}
+.spin::before{content:"";width:18px;height:18px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--accent);animation:r 0.9s linear infinite}
+@keyframes r{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin::before{animation:none}}
+.tip{font-size:14px;background:var(--accent-soft);border-radius:10px;padding:10px 12px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:99px;font-size:14px;font-weight:700;z-index:6}
+.ex-tag{font-size:12px;font-weight:700;color:var(--warn)}
+</style>
+
+<div class="wrap" id="app"><div class="spin">Загружаю твой курс…</div></div>
+<nav class="tabs" aria-label="Разделы"><div class="in" id="tabs"></div></nav>
+
+<script>
+(function(){
+// ---------- Course plan (A1 → A2, 12 weeks × 5 days) ----------
+const BLOCKS=[
+ {name:"Юниты 1–4: знакомство, семья, хобби, город",en:"First words",color:"--b1"},
+ {name:"Юниты 5–8: люди, прошлое, еда, поездки",en:"Everyday life",color:"--b2"},
+ {name:"Юниты 9–10 и две недели живой речи",en:"Sounding natural",color:"--b3"}];
+const W=[
+ ["Знакомство: Hello, how are you?","Откуда ты: Where are you from?","Числа, возраст, телефон","Семья: my family","Свободный разговор: итоги недели"],
+ ["Моя работа: what do you do?","Мой день: daily routine","Еда: food I like","Мой дом: my home","Свободный разговор: итоги недели"],
+ ["В кафе: заказываем кофе","В магазине: how much is it?","Как пройти: asking the way","Время и дни недели","Свободный разговор: итоги недели"],
+ ["Выходные и хобби","Я умею: can / can't","Погода и small talk","Приглашения: do you want to…?","Свободный разговор: итоги недели"],
+ ["Вчера: was / were","Что ты делал: past simple","Моя поездка: короткий рассказ","Чувства: I'm tired, I'm happy","Свободный разговор: итоги недели"],
+ ["Планы: going to","Договариваемся о встрече","В отеле","В аэропорту","Свободный разговор: итоги недели"],
+ ["У врача: I don't feel well","Такси и транспорт","Просим о помощи: sorry, can you help me?","Телефонный звонок","Свободный разговор: итоги недели"],
+ ["Small talk на работе","Описываем людей","Мой город","Покупаем одежду","Свободный разговор: итоги недели"],
+ ["Реакции: Really? No way! Cool!","Слова-связки: well, you know, I mean","Как поддержать разговор вопросами","Согласен / не согласен","Свободный разговор: итоги недели"],
+ ["Мнение: I think…","Предпочтения: I'd rather…","Советы: you should…","Сравниваем: bigger, better","Свободный разговор: итоги недели"],
+ ["Рассказываем историю","Опыт: Have you ever…?","Мечты и будущее","Small talk на вечеринке","Свободный разговор: итоги недели"],
+ ["Повторение: знакомство с незнакомцем","Лёгкое собеседование","Длинный разговор с другом","Расскажи о себе за 2 минуты","Финальный свободный разговор"]];
+let PLAN=[];W.forEach((wk,wi)=>wk.forEach((t,di)=>PLAN.push({title:t,week:wi+1,day:di+1,block:Math.floor(wi/4),free:di===4})));
+
+// ---------- Store: db capability, falling back to this browser ----------
+const LS="speakup:";
+const local={
+  async get(p){try{const v=localStorage.getItem(LS+p);return v?JSON.parse(v):null}catch(e){return null}},
+  async set(p,d){try{localStorage.setItem(LS+p,JSON.stringify(d))}catch(e){}},
+  async list(c){const out=[];try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(LS+c+"/")&&k.split("/").length===2)out.push({id:k.slice((LS+c+"/").length),...JSON.parse(localStorage.getItem(k))})}}catch(e){}return out}
+};
+let store=local, cloud=false, sample=null, COURSE=null;
+const IN_CLAUDE=!!(window.claude&&window.claude.use);
+function withTimeout(p,ms){return Promise.race([p,new Promise((_,j)=>setTimeout(()=>j(new Error("timeout")),ms))])}
+async function initCaps(){
+  if(!window.claude||!claude.use)return;
+  try{
+    const db=await withTimeout(claude.use("db"),10000);
+    if(db){
+      store={
+        async get(p){const s=await db.doc(p).get();return s.exists?s.data():null},
+        async set(p,d){await db.doc(p).set(d)},
+        async list(c){const s=await db.collection(c).get();return s.docs.map(d=>({id:d.id,...d.data()}))}
+      };cloud=true;
+    }
+  }catch(e){}
+  try{sample=await withTimeout(claude.use("sample"),10000)}catch(e){sample=null}
+}
+
+// ---------- State ----------
+const S={profile:{level:"A1",day:0,rate:0.9,voice:""},sessions:[],vocab:[],view:"today",sess:null};
+const today=()=>new Date().toISOString().slice(0,10);
+function addDays(n){const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60)||("w"+Date.now())}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function done(day,kind){return S.sessions.some(s=>s.day===day&&s.kind===kind)}
+
+// ---------- Speech ----------
+let voice=null;
+function enVoices(){try{return speechSynthesis.getVoices().filter(x=>/^en[-_]/i.test(x.lang)||x.lang==="en")}catch(e){return []}}
+function vScore(x){let s=0;const n=x.name;if(/premium|enhanced|natural|neural|online/i.test(n))s+=50;if(/siri/i.test(n))s+=40;if(/google/i.test(n))s+=30;
+  if(/^(Daniel|Serena|Kate|Oliver|Arthur|Martha|Stephanie|Samantha|Ava|Zoe|Evan|Tom|Allison|Nathan|Susan)\b/i.test(n))s+=15;
+  if(/en[-_]GB/i.test(x.lang))s+=8;else if(/en[-_]US/i.test(x.lang))s+=6;
+  if(/compact|eloquence|grandma|grandpa|bad news|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|albert|fred|junior|ralph|kathy|bahh|rocko|shelley|flo|reed|sandy|eddy/i.test(n))s-=60;
+  if(x.localService===false)s+=5;return s}
+function pickVoice(){const v=enVoices();const want=S.profile.voice;voice=(want&&v.find(x=>x.name===want))||[...v].sort((a,b)=>vScore(b)-vScore(a))[0]||null}
+try{pickVoice();speechSynthesis.onvoiceschanged=pickVoice}catch(e){}
+let sayGen=0;
+function splitSpeech(t){return String(t).replace(/([.!?…])\s+/g,"$1\n").split(/\n|\s+\/\s+|\s+—\s+/).map(x=>x.trim()).filter(Boolean)}
+function speakSeq(parts,rate,gap){const g=++sayGen;try{speechSynthesis.cancel()}catch(e){return}let i=0;
+  const next=()=>{if(g!==sayGen||i>=parts.length)return;try{const u=new SpeechSynthesisUtterance(parts[i]);if(voice){u.voice=voice;u.lang=voice.lang}else u.lang="en-GB";u.rate=rate||S.profile.rate||0.9;
+    u.onend=()=>{i++;setTimeout(next,gap)};u.onerror=u.onend;speechSynthesis.speak(u)}catch(e){}};
+  setTimeout(next,60)}
+let AUD={};
+const PACKS=new Map();
+function getPack(n){if(!PACKS.has(n)){const p=fetch("packs/"+n+".mp3").then(r=>{if(!r.ok)throw new Error(r.status);return r.arrayBuffer()});PACKS.set(n,p);p.catch(()=>PACKS.delete(n))}return PACKS.get(n)}
+async function loadAudioIndex(){try{const r=await fetch("packs/index.json");if(r.ok){AUD=await r.json();setTimeout(()=>{"0123456789abcdef".split("").forEach((h,i)=>setTimeout(()=>getPack("p"+h).catch(()=>{}),i*150))},1500)}}catch(e){}}
+const SILENT="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAABIADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA//////////////////////////////////////////////////////////////////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAAAAAAAAAAAASDs90hvAAAAAAAAAAAAAAAAAAAA//sQZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
+function unlockPlayer(){if(!player){player=new Audio();player.setAttribute("playsinline","")}
+  try{if(navigator.audioSession)navigator.audioSession.type="playback"}catch(e){}
+  if(player.__unlocked)return;try{player.src=SILENT;const p=player.play();if(p&&p.then)p.then(()=>{player.__unlocked=true}).catch(()=>{})}catch(e){}}
+function useRec(){return S.profile.engine!=="device"}
+function hasRec(t){return splitSpeech(t).every(p=>AUD[p])}
+let player=null;
+function speakOne(t,rate){return new Promise(res=>{try{const u=new SpeechSynthesisUtterance(t);if(voice){u.voice=voice;u.lang=voice.lang}else u.lang="en-GB";u.rate=rate||S.profile.rate||0.9;u.onend=u.onerror=()=>res();speechSynthesis.speak(u)}catch(e){res()}})}
+async function clipUrl(f){const [n,o,l]=f.split(":");const buf=await getPack(n);return URL.createObjectURL(new Blob([buf.slice(+o,+o+ +l)],{type:"audio/mpeg"}))}
+function playUrl(url,rate){return new Promise(res=>{if(!player){player=new Audio();player.setAttribute("playsinline","")}
+  const done=ok=>{player.onended=player.onerror=null;res(ok)};player.onended=()=>done(true);player.onerror=()=>done(false);
+  const r=Math.max(0.5,Math.min(1,rate||S.profile.rate||0.9));
+  try{player.preservesPitch=true;player.webkitPreservesPitch=true}catch(e){}
+  player.defaultPlaybackRate=r;player.src=url;player.playbackRate=r;
+  const p=player.play();if(p&&p.catch)p.catch(()=>done(false))})}
+async function playFile(f,rate){let url;try{url=await clipUrl(f)}catch(e){return false}const ok=await playUrl(url,rate);try{URL.revokeObjectURL(url)}catch(e){}return ok}
+async function sayParts(parts,gap,rate){const g=++sayGen;try{speechSynthesis.cancel()}catch(e){}try{player&&player.pause()}catch(e){}
+  if(useRec()&&parts.some(p=>AUD[p]))unlockPlayer();
+  for(let i=0;i<parts.length;i++){if(g!==sayGen)return;const f=useRec()&&AUD[parts[i]];
+    let ok=false;if(f)ok=await playFile(f,rate);
+    if(g!==sayGen)return;if(!ok){await new Promise(r=>setTimeout(r,60));await speakOne(parts[i],rate)}
+    if(g!==sayGen)return;if(i<parts.length-1)await new Promise(r=>setTimeout(r,gap))}}
+function say(text,rate){sayParts(splitSpeech(text),550,rate)}
+const ICON={
+ play:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>',
+ slow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>',
+ today:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>',
+ course:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 7v10M8 5h4a4 4 0 0 1 4 4v1"/></svg>',
+ words:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></svg>',
+ history:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg>'};
+function sayBtns(text){const t=esc(text);return `<span class="row" style="flex-wrap:nowrap"><button class="icon" data-say="${t}" aria-label="Послушать">${ICON.play}</button><button class="icon" data-say="${t}" data-slow="1" aria-label="Послушать медленно">${ICON.slow}</button></span>`}
+
+// ---------- AI ----------
+function levelNote(){const l=S.profile.level;return l==="A1"?"The learner is a Russian speaker at CEFR A1 (beginner). Use very short, simple, high-frequency spoken English. Max 8 words per sentence. Always give Russian help.":`The learner is a Russian speaker at CEFR ${l}. Use natural spoken English at that level.`}
+function dayCtx(d){const p=PLAN[d];let s=`Course day ${d+1}/60, week ${p.week}. Topic (Russian title): "${p.title}".`;if(p.source)s+=`\nTextbook material for this day:\n${p.source}`;
+  const n=p.notes;if(n){const it=[...(n.words||[]).map(w=>w[0]),...(n.phrases||[]).map(w=>w[0]),...(n.sentences||[])];if(it.length)s+=`\nThe learner's OWN notebook items for today (reuse several of them naturally in phrases, dialogue and drill; the learner runs, plays table tennis, goes to English clubs and cafés with Kristina): ${it.join(" | ")}`;if(n.grammar)s+=`\nExtra grammar note shown to the learner: ${n.grammar}`}
+  return s}
+function notesCount(p){const n=p.notes;return n?(n.words||[]).length+(n.phrases||[]).length+(n.sentences||[]).length:0}
+function notesCard(p){const n=p.notes;if(!n||!notesCount(p)&&!n.grammar)return "";
+  const row=(en,ru,tip)=>`<div class="phr"><div class="grow"><div class="en">${esc(en)}</div>${ru?`<div class="ru">${esc(ru)}${tip?` · <i>${esc(tip)}</i>`:""}</div>`:""}</div>${sayBtns(en)}</div>`;
+  return `<div class="card"><div class="label">Из твоей тетради</div>
+  ${n.grammar?`<div class="tip">${esc(n.grammar)}</div>`:""}
+  ${(n.words||[]).map(w=>row(w[0],w[1],w[2])).join("")}
+  ${(n.phrases||[]).map(w=>row(w[0],w[1],w[2])).join("")}
+  ${(n.sentences||[]).length?`<div class="label">Твои предложения: прочитай вслух</div>${n.sentences.map(t=>row(t)).join("")}`:""}</div>`}
+async function ai(prompt,opts){if(!sample)throw {code:"not_granted"};return sample.json(prompt,Object.assign({cache:false},opts||{}))}
+
+async function genMorning(d){
+  if(!sample)return offMorning(d);
+  const p=PLAN[d];
+  const prompt=`You are a friendly British English speaking coach. ${levelNote()}
+${dayCtx(d)}
+${p.free?"This is a review day: pick phrases from the whole week's topics.":""}
+Build a 30-minute morning lesson focused on SPEAKING, not grammar tables. Return JSON only:
+{"goal_ru":"one sentence in Russian: what the learner will be able to say today",
+ "phrases":[{"en":"natural phrase a native actually says","ru":"Russian translation","note_ru":"short tip in Russian about pronunciation or usage, or empty"}],
+ "dialogue":[{"who":"A or B","en":"line","ru":"Russian translation"}],
+ "drill":[{"ru":"Russian sentence to say in English using today's phrases","en":"model answer"}]}
+Rules: 8 phrases, 8 dialogue lines (a realistic everyday mini-dialogue using the phrases, B is the learner), 5 drill sentences. Prefer contractions (I'm, don't) and real spoken chunks.`;
+  return ai(prompt,{modelTier:"default"});
+}
+async function checkDrill(items){
+  if(!sample)return offCheck(items);
+  const prompt=`You are a kind English coach. ${levelNote()}
+Check the learner's translations. For each item say if it is understandable and correct enough for real conversation (small typos are fine).
+Items: ${JSON.stringify(items)}
+Return JSON only: {"results":[{"ok":true|false,"natural":"the most natural way a native would say it","tip_ru":"short explanation in Russian, empty if perfect"}]} in the same order.`;
+  return ai(prompt,{modelTier:"quick"});
+}
+async function roleTurn(d,msgs,scenario){
+  if(!sample)return offTurn(d,msgs);
+  const t=msgs.map(m=>`${m.who==="me"?"Learner":"You"}: ${m.en}`).join("\n");
+  const prompt=`You are role-playing a conversation partner to help a learner SPEAK. ${levelNote()}
+${dayCtx(d)}
+Scenario: ${scenario}
+Conversation so far:
+${t||"(not started: you speak first)"}
+Write your next line: stay in character, 1-2 short sentences, end with a simple question so the learner keeps talking. ${msgs.length>=18?"Start wrapping up the conversation politely.":""}
+Also check the learner's LAST line (if any). If it has a mistake or sounds unnatural, give a fix; otherwise null.
+Return JSON only: {"reply":"your line in English","reply_ru":"Russian translation","hint_ru":"short Russian hint of what the learner could answer","fix":null or {"said":"learner's words","better":"natural version","why_ru":"short reason in Russian"}}`;
+  return ai(prompt,{modelTier:"default"});
+}
+async function genScenario(d){
+  if(!sample)return offScenario(d);
+  const p=PLAN[d];
+  const prompt=`${levelNote()}\n${dayCtx(d)}\n${p.free?"Free talk day: a friend asks about the learner's week and recent topics.":""}
+Create a role-play scenario for evening speaking practice. Return JSON only: {"scenario":"one-line scenario in English for the AI partner, who it plays","setup_ru":"2 sentences in Russian telling the learner who they are and what to do","useful":[{"en":"phrase","ru":"translation"}]} with 4 useful phrases.`;
+  return ai(prompt,{modelTier:"quick"});
+}
+async function wrapUp(d,msgs){
+  if(!sample)return offWrap(d,msgs);
+  const t=msgs.map(m=>`${m.who==="me"?"Learner":"Partner"}: ${m.en}`).join("\n");
+  const prompt=`${levelNote()}\nHere is a speaking practice conversation:\n${t}\nReturn JSON only: {"praise_ru":"one warm sentence in Russian about what went well","mistakes":[{"said":"...","better":"...","why_ru":"..."}],"phrases":[{"en":"useful natural phrase to remember","ru":"translation"}],"score":1-5}
+Max 5 mistakes (most important only), 4 phrases.`;
+  return ai(prompt,{modelTier:"default"});
+}
+
+// ---------- Without AI: prepared lessons, self-check and scripted role-play ----------
+function normEn(t){return String(t||"").toLowerCase().replace(/[’`]/g,"'")
+  .replace(/\bi'm\b/g,"i am").replace(/n't\b/g," not").replace(/'re\b/g," are").replace(/'ve\b/g," have").replace(/'ll\b/g," will").replace(/'d\b/g," would")
+  .replace(/\b(it|that|he|she|what|where|who|there|here)'s\b/g,"$1 is").replace(/\bcan not\b/g,"cannot").replace(/\bwo not\b/g,"will not")
+  .replace(/colour/g,"color").replace(/favourite/g,"favorite").replace(/metre/g,"meter")
+  .replace(/[^a-z0-9' ]+/g," ").replace(/'s\b/g,"s").replace(/'/g,"").split(/\s+/).filter(Boolean)}
+function simEn(a,b){const x=normEn(a),y=normEn(b);if(!x.length||!y.length)return 0;
+  const m=new Map();y.forEach(w=>m.set(w,(m.get(w)||0)+1));let hit=0;x.forEach(w=>{if(m.get(w)>0){hit++;m.set(w,m.get(w)-1)}});
+  const pr=hit/x.length,rc=hit/y.length;return pr+rc?2*pr*rc/(pr+rc):0}
+function noContent(){return Promise.reject({code:"no_content"})}
+function offMorning(d){const a=COURSE&&COURSE.am&&COURSE.am[d];if(!a)return noContent();return Promise.resolve(a)}
+function offScenario(d){const a=COURSE&&COURSE.pm&&COURSE.pm[d];if(!a)return noContent();return Promise.resolve(a)}
+function offCheck(items){return Promise.resolve({results:items.map(x=>{const v=simEn(x.learner,x.model);const ok=v>=0.75;
+  return {ok,natural:x.model,tip_ru:ok?(v<0.99?"Смысл верный. Сравни с образцом.":""):(x.learner==="(empty)"?"Скажи образец вслух 3 раза.":"Сравни с образцом и произнеси его вслух 3 раза.")}})})}
+function offTurn(d,msgs){const sc=S.sess&&S.sess.data;const c=(sc&&sc.script)||[];const mine=msgs.filter(m=>m.who==="me");const i=mine.length;
+  let fix=null;const last=mine[i-1];
+  if(last&&c[i-1]){const v=simEn(last.en,c[i-1].me);last.score=v;if(v<0.8)fix={said:last.en,better:c[i-1].me,why_ru:v>=0.6?"Почти! Так звучит естественнее.":"Образец ответа: прочитай его вслух."}}
+  if(i<c.length)return Promise.resolve({reply:c[i].a,reply_ru:c[i].a_ru,task_ru:c[i].q,hint_ru:"Например: "+c[i].me,fix});
+  S.sess.over=true;return Promise.resolve({reply:sc.bye||"Thanks for the chat! Bye!",reply_ru:"",task_ru:"",hint_ru:"",fix})}
+function offWrap(d,msgs){const sc=S.sess.data,c=sc.script||[];const mine=msgs.filter(m=>m.who==="me");
+  const sc5=mine.length?mine.reduce((a,m,i)=>a+(m.score!=null?m.score:simEn(m.en,(c[i]||{}).me||m.en)),0)/mine.length:0;
+  const score=Math.max(2,Math.min(5,Math.round(1+sc5*4.4)));
+  const mistakes=mine.map((m,i)=>m.fix?{said:m.en,better:m.fix.better,why_ru:""}:null).filter(Boolean).slice(0,5);
+  const praise_ru=score>=5?"Отлично! Ответы почти совпали с образцами.":score>=4?"Хороший разговор! Пара мест, где можно сказать естественнее.":"Разговор состоялся, это главное. Прочитай образцы ниже вслух и попробуй ещё раз.";
+  return Promise.resolve({praise_ru,mistakes,phrases:(sc.useful||[]).concat(c.slice(0,2).map(x=>({en:x.me,ru:x.q}))),score})}
+
+// ---------- Rendering ----------
+const app=document.getElementById("app");
+function setView(v){if(reloadPending&&v!=="session"){location.reload();return}S.view=v;if(v!=="session")S.sess=null;try{history.replaceState(null,"","#"+v)}catch(e){}render();window.scrollTo(0,0)}
+function tabs(){
+  const t=[["today","Сегодня"],["course","Курс"],["words","Слова"],["history","История"]];
+  document.getElementById("tabs").innerHTML=t.map(([k,n])=>`<button class="tab ${S.view===k||(S.view==="session"&&k==="today")?"on":""}" data-tab="${k}">${ICON[k]}${n}</button>`).join("");
+}
+function weekOf(d){return PLAN[d].week}
+function render(){
+  tabs();
+  if(S.view==="session")return renderSession();
+  if(S.view==="course")return renderCourse();
+  if(S.view==="words")return renderWords();
+  if(S.view==="history")return renderHistory();
+  renderToday();
+}
+function dueCards(){const t=today();return S.vocab.filter(v=>(v.due||"")<=t)}
+function streak(){const ds=new Set(S.sessions.map(s=>s.date));let n=0;let d=new Date();if(!ds.has(today()))d.setDate(d.getDate()-1);
+  for(;;){const k=d.toISOString().slice(0,10);const wd=d.getDay();if(ds.has(k)){n++}else if(wd!==0&&wd!==6){break}d.setDate(d.getDate()-1);if(n>400)break}return n}
+function renderToday(){
+  const d=S.profile.day,p=PLAN[d],b=BLOCKS[p.block];
+  const wkStart=(p.week-1)*5;
+  const dots=[0,1,2,3,4].map(i=>{const di=wkStart+i;return `<div class="dayc"><div class="pair"><i class="${done(di,"am")?"done":""}"></i><i class="${done(di,"pm")?"done":""}"></i></div>${["Пн","Вт","Ср","Чт","Пт"][i]}</div>`}).join("");
+  const am=done(d,"am"),pm=done(d,"pm");
+  app.innerHTML=`
+  <div class="top"><div><div class="label">Speak Up · ${esc(b.en)}</div><h1>Неделя ${p.week}, день ${p.day}</h1></div>
+   <button class="chip" id="lvl" aria-label="Уровень">${esc(S.profile.level)}</button></div>
+  ${IN_CLAUDE&&!cloud?`<div class="tip">История сейчас хранится только в этом браузере. Открой приложение через claude.ai, чтобы она сохранялась в аккаунте.</div>`:""}
+${installTip()}
+  ${IN_CLAUDE&&!sample?`<div class="tip">ИИ-партнёр недоступен в этом просмотре. Открой приложение в claude.ai и разреши ему обращаться к Claude.</div>`:""}
+  <div class="card" style="border-left:6px solid var(${b.color})">
+   <div class="label">Тема дня</div><h2>${esc(p.title)}</h2>${/page (\d+)/.test(p.source||"")?`<p class="small muted">Учебник Roadmap A1, страница ${(p.source.match(/page (\d+)/)||[])[1]}. Можно открыть её перед утренней сессией.</p>`:""}${notesCount(p)?`<p class="small muted">Плюс из твоей тетради: ${notesCount(p)} слов, фраз и предложений.</p>`:""}
+   <div class="sess">
+    <button class="sbtn ${am?"done":""}" data-start="am"><span class="label">Утро · 30 мин</span><b>Фразы и звук</b><span class="small muted">Фразы носителей, повтор вслух, мини-диалог</span><span class="state">${am?"Пройдено ✓":"Начать"}</span></button>
+    <button class="sbtn ${pm?"done":""}" data-start="pm"><span class="label">Вечер · 30 мин</span><b>Разговор</b><span class="small muted">Повтор слов и ${sample?"живой диалог с ИИ":"диалог по ролям"}</span><span class="state">${pm?"Пройдено ✓":"Начать"}</span></button>
+   </div>
+   ${am&&pm&&d<59?`<button class="btn" id="next">Перейти к дню ${d+2}</button>`:""}
+  </div>
+  <div class="card"><div class="top"><h3>Эта неделя</h3><span class="small muted">цель: 10 сессий</span></div><div class="dots">${dots}</div></div>
+  <div class="card stats">
+   <div class="stat"><b>${streak()}</b><span class="small muted">дней подряд</span></div>
+   <div class="stat"><b>${S.sessions.length}</b><span class="small muted">сессий</span></div>
+   <div class="stat"><b>${S.vocab.length}</b><span class="small muted">фраз в запасе</span></div>
+  </div>
+  <div class="card"><div class="top"><h3>Голос озвучки</h3><button class="btn soft sm" id="vtest">Проверить</button></div>
+   <div class="row"><button class="btn sm ${useRec()?"":"soft"}" data-engine="rec">Живой голос Emma</button><button class="btn sm ${useRec()?"soft":""}" data-engine="device">Голос телефона</button></div>
+   ${useRec()?`<p class="small muted">Слова из тетради и фразы уроков звучат готовыми записями британского голоса Emma. То, для чего записи ещё нет (например, ответы ИИ в разговоре), читает голос телефона ниже.</p>`:""}
+   <select id="vsel" aria-label="Голос телефона">${enVoices().sort((a,b)=>vScore(b)-vScore(a)).map(x=>`<option value="${esc(x.name)}" ${voice&&voice.name===x.name?"selected":""}>${esc(x.name)} · ${esc(x.lang)}${vScore(x)>=40?" ★":""}</option>`).join("")||`<option>Голоса загружаются…</option>`}</select>
+   <div class="row"><span class="small muted">Скорость</span>${[[0.75,"медленно"],[0.9,"спокойно"],[1,"как носитель"]].map(([v,l])=>`<button class="btn sm ${S.profile.rate==v?"":"soft"}" data-rate-v="${v}">${l}</button>`).join("")}</div>
+   <p class="small muted">Звёздочкой отмечены самые естественные голоса телефона.</p></div>
+  <div class="tip"><b>Как говорить голосом:</b> в поле ответа нажми на микрофон на клавиатуре телефона и надиктуй фразу по-английски. Так ты тренируешь именно речь, а не печать.</div>`;
+}
+function renderCourse(){
+  let h=`<div><div class="label">12 недель · 60 дней</div><h1>Курс</h1></div><p class="muted">Каждый день две сессии: утром фразы и звук, вечером разговор. По пятницам свободная беседа.</p><div class="card line">`;
+  PLAN.forEach((p,i)=>{
+    if(i%20===0){const b=BLOCKS[p.block];h+=`<div class="block-h"><span style="background:var(${b.color})"></span><h3>${esc(b.name)}</h3></div>`}
+    const full=done(i,"am")&&done(i,"pm");
+    h+=`<button class="st ${full?"done":""} ${i===S.profile.day?"cur":""}" style="--c:var(${BLOCKS[p.block].color})" data-go="${i}"><span class="node"></span><span class="t">${esc(p.title)}<div class="w">Неделя ${p.week} · день ${p.day}</div></span><span class="small muted">${(done(i,"am")?1:0)+(done(i,"pm")?1:0)}/2</span></button>`;
+  });
+  app.innerHTML=h+`</div>`;
+}
+function renderWords(){
+  const due=dueCards();
+  const list=[...S.vocab].sort((a,b)=>(b.added||"").localeCompare(a.added||""));
+  app.innerHTML=`<div><div class="label">Интервальное повторение</div><h1>Мои фразы</h1></div>
+  <div class="card"><div class="top"><div><b>${due.length}</b> <span class="muted">к повторению сегодня</span></div>${due.length?`<button class="btn sm" id="review">Повторить</button>`:""}</div></div>
+  <div class="card">${list.length?list.map(v=>`<div class="phr"><div class="grow"><div class="en">${esc(v.en)}</div><div class="ru">${esc(v.ru)}</div></div>${sayBtns(v.en)}</div>`).join(""):`<p class="muted">Здесь появятся фразы из утренних уроков и вечерних разборов. Пройди первую утреннюю сессию, и они начнут повторяться по расписанию.</p>`}</div>`;
+}
+function renderHistory(){
+  const list=[...S.sessions].sort((a,b)=>(b.ts||0)-(a.ts||0));
+  const mins=S.sessions.reduce((a,s)=>a+(s.minutes||0),0);
+  app.innerHTML=`<div><div class="label">Всё, что ты прошёл</div><h1>История</h1></div>
+  <div class="card stats"><div class="stat"><b>${S.sessions.length}</b><span class="small muted">сессий</span></div><div class="stat"><b>${Math.round(mins/6)/10}</b><span class="small muted">часов практики</span></div><div class="stat"><b>${streak()}</b><span class="small muted">дней подряд</span></div></div>
+  <div class="card">${list.length?list.map(s=>`<div class="hist"><span class="date">${esc(s.date.slice(8,10)+"."+s.date.slice(5,7))}</span><div><b>${s.kind==="am"?"Утро":"Вечер"} · день ${s.day+1}</b> <span class="muted small">${s.minutes||0} мин</span><div class="small">${esc(PLAN[s.day]?.title||"")}</div>${s.summary?`<div class="small muted">${esc(s.summary)}</div>`:""}${(s.mistakes||[]).map(m=>`<div class="small"><s class="muted">${esc(m.said)}</s> → <b>${esc(m.better)}</b></div>`).join("")}</div></div>`).join(""):`<p class="muted">Пока пусто. После каждой сессии здесь сохранятся дата, тема, время и разбор ошибок.</p>`}</div>${backupCard()}`;
+}
+function installTip(){if(IN_CLAUDE)return "";const sa=window.navigator.standalone||matchMedia("(display-mode: standalone)").matches;if(sa)return "";
+  const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);if(!ios)return "";
+  return `<div class="tip"><b>Сделай из сайта приложение:</b> нажми «Поделиться» внизу Safari и выбери «На экран „Домой“». Прогресс сохраняется на этом iPhone.</div>`}
+function backupCard(){if(IN_CLAUDE)return "";return `<div class="card"><h3>Резервная копия</h3><p class="small muted">Прогресс хранится на этом телефоне. Время от времени сохраняй копию в «Файлы», чтобы ничего не потерять, если удалишь приложение с экрана.</p>
+  <div class="row"><button class="btn soft sm" id="bk-save">Сохранить копию</button><button class="btn soft sm" id="bk-load">Восстановить из файла</button></div><input type="file" id="bk-file" accept=".json,application/json" hidden></div>`}
+function backupSave(){const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(LS))o[k]=localStorage.getItem(k)}
+  const f=new File([JSON.stringify({app:"speakup",date:today(),data:o})],`speakup-backup-${today()}.json`,{type:"application/json"});
+  if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f]}).catch(()=>{});return}
+  const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000)}
+async function backupLoad(file){try{const j=JSON.parse(await file.text());if(j.app!=="speakup"||!j.data)throw 0;
+  Object.entries(j.data).forEach(([k,v])=>{if(k.startsWith(LS))localStorage.setItem(k,v)});location.reload()}catch(e){alert("Это не файл копии Speak Up.")}}
+
+// ---------- Sessions ----------
+let timerId=null;
+function startTimer(){clearInterval(timerId);timerId=setInterval(()=>{const el=document.getElementById("timer");if(el&&S.sess){const m=Math.floor((Date.now()-S.sess.t0)/60000);el.textContent=m+" / 30 мин"}},15000)}
+async function startSession(kind,day){
+  S.sess={kind,day:day??S.profile.day,step:0,t0:Date.now(),data:null,msgs:[],answers:[],results:null,reviewIdx:0,review:null,wrap:null,err:null};
+  setView("session");startTimer();
+  const key=`lessons/${S.sess.day}-${kind}`;
+  try{
+    let data=sample?await store.get(key):null;
+    if(!data){data=kind==="am"?await genMorning(S.sess.day):await genScenario(S.sess.day);if(sample)await store.set(key,data)}
+    if(!S.sess)return;S.sess.data=data;
+    if(kind==="pm"){S.sess.review=dueCards().slice(0,15);if(!S.sess.review.length)S.sess.step=1}
+  }catch(e){if(S.sess)S.sess.err=e}
+  render();
+}
+function sessHead(titles){
+  const s=S.sess;
+  return `<div class="top"><button class="btn ghost sm" id="exit">← Назад</button><span class="timer" id="timer">${Math.floor((Date.now()-s.t0)/60000)} / 30 мин</span></div>
+  <div><div class="label">${s.kind==="am"?"Утро":"Вечер"} · день ${s.day+1}</div><h2>${esc(PLAN[s.day].title)}</h2></div>
+  <div class="steps">${titles.map((t,i)=>`<button class="${i===s.step?"on":i<s.step?"done":""}" data-step="${i}" aria-label="${esc(t)}"></button>`).join("")}</div>
+  <div class="label">Шаг ${s.step+1}: ${esc(titles[s.step])}</div>`;
+}
+function renderSession(){
+  const s=S.sess;if(!s)return setView("today");
+  if(s.err){app.innerHTML=`<button class="btn ghost sm" id="exit" style="align-self:flex-start">← Назад</button><div class="card"><h3>Урок не загрузился</h3><p>${s.err.code==="no_content"?"Урок для этого дня ещё в работе. Он появится сам, когда приложение обновится.":s.err.code==="not_granted"?"Приложению нужен доступ к Claude. Открой его в claude.ai и разреши запрос.":s.err.code==="rate_limited"?"Достигнут лимит запросов. Попробуй через несколько минут.":"Не получилось получить ответ. Проверь интернет и попробуй ещё раз."}</p><button class="btn" data-start="${s.kind}">Попробовать ещё раз</button></div>`;return}
+  if(!s.data){app.innerHTML=`<button class="btn ghost sm" id="exit" style="align-self:flex-start">← Назад</button><div class="card"><div class="spin">${s.kind==="am"?"Готовлю фразы и диалог на сегодня…":"Готовлю ролевую игру…"}</div></div>`;return}
+  return s.kind==="am"?renderAM():renderPM();
+}
+function renderAM(){
+  const s=S.sess,d=s.data,T=["Фразы","Диалог","Скажи сам"];
+  let body="";
+  if(s.step===0){
+    body=`<div class="tip">${esc(d.goal_ru||"")}</div>
+    ${notesCard(PLAN[s.day])}
+    <div class="card"><div class="label">Фразы урока</div><p class="small muted">Послушай каждую фразу, затем повтори вслух 3 раза, стараясь копировать мелодию (это shadowing). Кнопка с часами включает медленную озвучку.</p>
+    ${(d.phrases||[]).map(p=>`<div class="phr"><div class="grow"><div class="en">${esc(p.en)}</div><div class="ru">${esc(p.ru)}</div></div>${sayBtns(p.en)}${p.note_ru?`<div class="note">${esc(p.note_ru)}</div>`:""}</div>`).join("")}</div>
+    <button class="btn" data-step="1">Дальше: диалог</button>`;
+  }else if(s.step===1){
+    body=`<div class="card"><p class="small muted">Ты играешь B. Послушай весь диалог, потом прочитай вслух свои реплики. Второй раз закрой перевод ладонью.</p><button class="btn soft sm" id="playall" style="align-self:flex-start">Послушать весь диалог</button>
+    <div class="dl">${(d.dialogue||[]).map(l=>`<div class="bub ${l.who==="B"?"me":""}"><span class="who">${l.who==="B"?"Ты (B)":"A"}</span><div class="row" style="flex-wrap:nowrap;align-items:flex-start"><div class="grow"><div class="en">${esc(l.en)}</div><div class="ru">${esc(l.ru)}</div></div><button class="icon" data-say="${esc(l.en)}" aria-label="Послушать">${ICON.play}</button></div></div>`).join("")}</div></div>
+    <button class="btn" data-step="2">Дальше: скажи сам</button>`;
+  }else{
+    const r=s.results?.results;
+    body=`<div class="card"><p class="small muted">Скажи по-английски. Сначала произнеси вслух, потом надиктуй или напечатай.</p>
+    ${(d.drill||[]).map((x,i)=>`<div class="phr" style="grid-template-columns:1fr"><div><b>${i+1}.</b> ${esc(x.ru)}</div><textarea id="dr${i}" rows="2" placeholder="По-английски…">${esc(s.answers[i]||"")}</textarea>${r&&r[i]?`<div class="res ${r[i].ok?"ok":"no"}">${r[i].ok?"Отлично! ":""}Как скажет носитель: <b>${esc(r[i].natural)}</b> ${sayBtns(r[i].natural)}${r[i].tip_ru?`<div class="small">${esc(r[i].tip_ru)}</div>`:""}</div>`:""}</div>`).join("")}
+    ${r?"":`<button class="btn" id="check">Проверить</button>`}</div>
+    ${r?`<button class="btn" id="finish">Завершить утро и сохранить</button>`:""}`;
+  }
+  app.innerHTML=sessHead(T)+body;
+}
+function renderPM(){
+  const s=S.sess,d=s.data,T=["Повторение","Ролевая игра","Итоги"];
+  let body="";
+  if(s.step===0){
+    const c=s.review[s.reviewIdx];
+    body=c?`<div class="card flash"><span class="label">${s.reviewIdx+1} из ${s.review.length}</span><div class="big">${esc(c.ru)}</div><p class="small muted">Скажи вслух по-английски, потом проверь себя.</p>
+      ${s.flip?`<div class="en">${esc(c.en)}</div>${sayBtns(c.en)}<div class="row"><button class="btn soft sm" data-rate="0">Не вспомнил</button><button class="btn sm" data-rate="1">Вспомнил</button><button class="btn ghost sm" data-rate="2">Легко</button></div>`:`<button class="btn" id="flip">Показать ответ</button>`}</div>`
+      :`<div class="card"><h3>Повторение готово</h3><button class="btn" data-step="1">К разговору</button></div>`;
+  }else if(s.step===1){
+    body=`<div class="tip">${esc(d.setup_ru||"")}</div>
+    <div class="card"><div class="label">Полезные фразы</div>${(d.useful||[]).map(p=>`<div class="phr"><div class="grow"><div class="en">${esc(p.en)}</div><div class="ru">${esc(p.ru)}</div></div>${sayBtns(p.en)}</div>`).join("")}</div>
+    <div class="card"><div class="dl" id="chat">${s.msgs.map(m=>m.who==="me"?`<div class="bub me"><span class="who">Ты</span><div>${esc(m.en)}</div></div>${m.fix?`<div class="fix"><b>Лучше:</b> ${esc(m.fix.better)}<div class="small muted">${esc(m.fix.why_ru)}</div></div>`:""}`:`<div class="bub"><span class="who">Партнёр</span><div class="row" style="flex-wrap:nowrap;align-items:flex-start"><div class="grow"><div class="en">${esc(m.en)}</div>${s.showRu?`<div class="ru">${esc(m.ru)}</div>`:""}</div><button class="icon" data-say="${esc(m.en)}" aria-label="Послушать">${ICON.play}</button></div></div>`).join("")}
+    ${s.busy?`<div class="spin">Партнёр отвечает…</div>`:""}</div>
+    ${s.msgs.length?"":`<button class="btn" id="begin" ${s.busy?"disabled":""}>Начать разговор</button>`}
+    ${s.msgs.length&&!s.busy&&s.over?`<div class="tip">Разговор окончен. Нажми «Закончить разговор и разобрать».</div>`:""}
+    ${s.msgs.length&&!s.busy&&!s.over?`${s.task?`<div class="tip"><b>Твоя реплика:</b> ${esc(s.task)}</div>`:""}${s.hint&&s.showHint?`<div class="tip">${esc(s.hint)}</div>`:""}
+      <textarea id="say" placeholder="Ответь по-английски (можно голосом с клавиатуры)">${esc(s.draft||"")}</textarea>
+      <div class="row"><button class="btn grow" id="send">Отправить</button><button class="btn soft sm" id="hint">Подсказка</button><button class="btn soft sm" id="ru">${s.showRu?"Скрыть":"Перевод"}</button></div>`:""}
+    </div>
+    ${s.msgs.filter(m=>m.who==="me").length>=4?`<button class="btn ghost" id="towrap" ${s.busy?"disabled":""}>Закончить разговор и разобрать</button>`:`<p class="small muted">Сделай хотя бы 4 ответа, потом можно перейти к разбору. Хорошая цель: 10–15 реплик.</p>`}`;
+  }else{
+    const w=s.wrap;
+    body=!w?`<div class="card"><div class="spin">Разбираю разговор…</div></div>`:`<div class="card"><h3>${"★".repeat(w.score||3)}${"☆".repeat(5-(w.score||3))}</h3><p>${esc(w.praise_ru)}</p></div>
+    ${(w.mistakes||[]).length?`<div class="card"><div class="label">Над чем поработать</div>${w.mistakes.map(m=>`<div class="phr"><div class="grow"><div class="ru"><s>${esc(m.said)}</s></div><div class="en">${esc(m.better)}</div><div class="small muted">${esc(m.why_ru)}</div></div>${sayBtns(m.better)}</div>`).join("")}</div>`:""}
+    <div class="card"><div class="label">Фразы в копилку</div>${(w.phrases||[]).map(p=>`<div class="phr"><div class="grow"><div class="en">${esc(p.en)}</div><div class="ru">${esc(p.ru)}</div></div>${sayBtns(p.en)}</div>`).join("")}</div>
+    <button class="btn" id="finish">Завершить вечер и сохранить</button>`;
+  }
+  app.innerHTML=sessHead(T)+body;
+  const chat=document.getElementById("chat");if(chat&&s.step===1)chat.lastElementChild?.scrollIntoView({block:"nearest"});
+}
+async function partnerTurn(){
+  const s=S.sess;s.busy=true;render();
+  try{
+    const r=await roleTurn(s.day,s.msgs,s.data.scenario);
+    if(!S.sess)return;
+    const last=[...s.msgs].reverse().find(m=>m.who==="me");if(last&&r.fix&&r.fix.better)last.fix=r.fix;
+    s.msgs.push({who:"ai",en:r.reply,ru:r.reply_ru});s.hint=r.hint_ru;s.task=r.task_ru||"";s.showHint=false;say(r.reply);
+  }catch(e){s.msgs.push({who:"ai",en:"(No answer. Tap Send again.)",ru:"Не удалось получить ответ, отправь ещё раз."})}
+  s.busy=false;render();
+}
+async function addVocab(items){
+  for(const p of items||[]){if(!p||!p.en)continue;const id=slug(p.en);if(S.vocab.some(v=>v.id===id))continue;
+    const v={id,en:p.en,ru:p.ru||"",box:0,due:addDays(1),added:today()};S.vocab.push(v);try{await store.set("vocab/"+id,{en:v.en,ru:v.ru,box:0,due:v.due,added:v.added})}catch(e){}}
+}
+async function finish(){
+  const s=S.sess;const btn=document.getElementById("finish");if(btn){btn.disabled=true;btn.textContent="Сохраняю…"}
+  const rec={day:s.day,kind:s.kind,date:today(),ts:Date.now(),minutes:Math.max(1,Math.round((Date.now()-s.t0)/60000))};
+  if(s.kind==="am"){await addVocab(s.data.phrases);const n=PLAN[s.day].notes||{};await addVocab([...(n.words||[]),...(n.phrases||[])].map(w=>({en:w[0],ru:w[1]})));const r=s.results?.results||[];rec.summary=`Перевод: ${r.filter(x=>x.ok).length} из ${r.length} верно`;rec.mistakes=r.map((x,i)=>x.ok?null:{said:s.answers[i]||"",better:x.natural}).filter(Boolean).slice(0,5)}
+  else{await addVocab(s.data.useful);await addVocab(s.wrap?.phrases);rec.summary=s.wrap?.praise_ru||"";rec.mistakes=(s.wrap?.mistakes||[]).map(m=>({said:m.said,better:m.better}));rec.transcript=s.msgs.map(m=>(m.who==="me"?"Me: ":"AI: ")+m.en).join("\n").slice(0,8000)}
+  const id=`${rec.date}-${rec.day}-${rec.kind}`;
+  try{await store.set("sessions/"+id,rec)}catch(e){}
+  S.sessions=S.sessions.filter(x=>x.id!==id);S.sessions.push({id,...rec});
+  clearInterval(timerId);setView("today");
+}
+const IV=[1,2,4,7,15,30,60];
+async function rate(q){
+  const s=S.sess,c=s.review[s.reviewIdx];
+  c.box=q===0?0:Math.min(6,(c.box||0)+q);c.due=q===0?today():addDays(IV[c.box]);
+  try{await store.set("vocab/"+c.id,{en:c.en,ru:c.ru,box:c.box,due:c.due,added:c.added||today()})}catch(e){}
+  if(q===0)s.review.push(c);
+  s.reviewIdx++;s.flip=false;render();
+}
+async function saveProfile(){try{await store.set("profile/me",S.profile)}catch(e){}}
+
+// ---------- Events ----------
+document.addEventListener("click",async e=>{
+  const t=e.target.closest("button");if(!t)return;
+  const s=S.sess;
+  if(t.dataset.say){say(t.dataset.say,t.dataset.slow?Math.max(0.6,(S.profile.rate||0.9)-0.2):undefined);return}
+  if(t.dataset.rateV){S.profile.rate=+t.dataset.rateV;saveProfile();render();say("Hi! Shall we have a coffee?");return}
+  if(t.dataset.engine){S.profile.engine=t.dataset.engine;saveProfile();render();say("Hello! My name's Hector. Nice to meet you.");return}
+  if(t.dataset.tab){setView(t.dataset.tab);return}
+  if(t.dataset.start){startSession(t.dataset.start,s?.day);return}
+  if(t.dataset.go){S.profile.day=+t.dataset.go;saveProfile();setView("today");return}
+  if(t.dataset.step&&s){s.step=+t.dataset.step;if(s.kind==="pm"&&s.step===2&&!s.wrap)return toWrap();render();window.scrollTo(0,0);return}
+  if(t.dataset.rate&&s){rate(+t.dataset.rate);return}
+  switch(t.id){
+    case "vtest":say("Hello! My name's Hector. Nice to meet you. Shall we have a coffee?");break;
+    case "exit":clearInterval(timerId);setView("today");break;
+    case "next":S.profile.day=Math.min(59,S.profile.day+1);saveProfile();render();break;
+    case "lvl":{const L=["A1","A2","B1"];S.profile.level=L[(L.indexOf(S.profile.level)+1)%L.length];saveProfile();render();break}
+    case "playall":sayParts((s.data.dialogue||[]).flatMap(l=>splitSpeech(l.en)),800);break;
+    case "check":{const items=(s.data.drill||[]).map((x,i)=>{s.answers[i]=document.getElementById("dr"+i).value.trim();return {ru:x.ru,model:x.en,learner:s.answers[i]||"(empty)"}});
+      t.disabled=true;t.textContent="Проверяю…";try{s.results=await checkDrill(items)}catch(err){s.results={results:items.map(x=>({ok:false,natural:x.model,tip_ru:"Проверка недоступна, сравни с образцом."}))}}render();break}
+    case "finish":finish();break;
+    case "review":startSession("pm");break;
+    case "flip":s.flip=true;render();break;
+    case "begin":partnerTurn();break;
+    case "send":{const v=document.getElementById("say").value.trim();if(!v||s.over)return;s.msgs.push({who:"me",en:v});s.draft="";partnerTurn();break}
+    case "hint":s.showHint=!s.showHint;s.draft=document.getElementById("say").value;render();break;
+    case "ru":s.showRu=!s.showRu;s.draft=document.getElementById("say").value;render();break;
+    case "towrap":s.step=2;toWrap();break;
+    case "bk-save":backupSave();break;
+    case "bk-load":document.getElementById("bk-file").click();break;
+  }
+});
+document.addEventListener("change",e=>{if(e.target.id==="bk-file"&&e.target.files[0]){backupLoad(e.target.files[0]);return}if(e.target.id==="vsel"){S.profile.voice=e.target.value;pickVoice();saveProfile();say("Hello! Nice to meet you.")}});
+try{speechSynthesis.onvoiceschanged=()=>{pickVoice();if(S.view==="today")render()}}catch(e){}
+async function toWrap(){const s=S.sess;s.step=2;render();try{s.wrap=await wrapUp(s.day,s.msgs.filter(m=>!m.en.startsWith("(No answer")))}catch(e){s.wrap={praise_ru:"Разговор сохранён. Разбор сейчас недоступен.",mistakes:[],phrases:[],score:3}}render()}
+
+// ---------- Boot ----------
+async function loadCourse(){try{const r=await fetch("course.json",{cache:"no-cache"});if(r.ok)COURSE=await r.json()}catch(e){}}
+let reloadPending=false;
+function setupSW(){if(IN_CLAUDE||!("serviceWorker" in navigator)||location.protocol!=="https:"&&location.hostname!=="localhost")return;
+  const had=!!navigator.serviceWorker.controller;
+  navigator.serviceWorker.register("sw.js").then(reg=>{
+    document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")reg.update().catch(()=>{})});
+    setInterval(()=>reg.update().catch(()=>{}),30*60*1000)}).catch(()=>{});
+  navigator.serviceWorker.addEventListener("controllerchange",()=>{if(!had)return;if(S.view==="session"){reloadPending=true}else location.reload()})}
+setupSW();
+(async function boot(){
+  await Promise.all([initCaps(),loadAudioIndex(),loadCourse()]);
+  try{
+    const [p,ss,vv,plan]=await Promise.all([store.get("profile/me"),store.list("sessions"),store.list("vocab"),store.get("course/plan")]);
+    if(p)S.profile=Object.assign(S.profile,p);pickVoice();
+    S.sessions=ss||[];S.vocab=vv||[];
+    const pl=plan&&Array.isArray(plan.days)&&plan.days.length?plan:(COURSE&&COURSE.days?COURSE:null);
+    if(pl){pl.days.forEach((x,i)=>{if(PLAN[i])Object.assign(PLAN[i],x)})}
+  }catch(e){}
+  const h=(location.hash||"").slice(1);if(["today","course","words","history"].includes(h))S.view=h;
+  render();
+})();
+})();
+</script>
+
+</html>

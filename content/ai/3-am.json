@@ -1,0 +1,109 @@
+{
+  "dialogue": [
+    {
+      "en": "Hi, Andrei! What time is it?",
+      "ru": "Привет, Андрей! Который час?",
+      "who": "A"
+    },
+    {
+      "en": "It's half past seven.",
+      "ru": "Половина восьмого.",
+      "who": "B"
+    },
+    {
+      "en": "Oh no! My table tennis lesson is at eight.",
+      "ru": "О нет! У меня урок тенниса в восемь.",
+      "who": "A"
+    },
+    {
+      "en": "Don't worry. The club is near.",
+      "ru": "Не волнуйся. Клуб рядом.",
+      "who": "B"
+    },
+    {
+      "en": "Are you free after the lesson?",
+      "ru": "Ты свободен после урока?",
+      "who": "A"
+    },
+    {
+      "en": "Yes. Coffee at quarter past nine?",
+      "ru": "Да. Кофе в четверть десятого?",
+      "who": "B"
+    },
+    {
+      "en": "Perfect! See you at the café.",
+      "ru": "Отлично! Увидимся в кафе.",
+      "who": "A"
+    },
+    {
+      "en": "See you!",
+      "ru": "Увидимся!",
+      "who": "B"
+    }
+  ],
+  "drill": [
+    {
+      "en": "What time is it?",
+      "ru": "Который час?"
+    },
+    {
+      "en": "It's half past six.",
+      "ru": "Половина седьмого."
+    },
+    {
+      "en": "It's quarter to eight.",
+      "ru": "Без пятнадцати восемь."
+    },
+    {
+      "en": "I have an appointment at one o'clock.",
+      "ru": "У меня встреча в час."
+    },
+    {
+      "en": "See you at six!",
+      "ru": "Увидимся в шесть!"
+    }
+  ],
+  "goal_ru": "Сегодня ты научишься спрашивать и говорить время и договариваться, во сколько встречаемся.",
+  "phrases": [
+    {
+      "en": "What time is it?",
+      "note_ru": "",
+      "ru": "Который час?"
+    },
+    {
+      "en": "It's seven o'clock.",
+      "note_ru": "o'clock — только для ровных часов.",
+      "ru": "Семь часов."
+    },
+    {
+      "en": "It's half past six.",
+      "note_ru": "half past six = 6:30, «ха:ф па:ст».",
+      "ru": "Половина седьмого."
+    },
+    {
+      "en": "It's quarter to eight.",
+      "note_ru": "quarter to = без четверти.",
+      "ru": "Без пятнадцати восемь."
+    },
+    {
+      "en": "It's ten past nine.",
+      "note_ru": "past = после.",
+      "ru": "Десять минут десятого."
+    },
+    {
+      "en": "I have an appointment at one o'clock.",
+      "note_ru": "at + время.",
+      "ru": "У меня встреча в час."
+    },
+    {
+      "en": "See you at six!",
+      "note_ru": "",
+      "ru": "Увидимся в шесть!"
+    },
+    {
+      "en": "Sorry, I'm late!",
+      "note_ru": "",
+      "ru": "Извини, я опоздал!"
+    }
+  ]
+}

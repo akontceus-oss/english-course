@@ -1,0 +1,22 @@
+{
+  "scenario": "Free talk with a friendly British friend, Kate, about the learner's week and about dates: birthdays, races, holidays. Recycle unit 1: be, questions, this/that, telling the time, and ordinal numbers with months (on the first of May). Very short A1 sentences.",
+  "setup_ru": "Свободный разговор с Кейт о твоей неделе. Обязательно назови несколько дат: день рождения, забег, праздник.",
+  "useful": [
+    {
+      "en": "When's your birthday?",
+      "ru": "Когда у тебя день рождения?"
+    },
+    {
+      "en": "It's on the first of May.",
+      "ru": "Первого мая."
+    },
+    {
+      "en": "My race is in September.",
+      "ru": "Мой забег в сентябре."
+    },
+    {
+      "en": "What time is it?",
+      "ru": "Который час?"
+    }
+  ]
+}
