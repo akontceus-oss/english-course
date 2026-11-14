@@ -1,62 +1,857 @@
 {
-"35":{"am":{"g":"Сегодня ты расскажешь, что происходит прямо сейчас в поездке: present continuous.",
-"p":[["I'm sitting in a café by the sea.","Я сижу в кафе у моря.","sitting: «СИтин»."],["We're having a great time.","Мы отлично проводим время.","We're: «вие»."],["It's raining at the moment.","Сейчас идёт дождь.","at the moment — сейчас."],["Kristina is taking photos.","Кристина фотографирует.",""],["We're staying in the north of the country.","Мы остановились на севере страны.","north: «но:θ»."],["The town is in the south-west.","Город на юго-западе.","south: «сауθ»."],["What are you doing right now?","Что ты делаешь прямо сейчас?",""],["Fewer tourists come here in winter.","Зимой сюда приезжает меньше туристов.","fewer — меньше (исч.)."]],
-"d":[["A","Hi! Where are you?","Привет! Ты где?"],["B","I'm in Sochi! I'm sitting on the beach.","В Сочи! Сижу на пляже."],["A","Lucky you! What's Kristina doing?","Везёт! А что делает Кристина?"],["B","She's swimming in the sea.","Плавает в море."],["A","Is it hot?","Жарко?"],["B","Not really. It's windy, but it isn't raining.","Не очень. Ветрено, но дождя нет."],["A","Are you running there?","Бегаешь там?"],["B","Yes, I'm running every morning by the sea!","Да, бегаю каждое утро у моря!"]],
-"x":[["Я сижу в кафе у моря.","I'm sitting in a café by the sea."],["Мы отлично проводим время.","We're having a great time."],["Сейчас идёт дождь.","It's raining at the moment."],["Кристина фотографирует.","Kristina is taking photos."],["Что ты делаешь прямо сейчас?","What are you doing right now?"]]},
-"pm":{"s":"Ты в отпуске, и тебе звонит коллега Эндрю. Расскажи, где ты и что сейчас происходит.","u":[["I'm …ing","Я сейчас…"],["We're having…","Мы проводим…"],["It's raining / shining","Идёт дождь / светит"],["in the north / south","на севере / юге"]],
-"c":[["Hi! Are you on holiday? Where are you?","Привет! Ты в отпуске? Где ты?","Скажи, что в Карелии, на севере России.","Yes! I'm in Karelia, in the north of Russia."],
-["Wow! What are you doing right now?","Ого! Что делаешь сейчас?","Скажи, что сидишь у озера и пьёшь чай.","I'm sitting by a lake and drinking tea."],
-["Sounds relaxing! What's the weather like?","Звучит расслабляюще! Какая погода?","Скажи, что светит солнце, но холодно.","The sun is shining, but it's cold."],
-["Where's Kristina?","Где Кристина?","Скажи, что она фотографирует лес.","She's taking photos of the forest."],
-["Are you running there?","Бегаешь там?","Скажи да, каждое утро бегаешь вокруг озера.","Yes, I'm running around the lake every morning."],
-["Are you having a good time?","Хорошо проводите время?","Скажи, что отлично, и что здесь мало туристов.","We're having a great time. There are very few tourists."]],
-"b":"Lucky you! Enjoy your holiday!"}},
-"36":{"am":{"g":"Сегодня ты научишься говорить о погоде и различать «обычно» и «сейчас».",
-"p":[["What's the weather like today?","Какая сегодня погода?",""],["It's freezing!","Очень холодно!","freezing: «ФРИ:зин»."],["It usually snows in December.","Обычно в декабре идёт снег.","usually — present simple."],["It's snowing right now.","Сейчас идёт снег.","right now — present continuous."],["The sun is shining, but it's windy.","Солнце светит, но ветрено.",""],["Breathing fresh air helps during long runs.","Свежий воздух помогает на длинных пробежках.","breathing: «БРИ:зин»."],["What dreadful weather!","Какая ужасная погода!","dreadful: «ДРЭДфл»."],["Arms up!","Руки вверх!","Команда на разминке."]],
-"d":[["A","What's the weather like there?","Какая у вас погода?"],["B","Terrible! It's raining and it's very windy.","Ужасная! Дождь и сильный ветер."],["A","Is it usually like this in November?","В ноябре обычно так?"],["B","Yes, it usually rains a lot.","Да, обычно много дождей."],["A","Are you running today?","Сегодня бегаешь?"],["B","No, I'm staying at home and drinking tea.","Нет, сижу дома и пью чай."],["A","Here it's sunny!","А у нас солнечно!"],["B","Lucky you!","Везёт!"]],
-"x":[["Какая сегодня погода?","What's the weather like today?"],["Очень холодно!","It's freezing!"],["Обычно в декабре идёт снег.","It usually snows in December."],["Сейчас идёт снег.","It's snowing right now."],["Солнце светит, но ветрено.","The sun is shining, but it's windy."]]},
-"pm":{"s":"Подруга из Лондона Грейс звонит по видео. Поговорите о погоде у вас обоих.","u":[["It's raining / snowing.","Идёт дождь / снег."],["It usually…","Обычно…"],["It's freezing!","Очень холодно!"],["What's the weather like?","Какая погода?"]],
-"c":[["Hi! What's the weather like there today?","Привет! Какая у вас сегодня погода?","Скажи, что идёт снег и очень холодно.","It's snowing and it's freezing!"],
-["Brr! How cold is it?","Брр! Насколько холодно?","Скажи: минус десять.","It's minus ten."],
-["Is it usually that cold in November?","В ноябре обычно так холодно?","Скажи, что обычно нет, обычно около нуля.","Not usually. It's usually about zero."],
-["Here it's raining, as always! Are you running in this weather?","У нас дождь, как всегда! Ты бегаешь в такую погоду?","Скажи, что да, но сегодня бежишь в зале.","Yes, but today I'm running in the gym."],
-["Smart! What do you usually wear for winter runs?","Умно! Что обычно надеваешь на зимние пробежки?","Скажи: тёплую куртку, шапку и перчатки.","A warm jacket, a hat and gloves."],
-["What's your favourite season?","Какое твоё любимое время года?","Скажи, что лето, потому что можно бегать у моря.","Summer. I can run by the sea!"]],
-"b":"Me too! Stay warm!"}},
-"37":{"am":{"g":"Сегодня ты научишься сравнивать места и транспорт в превосходной степени: the biggest, the best.",
-"p":[["It's the biggest city in Russia.","Это самый большой город России.","the biggest: «зэ БИгист»."],["What's the best way to get there?","Как туда лучше всего добраться?",""],["The train is the most comfortable.","Поезд — самый удобный.","the most + длинное."],["The plane is the fastest but the most expensive.","Самолёт самый быстрый, но самый дорогой.",""],["It was the worst trip ever!","Это была худшая поездка!","the worst."],["Running in a park feels safe and refreshing.","Бег в парке ощущается безопасным и бодрящим.","refreshing: «риФРЭшин»."],["I bet you're tired.","Спорим, ты устал.","I bet — уверен, что…"],["Each city has its own style.","У каждого города свой стиль.",""]],
-"d":[["A","What's the best way to get to Kazan?","Как лучше доехать до Казани?"],["B","The plane is the fastest.","Самолёт — самый быстрый."],["A","But is it the cheapest?","Но он самый дешёвый?"],["B","No, the bus is the cheapest, but it's the slowest.","Нет, автобус дешевле всего, но самый медленный."],["A","What about the train?","А поезд?"],["B","The train is the most comfortable. I love it.","Поезд — самый удобный. Обожаю его."],["A","What's the most beautiful place there?","Самое красивое место там?"],["B","The Kremlin, I think. I bet you'll love it.","Кремль, думаю. Спорим, тебе понравится."]],
-"x":[["Это самый большой город в России.","It's the biggest city in Russia."],["Как лучше всего туда добраться?","What's the best way to get there?"],["Поезд — самый удобный.","The train is the most comfortable."],["Это была худшая поездка!","It was the worst trip ever!"],["Спорим, ты устал.","I bet you're tired."]]},
-"pm":{"s":"Турист Бен впервые едет в Россию и спрашивает совета: какие города и транспорт лучше.","u":[["the best / the worst","лучший / худший"],["the most beautiful","самый красивый"],["the fastest / the cheapest","самый быстрый / дешёвый"],["I bet…","Спорим…"]],
-"c":[["I'm visiting Russia! What's the most beautiful city?","Я еду в Россию! Какой самый красивый город?","Скажи, что, по-твоему, Санкт-Петербург.","I think Saint Petersburg is the most beautiful."],
-["And what's the biggest?","А самый большой?","Скажи, что Москва — самый большой город.","Moscow is the biggest city."],
-["What's the best way to travel between them?","Как лучше всего ехать между ними?","Скажи, что скоростной поезд — самый удобный.","The fast train is the most comfortable."],
-["Is it the fastest?","Он самый быстрый?","Скажи: почти, самолёт быстрее, но это дольше с аэропортом.","Almost. The plane is faster, but the airport takes a long time."],
-["When's the best time to visit?","Когда лучше всего приезжать?","Скажи, что лучшее время — июнь, белые ночи.","June is the best time. The white nights!"],
-["And the worst time?","А худшее?","Скажи: ноябрь, самый тёмный месяц. Спорим, тебе не понравится.","November. It's the darkest month. I bet you won't like it!"]],
-"b":"Ha! June it is. Thanks!"}},
-"38":{"am":{"g":"Сегодня ты научишься звонить по телефону: представиться, попросить кого-то, оставить сообщение.",
-"p":[["Hello, this is Hector.","Здравствуйте, это Гектор.","По телефону: this is, не I am."],["Can I speak to Mr Brown, please?","Можно поговорить с мистером Брауном?",""],["I'm afraid he's not here.","Боюсь, его нет.","I'm afraid — вежливое «к сожалению»."],["Can I leave a message?","Могу я оставить сообщение?","message: «МЭсидж»."],["Could you ask him to call me back?","Попросите его перезвонить.","call back — перезвонить."],["Sorry, I can't hear you very well.","Извините, плохо слышно.",""],["I'll call you later.","Я перезвоню позже.",""],["Guess what!","Угадай что!","Начало новости."]],
-"d":[["A","Hello, Green Sports Club.","Здравствуйте, спортклуб Green."],["B","Hello, this is Hector. Can I speak to Mark, please?","Здравствуйте, это Гектор. Можно Марка?"],["A","I'm afraid he's not here at the moment.","К сожалению, его сейчас нет."],["B","Can I leave a message?","Можно оставить сообщение?"],["A","Of course.","Конечно."],["B","Could you ask him to call me back?","Попросите его перезвонить."],["A","Sure. What's your number?","Конечно. Ваш номер?"],["B","It's 07700 900 123. Thanks a lot!","07700 900 123. Большое спасибо!"]],
-"x":[["Здравствуйте, это Гектор.","Hello, this is Hector."],["Можно поговорить с Анной?","Can I speak to Anna, please?"],["Могу я оставить сообщение?","Can I leave a message?"],["Попросите его перезвонить мне.","Could you ask him to call me back?"],["Извините, плохо слышно.","Sorry, I can't hear you very well."]]},
-"pm":{"s":"Ты звонишь в клуб настольного тенниса, чтобы записаться на тренировку. Отвечает администратор Кейт.","u":[["This is…","Это…"],["Can I speak to…?","Можно поговорить с…?"],["Can I leave a message?","Могу оставить сообщение?"],["Could you call me back?","Перезвоните, пожалуйста."]],
-"c":[["Hello, City Table Tennis Club. How can I help?","Здравствуйте, клуб настольного тенниса. Чем помочь?","Представься и попроси тренера Тома.","Hello, this is Hector. Can I speak to Tom, the coach?"],
-["I'm afraid he's busy right now. He's training a group.","Боюсь, он занят. Тренирует группу.","Спроси, можно ли оставить сообщение.","Can I leave a message?"],
-["Of course.","Конечно.","Скажи, что хочешь записаться на индивидуальную тренировку.","I'd like to book a private lesson."],
-["Sorry, I can't hear you very well. Could you say that again?","Простите, плохо слышно. Повторите?","Повтори медленнее.","I'd like to book a private lesson with Tom."],
-["Got it. When are you free?","Поняла. Когда вам удобно?","Скажи, что в среду вечером.","On Wednesday evening."],
-["OK. And your phone number?","Хорошо. Ваш номер?","Попроси, чтобы он перезвонил по этому номеру.","Could he call me back on this number, please?"]],
-"b":"Of course. He'll call you this afternoon. Bye!"}},
-"39":{"am":{"g":"Повторяем юнит 8: путешествия, погода, сравнения и телефонные звонки.",
-"p":[["We're having the best holiday ever!","У нас лучший отпуск на свете!",""],["Are you sure it's not raining?","Ты уверен, что дождя нет?",""],["It's the warmest month of the year.","Это самый тёплый месяц года.",""],["Don't be a spoilsport!","Не будь занудой!","spoilsport — тот, кто портит веселье."],["Let's talk about the next race over coffee.","Давай обсудим следующий забег за кофе.","over coffee — за кофе."],["The community is really supportive.","Сообщество очень поддерживает.",""],["I'm calling about the booking.","Я звоню по поводу брони.",""],["My new leather jacket is warmer.","Моя новая кожаная куртка теплее.","leather: «ЛЭзэ»."]],
-"d":[["A","Are you coming to the beach?","Идёшь на пляж?"],["B","It's raining!","Идёт дождь!"],["A","Don't be a spoilsport! It's the warmest rain ever.","Не будь занудой! Это самый тёплый дождь на свете."],["B","Ha! OK. What are the others doing?","Ха! Ладно. А что делают остальные?"],["A","They're playing volleyball.","Играют в волейбол."],["B","In the rain?","Под дождём?"],["A","Sure! It's the best holiday ever.","Конечно! Лучший отпуск на свете."],["B","OK, I'm coming!","Ладно, иду!"]],
-"x":[["Это лучший отпуск на свете!","It's the best holiday ever!"],["Не будь занудой!","Don't be a spoilsport!"],["Давай обсудим следующий забег за кофе.","Let's talk about the next race over coffee."],["Я звоню по поводу брони.","I'm calling about the booking."],["Это самый тёплый месяц года.","It's the warmest month of the year."]]},
-"pm":{"s":"Итоги недели с приятелем Дэном: поездки, погода, лучшие места и звонки.","u":[["I'm …ing at the moment.","Сейчас я…"],["the best / the most…","самый…"],["It usually…","Обычно…"],["Don't be a spoilsport!","Не будь занудой!"]],
-"c":[["Hi! What are you doing at the moment?","Привет! Чем занимаешься сейчас?","Скажи, что планируешь поездку на весну.","I'm planning a trip for the spring."],
-["Cool! Where to?","Круто! Куда?","Скажи: в Грузию, ты слышал, что это лучшая еда.","To Georgia. I hear the food is the best!"],
-["What's the weather like there in spring?","Какая там погода весной?","Скажи, что обычно тепло и солнечно.","It's usually warm and sunny."],
-["Are you running a race there?","Будешь бежать там забег?","Скажи да, полумарафон в Тбилиси.","Yes, a half marathon in Tbilisi."],
-["Wow. I don't want to run. I want to eat!","Ого. Я бегать не хочу. Я хочу есть!","Пошути: не будь занудой, бег — это весело!","Don't be a spoilsport! Running is fun!"],
-["Ha! OK, let's talk about it over coffee.","Ха! Ладно, обсудим за кофе.","Согласись и предложи субботу.","Great! How about Saturday?"]],
-"b":"Saturday works. See you!"}}
+"35": {
+"am": {
+"g": "Сегодня ты расскажешь, что происходит прямо сейчас в поездке: present continuous.",
+"p": [
+[
+"I'm sitting in a café by the sea.",
+"Я сижу в кафе у моря.",
+"sitting: «СИтин»."
+],
+[
+"We're having a great time.",
+"Мы отлично проводим время.",
+"We're: «уиэ»."
+],
+[
+"It's raining at the moment.",
+"Сейчас идёт дождь.",
+"at the moment — сейчас."
+],
+[
+"Vlad is taking photos.",
+"Влад фотографирует.",
+""
+],
+[
+"We're staying in the north of the country.",
+"Мы остановились на севере страны.",
+"north: «но:θ»."
+],
+[
+"The town is in the south-west.",
+"Город на юго-западе.",
+"south: «сауθ»."
+],
+[
+"What are you doing right now?",
+"Что ты делаешь прямо сейчас?",
+""
+],
+[
+"Fewer tourists come here in winter.",
+"Зимой сюда приезжает меньше туристов.",
+"fewer — меньше (исч.)."
+]
+],
+"d": [
+[
+"A",
+"Hi! Where are you?",
+"Привет! Ты где?"
+],
+[
+"B",
+"I'm in Tbilisi! I'm sitting in a café.",
+"В Тбилиси! Сижу в кафе."
+],
+[
+"A",
+"Lucky you! What's Vlad doing?",
+"Везёт! А что делает Влад?"
+],
+[
+"B",
+"He's walking around the Old Town.",
+"Гуляет по Старому городу."
+],
+[
+"A",
+"Is it hot?",
+"Жарко?"
+],
+[
+"B",
+"Not really. It's windy, but it isn't raining.",
+"Не очень. Ветрено, но дождя нет."
+],
+[
+"A",
+"Are you working there?",
+"Работаешь там?"
+],
+[
+"B",
+"Yes, I'm working from cafés every day!",
+"Да, каждый день работаю из кафе!"
+]
+],
+"x": [
+[
+"Я сижу в кафе у моря.",
+"I'm sitting in a café by the sea."
+],
+[
+"Мы отлично проводим время.",
+"We're having a great time."
+],
+[
+"Сейчас идёт дождь.",
+"It's raining at the moment."
+],
+[
+"Влад фотографирует.",
+"Vlad is taking photos."
+],
+[
+"Что ты делаешь прямо сейчас?",
+"What are you doing right now?"
+]
+]
+},
+"pm": {
+"s": "Ты в Тбилиси, и тебе звонит коллега из Crazy Drift. Расскажи, где ты и что сейчас происходит.",
+"u": [
+[
+"I'm …ing",
+"Я сейчас…"
+],
+[
+"We're having…",
+"Мы проводим…"
+],
+[
+"It's raining / shining",
+"Идёт дождь / светит"
+],
+[
+"in the north / south",
+"на севере / юге"
+]
+],
+"c": [
+[
+"Hi! Are you travelling? Where are you?",
+"Привет! Ты в поездке? Где ты?",
+"Скажи, что в Тбилиси, на десять дней.",
+"Yes! I'm in Tbilisi for ten days."
+],
+[
+"Wow! What are you doing right now?",
+"Ого! Что делаешь сейчас?",
+"Скажи, что сидишь в кафе и пьёшь зелёный чай.",
+"I'm sitting in a café and drinking green tea."
+],
+[
+"Sounds relaxing! What's the weather like?",
+"Звучит расслабляюще! Какая погода?",
+"Скажи, что светит солнце, но холодно.",
+"The sun is shining, but it's cold."
+],
+[
+"Are you alone?",
+"Ты один?",
+"Скажи, что нет, с другом Владом, он сейчас фотографирует город.",
+"No, I'm with my friend Vlad. He's taking photos of the city."
+],
+[
+"Are you working there?",
+"Работаешь там?",
+"Скажи да, работаешь из кафе каждый день.",
+"Yes, I'm working from cafés every day."
+],
+[
+"Are you having a good time?",
+"Хорошо проводите время?",
+"Скажи, что отлично, и что здесь очень вкусная еда.",
+"We're having a great time. The food is amazing."
+]
+],
+"b": "Lucky you! Enjoy your holiday!"
+}
+},
+"36": {
+"am": {
+"g": "Сегодня ты научишься говорить о погоде и различать «обычно» и «сейчас».",
+"p": [
+[
+"What's the weather like today?",
+"Какая сегодня погода?",
+""
+],
+[
+"It's freezing!",
+"Очень холодно!",
+"freezing: «ФРИ:зин»."
+],
+[
+"It usually snows in December.",
+"Обычно в декабре идёт снег.",
+"usually — present simple."
+],
+[
+"It's snowing right now.",
+"Сейчас идёт снег.",
+"right now — present continuous."
+],
+[
+"The sun is shining, but it's windy.",
+"Солнце светит, но ветрено.",
+""
+],
+[
+"Breathing fresh air helps during long runs.",
+"Свежий воздух помогает на длинных пробежках.",
+"breathing: «БРИ:зин»."
+],
+[
+"What dreadful weather!",
+"Какая ужасная погода!",
+"dreadful: «ДРЭДфл»."
+],
+[
+"Arms up!",
+"Руки вверх!",
+"Команда на разминке."
+]
+],
+"d": [
+[
+"A",
+"What's the weather like there?",
+"Какая у вас погода?"
+],
+[
+"B",
+"Terrible! It's raining and it's very windy.",
+"Ужасная! Дождь и сильный ветер."
+],
+[
+"A",
+"Is it usually like this in November?",
+"В ноябре обычно так?"
+],
+[
+"B",
+"Yes, it usually rains a lot.",
+"Да, обычно много дождей."
+],
+[
+"A",
+"Are you running today?",
+"Сегодня бегаешь?"
+],
+[
+"B",
+"No, I'm staying at home and drinking tea.",
+"Нет, сижу дома и пью чай."
+],
+[
+"A",
+"Here it's sunny!",
+"А у нас солнечно!"
+],
+[
+"B",
+"Lucky you!",
+"Везёт!"
+]
+],
+"x": [
+[
+"Какая сегодня погода?",
+"What's the weather like today?"
+],
+[
+"Очень холодно!",
+"It's freezing!"
+],
+[
+"Обычно в декабре идёт снег.",
+"It usually snows in December."
+],
+[
+"Сейчас идёт снег.",
+"It's snowing right now."
+],
+[
+"Солнце светит, но ветрено.",
+"The sun is shining, but it's windy."
+]
+]
+},
+"pm": {
+"s": "Подруга из Лондона Грейс звонит по видео. Поговорите о погоде у вас обоих.",
+"u": [
+[
+"It's raining / snowing.",
+"Идёт дождь / снег."
+],
+[
+"It usually…",
+"Обычно…"
+],
+[
+"It's freezing!",
+"Очень холодно!"
+],
+[
+"What's the weather like?",
+"Какая погода?"
+]
+],
+"c": [
+[
+"Hi! What's the weather like there today?",
+"Привет! Какая у вас сегодня погода?",
+"Скажи, что в Тбилиси идёт дождь и холодно.",
+"It's raining and it's cold!"
+],
+[
+"Brr! How cold is it?",
+"Брр! Насколько холодно?",
+"Скажи: плюс пять.",
+"It's five degrees."
+],
+[
+"Is it usually that cold in November?",
+"В ноябре обычно так холодно?",
+"Скажи, что обычно нет, обычно теплее.",
+"Not usually. It's usually warmer."
+],
+[
+"Here it's raining too! Do you go out in this weather?",
+"У нас тоже дождь! Ты выходишь в такую погоду?",
+"Скажи, что да, но сегодня работаешь в кафе.",
+"Yes, but today I'm working in a café."
+],
+[
+"Smart! What do you usually wear in winter?",
+"Умно! Что обычно надеваешь зимой?",
+"Скажи: тёплую куртку, шапку и перчатки.",
+"A warm jacket, a hat and gloves."
+],
+[
+"What's your favourite season?",
+"Какое твоё любимое время года?",
+"Скажи, что лето, потому что в Дилижане очень красиво.",
+"Summer. Dilijan is beautiful in summer!"
+]
+],
+"b": "Me too! Stay warm!"
+}
+},
+"37": {
+"am": {
+"g": "Сегодня ты научишься сравнивать места и транспорт в превосходной степени: the biggest, the best.",
+"p": [
+[
+"It's the biggest city in Georgia.",
+"Это самый большой город Грузии.",
+"the biggest: «зэ БИгист»."
+],
+[
+"What's the best way to get there?",
+"Как туда лучше всего добраться?",
+""
+],
+[
+"The train is the most comfortable.",
+"Поезд — самый удобный.",
+"the most + длинное."
+],
+[
+"The plane is the fastest but the most expensive.",
+"Самолёт самый быстрый, но самый дорогой.",
+""
+],
+[
+"It was the worst trip ever!",
+"Это была худшая поездка!",
+"the worst."
+],
+[
+"Running in a park feels safe and refreshing.",
+"Бег в парке ощущается безопасным и бодрящим.",
+"refreshing: «риФРЭшин»."
+],
+[
+"I bet you're tired.",
+"Спорим, ты устал.",
+"I bet — уверен, что…"
+],
+[
+"Each city has its own style.",
+"У каждого города свой стиль.",
+""
+]
+],
+"d": [
+[
+"A",
+"What's the best way to get to Batumi?",
+"Как лучше доехать до Батуми?"
+],
+[
+"B",
+"The plane is the fastest.",
+"Самолёт — самый быстрый."
+],
+[
+"A",
+"But is it the cheapest?",
+"Но он самый дешёвый?"
+],
+[
+"B",
+"No, the bus is the cheapest, but it's the slowest.",
+"Нет, автобус дешевле всего, но самый медленный."
+],
+[
+"A",
+"What about the train?",
+"А поезд?"
+],
+[
+"B",
+"The train is the most comfortable. I love it.",
+"Поезд — самый удобный. Обожаю его."
+],
+[
+"A",
+"What's the most beautiful place there?",
+"Самое красивое место там?"
+],
+[
+"B",
+"The seaside, I think. I bet you'll love it.",
+"Набережная, думаю. Спорим, тебе понравится."
+]
+],
+"x": [
+[
+"Это самый большой город в Грузии.",
+"It's the biggest city in Georgia."
+],
+[
+"Как лучше всего туда добраться?",
+"What's the best way to get there?"
+],
+[
+"Поезд — самый удобный.",
+"The train is the most comfortable."
+],
+[
+"Это была худшая поездка!",
+"It was the worst trip ever!"
+],
+[
+"Спорим, ты устал.",
+"I bet you're tired."
+]
+]
+},
+"pm": {
+"s": "Турист Бен впервые едет в Армению и спрашивает совета: какие города и транспорт лучше.",
+"u": [
+[
+"the best / the worst",
+"лучший / худший"
+],
+[
+"the most beautiful",
+"самый красивый"
+],
+[
+"the fastest / the cheapest",
+"самый быстрый / дешёвый"
+],
+[
+"I bet…",
+"Спорим…"
+]
+],
+"c": [
+[
+"I'm visiting Armenia! What's the most beautiful place?",
+"Я еду в Армению! Какое самое красивое место?",
+"Скажи, что, по-твоему, Дилижан.",
+"I think Dilijan is the most beautiful."
+],
+[
+"And what's the biggest?",
+"А самый большой?",
+"Скажи, что Ереван — самый большой город.",
+"Yerevan is the biggest city."
+],
+[
+"What's the best way to travel between them?",
+"Как лучше всего ехать между ними?",
+"Скажи, что такси — самое удобное.",
+"A taxi is the most comfortable."
+],
+[
+"Is it the fastest?",
+"Он самый быстрый?",
+"Скажи: да, и не самое дорогое.",
+"Yes, and it isn't the most expensive."
+],
+[
+"When's the best time to visit?",
+"Когда лучше всего приезжать?",
+"Скажи, что лучшее время — осень, когда в горах всё жёлтое.",
+"Autumn is the best time. The mountains are yellow and red!"
+],
+[
+"And the worst time?",
+"А худшее?",
+"Скажи: январь, самый холодный месяц. Спорим, тебе не понравится.",
+"January. It's the coldest month. I bet you won't like it!"
+]
+],
+"b": "Ha! Autumn it is. Thanks!"
+}
+},
+"38": {
+"am": {
+"g": "Сегодня ты научишься звонить по телефону: представиться, попросить кого-то, оставить сообщение.",
+"p": [
+[
+"Hello, this is Andrew.",
+"Здравствуйте, это Андрей.",
+"По телефону: this is, не I am."
+],
+[
+"Can I speak to Mr Brown, please?",
+"Можно поговорить с мистером Брауном?",
+""
+],
+[
+"I'm afraid he's not here.",
+"Боюсь, его нет.",
+"I'm afraid — вежливое «к сожалению»."
+],
+[
+"Can I leave a message?",
+"Могу я оставить сообщение?",
+"message: «МЭсидж»."
+],
+[
+"Could you ask him to call me back?",
+"Попросите его перезвонить.",
+"call back — перезвонить."
+],
+[
+"Sorry, I can't hear you very well.",
+"Извините, плохо слышно.",
+""
+],
+[
+"I'll call you later.",
+"Я перезвоню позже.",
+""
+],
+[
+"Guess what!",
+"Угадай что!",
+"Начало новости."
+]
+],
+"d": [
+[
+"A",
+"Hello, Green Sports Club.",
+"Здравствуйте, спортклуб Green."
+],
+[
+"B",
+"Hello, this is Andrew. Can I speak to Mark, please?",
+"Здравствуйте, это Андрей. Можно Марка?"
+],
+[
+"A",
+"I'm afraid he's not here at the moment.",
+"К сожалению, его сейчас нет."
+],
+[
+"B",
+"Can I leave a message?",
+"Можно оставить сообщение?"
+],
+[
+"A",
+"Of course.",
+"Конечно."
+],
+[
+"B",
+"Could you ask him to call me back?",
+"Попросите его перезвонить."
+],
+[
+"A",
+"Sure. What's your number?",
+"Конечно. Ваш номер?"
+],
+[
+"B",
+"It's 07700 900 123. Thanks a lot!",
+"07700 900 123. Большое спасибо!"
+]
+],
+"x": [
+[
+"Здравствуйте, это Андрей.",
+"Hello, this is Andrew."
+],
+[
+"Можно поговорить с Анной?",
+"Can I speak to Anna, please?"
+],
+[
+"Могу я оставить сообщение?",
+"Can I leave a message?"
+],
+[
+"Попросите его перезвонить мне.",
+"Could you ask him to call me back?"
+],
+[
+"Извините, плохо слышно.",
+"Sorry, I can't hear you very well."
+]
+]
+},
+"pm": {
+"s": "Ты звонишь в клуб настольного тенниса в Тбилиси, чтобы записаться на тренировку. Отвечает администратор Кейт.",
+"u": [
+[
+"This is…",
+"Это…"
+],
+[
+"Can I speak to…?",
+"Можно поговорить с…?"
+],
+[
+"Can I leave a message?",
+"Могу оставить сообщение?"
+],
+[
+"Could you call me back?",
+"Перезвоните, пожалуйста."
+]
+],
+"c": [
+[
+"Hello, City Table Tennis Club. How can I help?",
+"Здравствуйте, клуб настольного тенниса. Чем помочь?",
+"Представься и попроси тренера Тома.",
+"Hello, this is Andrew. Can I speak to Tom, the coach?"
+],
+[
+"I'm afraid he's busy right now. He's training a group.",
+"Боюсь, он занят. Тренирует группу.",
+"Спроси, можно ли оставить сообщение.",
+"Can I leave a message?"
+],
+[
+"Of course.",
+"Конечно.",
+"Скажи, что хочешь записаться на индивидуальную тренировку.",
+"I'd like to book a private lesson."
+],
+[
+"Sorry, I can't hear you very well. Could you say that again?",
+"Простите, плохо слышно. Повторите?",
+"Повтори медленнее.",
+"I'd like to book a private lesson with Tom."
+],
+[
+"Got it. When are you free?",
+"Поняла. Когда вам удобно?",
+"Скажи, что в среду вечером.",
+"On Wednesday evening."
+],
+[
+"OK. And your phone number?",
+"Хорошо. Ваш номер?",
+"Попроси, чтобы он перезвонил по этому номеру.",
+"Could he call me back on this number, please?"
+]
+],
+"b": "Of course. He'll call you this afternoon. Bye!"
+}
+},
+"39": {
+"am": {
+"g": "Повторяем юнит 8: путешествия, погода, сравнения и телефонные звонки.",
+"p": [
+[
+"We're having the best holiday ever!",
+"У нас лучший отпуск на свете!",
+""
+],
+[
+"Are you sure it's not raining?",
+"Ты уверен, что дождя нет?",
+""
+],
+[
+"It's the warmest month of the year.",
+"Это самый тёплый месяц года.",
+""
+],
+[
+"Don't be a spoilsport!",
+"Не будь занудой!",
+"spoilsport — тот, кто портит веселье."
+],
+[
+"Let's talk about the next race over coffee.",
+"Давай обсудим следующий забег за кофе.",
+"over coffee — за кофе."
+],
+[
+"The community is really supportive.",
+"Сообщество очень поддерживает.",
+""
+],
+[
+"I'm calling about the booking.",
+"Я звоню по поводу брони.",
+""
+],
+[
+"My new leather jacket is warmer.",
+"Моя новая кожаная куртка теплее.",
+"leather: «ЛЭðэ»."
+]
+],
+"d": [
+[
+"A",
+"Are you coming to the beach?",
+"Идёшь на пляж?"
+],
+[
+"B",
+"It's raining!",
+"Идёт дождь!"
+],
+[
+"A",
+"Don't be a spoilsport! It's the warmest rain ever.",
+"Не будь занудой! Это самый тёплый дождь на свете."
+],
+[
+"B",
+"Ha! OK. What are the others doing?",
+"Ха! Ладно. А что делают остальные?"
+],
+[
+"A",
+"They're playing volleyball.",
+"Играют в волейбол."
+],
+[
+"B",
+"In the rain?",
+"Под дождём?"
+],
+[
+"A",
+"Sure! It's the best holiday ever.",
+"Конечно! Лучший отпуск на свете."
+],
+[
+"B",
+"OK, I'm coming!",
+"Ладно, иду!"
+]
+],
+"x": [
+[
+"Это лучший отпуск на свете!",
+"It's the best holiday ever!"
+],
+[
+"Не будь занудой!",
+"Don't be a spoilsport!"
+],
+[
+"Давай обсудим следующий забег за кофе.",
+"Let's talk about the next race over coffee."
+],
+[
+"Я звоню по поводу брони.",
+"I'm calling about the booking."
+],
+[
+"Это самый тёплый месяц года.",
+"It's the warmest month of the year."
+]
+]
+},
+"pm": {
+"s": "Итоги недели с товарищем Матвеем: поездки, погода, лучшие места и звонки.",
+"u": [
+[
+"I'm …ing at the moment.",
+"Сейчас я…"
+],
+[
+"the best / the most…",
+"самый…"
+],
+[
+"It usually…",
+"Обычно…"
+],
+[
+"Don't be a spoilsport!",
+"Не будь занудой!"
+]
+],
+"c": [
+[
+"Hi! What are you doing at the moment?",
+"Привет! Чем занимаешься сейчас?",
+"Скажи, что планируешь поездку на весну.",
+"I'm planning a trip for the spring."
+],
+[
+"Cool! Where to?",
+"Круто! Куда?",
+"Скажи: в Грузию, там лучшая еда.",
+"To Georgia. The food is the best!"
+],
+[
+"What's the weather like there in spring?",
+"Какая там погода весной?",
+"Скажи, что обычно тепло и солнечно.",
+"It's usually warm and sunny."
+],
+[
+"Are you playing table tennis there?",
+"Будешь там играть в настольный теннис?",
+"Скажи да, ты нашёл клуб в Тбилиси.",
+"Yes, I've found a club in Tbilisi."
+],
+[
+"Wow. I don't want to play. I want to eat!",
+"Ого. Я играть не хочу. Я хочу есть!",
+"Пошути: не будь занудой, настольный теннис — это весело!",
+"Don't be a spoilsport! Table tennis is fun!"
+],
+[
+"Ha! OK, let's talk about it over coffee.",
+"Ха! Ладно, обсудим за кофе.",
+"Согласись и предложи субботу.",
+"Great! How about Saturday?"
+]
+],
+"b": "Saturday works. See you!"
+}
+}
 }

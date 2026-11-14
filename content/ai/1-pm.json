@@ -1,6 +1,6 @@
 {
   "scenario": "You are Tom, a friendly British coach at a running club in Moscow. You meet the learner for the first time after a morning run. Ask simple questions with be and question words (What's your name? Where are you from? What do you do? Are you…?). Answer the learner's questions about you too. Use very short A1 sentences.",
-  "setup_ru": "Ты на пробежке познакомился с британцем Томом. Ответь на его вопросы о себе и задай ему свои: как зовут, откуда, кем работает.",
+  "setup_ru": "В парке в Тбилиси ты познакомился с британцем Томом. Ответь на его вопросы о себе и задай ему свои: как зовут, откуда, кем работает.",
   "useful": [
     {
       "en": "What's your name?",

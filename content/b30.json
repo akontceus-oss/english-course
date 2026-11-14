@@ -1,62 +1,857 @@
 {
-"30":{"am":{"g":"Сегодня ты научишься говорить о продуктах: исчисляемые и неисчисляемые, some, any, a lot of.",
-"p":[["We need some eggs and some milk.","Нам нужно немного яиц и молока.","some: слабое «сэм»."],["Is there any bread?","Есть хлеб?","any — в вопросах."],["There isn't any cheese.","Сыра нет.",""],["I eat a lot of fruit.","Я ем много фруктов.","fruit: «фру:т»."],["I don't drink much coffee.","Я пью не очень много кофе.","much — с неисчисляемыми."],["Are my eggs ready?","Мои яйца готовы?",""],["After a run, I need lots of water.","После пробежки мне нужно много воды.",""],["Stand by for dinner!","Ужин скоро будет, ждите!","stand by — оставайтесь наготове."]],
-"d":[["A","What do we need from the shop?","Что купить в магазине?"],["B","Some eggs, some bananas and some rice.","Яйца, бананы и рис."],["A","Is there any milk?","Молоко есть?"],["B","No, there isn't any.","Нет, нету."],["A","Do we need any meat?","Мясо нужно?"],["B","Yes, some chicken. I need a lot of protein!","Да, курицу. Мне нужно много белка!"],["A","What about coffee?","А кофе?"],["B","We've got a lot of coffee. Don't buy any!","Кофе много. Не покупай!"]],
-"x":[["Нам нужно немного яиц и молока.","We need some eggs and some milk."],["Есть хлеб?","Is there any bread?"],["Сыра нет.","There isn't any cheese."],["Я ем много фруктов.","I eat a lot of fruit."],["Я пью не очень много кофе.","I don't drink much coffee."]]},
-"pm":{"s":"Вы с Кристиной составляете список покупок на неделю. Её роль играет партнёр.","u":[["We need some…","Нам нужно немного…"],["Is there any…?","Есть ли…?"],["There isn't any…","Нет…"],["a lot of…","много…"]],
-"c":[["OK, shopping list! What do we need for breakfast?","Так, список покупок! Что нужно на завтрак?","Скажи, что нужны яйца и хлеб.","We need some eggs and some bread."],
-["Is there any milk in the fridge?","В холодильнике есть молоко?","Скажи, что молока нет.","No, there isn't any milk."],
-["And for dinner?","А на ужин?","Предложи курицу и рис.","Some chicken and some rice."],
-["Do we need any fruit?","Фрукты нужны?","Скажи, что нужно много бананов для твоих пробежек.","Yes, a lot of bananas for my runs."],
-["What about coffee?","А кофе?","Скажи, что кофе много, не нужно.","We've got a lot of coffee. We don't need any."],
-["Anything sweet?","Что-нибудь сладкое?","Предложи немного тёмного шоколада.","Some dark chocolate, please!"]],
-"b":"Perfect. I'll go to the shop now!"}},
-"31":{"am":{"g":"Сегодня ты научишься спрашивать о количестве: how much / how many, и упаковкам: a bottle of, a packet of.",
-"p":[["How much water do you drink?","Сколько воды ты пьёшь?","much — для неисчисляемых."],["How many eggs do we need?","Сколько яиц нужно?","many — для исчисляемых."],["A bottle of water, please.","Бутылку воды, пожалуйста.","bottle: t мягкое «ботл»."],["A packet of pasta and a tin of tomatoes.","Пачку пасты и банку томатов.","tin — консервная банка."],["Not many, just two.","Не много, всего два.",""],["Too much sugar isn't good.","Слишком много сахара вредно.",""],["Are you sure?","Ты уверен?",""],["I'm exhausted after the run.","Я выжат после пробежки.","exhausted: «игЗО:стид»."]],
-"d":[["A","Let's make pancakes! How many eggs do we need?","Давай сделаем блины! Сколько яиц?"],["B","Three eggs and a carton of milk.","Три яйца и пакет молока."],["A","How much flour?","Сколько муки?"],["B","About two cups.","Около двух стаканов."],["A","How much sugar?","Сколько сахара?"],["B","Not much. One spoon.","Немного. Одну ложку."],["A","Are you sure? I like them sweet!","Уверен? Я люблю сладкие!"],["B","Then add some honey on top.","Тогда добавь мёд сверху."]],
-"x":[["Сколько воды ты пьёшь?","How much water do you drink?"],["Сколько яиц нам нужно?","How many eggs do we need?"],["Бутылку воды, пожалуйста.","A bottle of water, please."],["Пачку пасты и банку томатов.","A packet of pasta and a tin of tomatoes."],["Ты уверен?","Are you sure?"]]},
-"pm":{"s":"Друг Лиам готовит ужин и спрашивает рецепт твоего любимого блюда. Объясни, что и сколько нужно.","u":[["How much…?","Сколько (неисч.)…?"],["How many…?","Сколько (исч.)…?"],["a packet / a bottle / a tin of…","пачка / бутылка / банка…"],["Not much / not many","Немного"]],
-"c":[["What's your favourite dish to cook?","Какое твоё любимое блюдо?","Скажи, что паста с курицей.","Pasta with chicken."],
-["Yum! How much pasta do I need?","Вкусно! Сколько пасты нужно?","Скажи: одна пачка на двоих.","One packet for two people."],
-["How many tomatoes?","Сколько помидоров?","Скажи, что банку томатов или четыре свежих.","A tin of tomatoes or four fresh ones."],
-["How much chicken?","Сколько курицы?","Скажи: около трёхсот грамм.","About three hundred grams."],
-["Do I need a lot of cheese?","Много сыра нужно?","Скажи, что нет, немного.","No, not much. Just a little."],
-["Are you sure it's easy?","Ты уверен, что это просто?","Скажи да, 20 минут, и это отлично после пробежки.","Yes! Twenty minutes. It's perfect after a run."]],
-"b":"Great, I'm cooking it tonight!"}},
-"32":{"am":{"g":"Сегодня ты научишься сравнивать места: bigger, cheaper, more comfortable than.",
-"p":[["This café is cheaper than that one.","Это кафе дешевле, чем то.","than: слабое «зэн»."],["It's bigger and brighter.","Оно больше и светлее.",""],["The coffee here is better.","Кофе здесь лучше.","good → better."],["The service is worse.","Обслуживание хуже.","bad → worse."],["It's more comfortable than my office.","Здесь удобнее, чем в моём офисе.","more + длинное прилагательное."],["The café offers a different menu on weekdays.","В будни в кафе другое меню.",""],["I miss our old café.","Я скучаю по нашему старому кафе.","miss — скучать."],["I hardly ever eat fast food.","Я почти никогда не ем фастфуд.","hardly ever — почти никогда."]],
-"d":[["A","Which café is better, Coffee Point or Bean Bar?","Какое кафе лучше: Coffee Point или Bean Bar?"],["B","Bean Bar is cheaper, but Coffee Point is nicer.","Bean Bar дешевле, но Coffee Point приятнее."],["A","Which one is quieter?","Где тише?"],["B","Coffee Point. It's more comfortable for work.","В Coffee Point. Там удобнее работать."],["A","What about the coffee?","А кофе?"],["B","The coffee is better at Bean Bar.","Кофе лучше в Bean Bar."],["A","Hmm. And the food?","Хм. А еда?"],["B","Worse! I hardly ever eat there.","Хуже! Я там почти не ем."]],
-"x":[["Это кафе дешевле, чем то.","This café is cheaper than that one."],["Кофе здесь лучше.","The coffee here is better."],["Здесь удобнее, чем в моём офисе.","It's more comfortable than my office."],["Я скучаю по нашему старому кафе.","I miss our old café."],["Я почти никогда не ем фастфуд.","I hardly ever eat fast food."]]},
-"pm":{"s":"Коллега Тина выбирает кафе для встречи команды. Сравни два кафе рядом с офисом.","u":[["cheaper than","дешевле, чем"],["better / worse","лучше / хуже"],["more comfortable","удобнее"],["I prefer…","Я предпочитаю…"]],
-"c":[["Which café is better for our meeting, Luna or Forest?","Какое кафе лучше для встречи: Luna или Forest?","Скажи, что Forest больше.","Forest is bigger."],
-["Is it more expensive?","Оно дороже?","Скажи, что да, Luna дешевле.","Yes, a little. Luna is cheaper."],
-["Which one is quieter?","Где тише?","Скажи, что в Forest тише и удобнее.","Forest is quieter and more comfortable."],
-["What about the coffee?","А кофе?","Скажи, что в Luna кофе лучше.","The coffee is better at Luna."],
-["Hmm. And the food?","Хм. А еда?","Скажи, что в Forest еда лучше, у них другое меню в будни.","The food is better at Forest. They have a different menu on weekdays."],
-["So, which one do you prefer?","Так какое ты выбираешь?","Скажи, что предпочитаешь Forest для встречи.","I prefer Forest for the meeting."]],
-"b":"Great, I'll book Forest for Thursday."}},
-"33":{"am":{"g":"Сегодня ты научишься заказывать в кафе: напитки, еду, с собой или здесь.",
-"p":[["Can I have a flat white, please?","Можно флэт уайт, пожалуйста?","Can I have — самый частый способ заказать."],["I'd like a croissant, please.","Я бы хотел круассан.","I'd like: «айд лайк»."],["Eat in or take away?","Здесь или с собой?",""],["To take away, please.","С собой, пожалуйста.",""],["Could I have oat milk?","Можно на овсяном молоке?","oat: «оут»."],["Let's take a break and drink some coffee.","Давай сделаем перерыв и выпьем кофе.",""],["Be my guest.","Пожалуйста, угощайся / прошу.","Разрешение или приглашение."],["The service here is always friendly.","Обслуживание здесь всегда дружелюбное.",""]],
-"d":[["A","Hi! What can I get you?","Здравствуйте! Что вам?"],["B","Can I have a large cappuccino, please?","Большой капучино, пожалуйста."],["A","Sure. Anything to eat?","Конечно. Что-нибудь поесть?"],["B","Yes, I'd like a cheese sandwich.","Да, сэндвич с сыром."],["A","Eat in or take away?","Здесь или с собой?"],["B","Eat in, please. Could I have oat milk?","Здесь. Можно на овсяном молоке?"],["A","No problem. That's seven pounds fifty.","Без проблем. Семь пятьдесят."],["B","Here you are. Thanks!","Вот, спасибо!"]],
-"x":[["Можно флэт уайт, пожалуйста?","Can I have a flat white, please?"],["Я бы хотел круассан.","I'd like a croissant, please."],["С собой, пожалуйста.","To take away, please."],["Можно на овсяном молоке?","Could I have oat milk?"],["Давай сделаем перерыв и выпьем кофе.","Let's take a break and drink some coffee."]]},
-"pm":{"s":"Ты в кафе в Лондоне. Бариста Джо принимает заказ для тебя и Кристины.","u":[["Can I have…?","Можно мне…?"],["I'd like…","Я бы хотел…"],["Eat in, please.","Здесь, пожалуйста."],["Could I have…?","Можно…?"]],
-"c":[["Hi there! What can I get you?","Здравствуйте! Что вам?","Закажи два капучино.","Can I have two cappuccinos, please?"],
-["Sure. Large or small?","Конечно. Большие или маленькие?","Скажи: один большой, один маленький.","One large and one small, please."],
-["Anything else?","Что-нибудь ещё?","Закажи круассан и кусок морковного торта.","I'd like a croissant and a piece of carrot cake."],
-["Eat in or take away?","Здесь или с собой?","Скажи, что здесь.","Eat in, please."],
-["Any milk preference?","Какое молоко?","Попроси овсяное молоко для маленького.","Could I have oat milk in the small one?"],
-["No problem. That's twelve pounds.","Без проблем. Двенадцать фунтов.","Спроси, можно ли картой.","Can I pay by card?"]],
-"b":"Of course. I'll bring it to your table!"}},
-"34":{"am":{"g":"Повторяем юнит 7: продукты, количество, сравнение и заказ в кафе.",
-"p":[["How many times a week do you run?","Сколько раз в неделю ты бегаешь?",""],["Twice a week.","Дважды в неделю.","twice: «твайс»."],["This place is nicer than the old one.","Это место приятнее старого.",""],["There isn't much time.","Времени немного.",""],["Can I have some water, please?","Можно воды?",""],["That's not fair!","Это нечестно!","fair: «фээ»."],["Worse still, it started to rain.","Хуже того, пошёл дождь.","worse still — хуже того."],["The best part was dessert.","Лучшей частью был десерт.",""]],
-"d":[["A","Do you eat out a lot?","Ты часто ешь вне дома?"],["B","About twice a week.","Где-то дважды в неделю."],["A","Where's better, the new place or the old one?","Где лучше: новое место или старое?"],["B","The new one is nicer, but more expensive.","Новое приятнее, но дороже."],["A","What did you order last time?","Что заказывал в прошлый раз?"],["B","Fish and a lot of vegetables. Worse still, no dessert!","Рыбу и много овощей. Хуже того, без десерта!"],["A","That's not fair!","Нечестно!"],["B","I know! Next time I'll have two desserts.","Знаю! В следующий раз возьму два."]],
-"x":[["Сколько раз в неделю ты бегаешь?","How many times a week do you run?"],["Дважды в неделю.","Twice a week."],["Это место приятнее старого.","This place is nicer than the old one."],["Это нечестно!","That's not fair!"],["Хуже того, пошёл дождь.","Worse still, it started to rain."]]},
-"pm":{"s":"Итоги недели с подругой Мией: еда, любимые места, что ты заказывал.","u":[["How much / how many…?","Сколько…?"],["…than…","…чем…"],["Can I have…?","Можно…?"],["Worse still…","Хуже того…"]],
-"c":[["Hi! What did you eat this week? Anything good?","Привет! Что ел на неделе? Что-нибудь вкусное?","Скажи, что ходил в новый ресторан в пятницу.","I went to a new restaurant on Friday."],
-["What did you order?","Что заказал?","Скажи: стейк и салат.","A steak and a salad."],
-["Was it better than your favourite place?","Лучше, чем твоё любимое место?","Скажи, что еда лучше, но цены выше.","The food was better, but it was more expensive."],
-["How much did you pay?","Сколько заплатил?","Скажи: около пятидесяти фунтов на двоих, хуже того — без десерта.","About fifty pounds for two. Worse still, no dessert!"],
-["Ha! How many coffees do you drink a day?","Ха! Сколько чашек кофе в день пьёшь?","Скажи, что две, утром и днём.","Two. One in the morning and one in the afternoon."],
-["Only two? I drink four!","Только две? Я пью четыре!","Скажи, что это слишком много кофе.","That's too much coffee!"]],
-"b":"I know, I know! See you soon."}}
+"30": {
+"am": {
+"g": "Сегодня ты научишься говорить о продуктах: исчисляемые и неисчисляемые, some, any, a lot of.",
+"p": [
+[
+"We need some eggs and some milk.",
+"Нам нужно немного яиц и молока.",
+"some: слабое «сэм»."
+],
+[
+"Is there any bread?",
+"Есть хлеб?",
+"any — в вопросах."
+],
+[
+"There isn't any cheese.",
+"Сыра нет.",
+""
+],
+[
+"I eat a lot of fruit.",
+"Я ем много фруктов.",
+"fruit: «фру:т»."
+],
+[
+"I don't drink much coffee.",
+"Я пью не очень много кофе.",
+"much — с неисчисляемыми."
+],
+[
+"Are my eggs ready?",
+"Мои яйца готовы?",
+""
+],
+[
+"After a run, I need lots of water.",
+"После пробежки мне нужно много воды.",
+""
+],
+[
+"Stand by for dinner!",
+"Ужин скоро будет, ждите!",
+"stand by — оставайтесь наготове."
+]
+],
+"d": [
+[
+"A",
+"What do we need from the shop?",
+"Что купить в магазине?"
+],
+[
+"B",
+"Some eggs, some bananas and some rice.",
+"Яйца, бананы и рис."
+],
+[
+"A",
+"Is there any milk?",
+"Молоко есть?"
+],
+[
+"B",
+"No, there isn't any.",
+"Нет, нету."
+],
+[
+"A",
+"Do we need any meat?",
+"Мясо нужно?"
+],
+[
+"B",
+"Yes, some chicken. I need a lot of protein!",
+"Да, курицу. Мне нужно много белка!"
+],
+[
+"A",
+"What about coffee?",
+"А кофе?"
+],
+[
+"B",
+"We've got a lot of coffee. Don't buy any!",
+"Кофе много. Не покупай!"
+]
+],
+"x": [
+[
+"Нам нужно немного яиц и молока.",
+"We need some eggs and some milk."
+],
+[
+"Есть хлеб?",
+"Is there any bread?"
+],
+[
+"Сыра нет.",
+"There isn't any cheese."
+],
+[
+"Я ем много фруктов.",
+"I eat a lot of fruit."
+],
+[
+"Я пью не очень много кофе.",
+"I don't drink much coffee."
+]
+]
+},
+"pm": {
+"s": "Вы с другом Радиком снимаете квартиру в Тбилиси и составляете список покупок. Его роль играет партнёр.",
+"u": [
+[
+"We need some…",
+"Нам нужно немного…"
+],
+[
+"Is there any…?",
+"Есть ли…?"
+],
+[
+"There isn't any…",
+"Нет…"
+],
+[
+"a lot of…",
+"много…"
+]
+],
+"c": [
+[
+"OK, shopping list! What do we need for breakfast?",
+"Так, список покупок! Что нужно на завтрак?",
+"Скажи, что нужны яйца и хлеб.",
+"We need some eggs and some bread."
+],
+[
+"Is there any milk in the fridge?",
+"В холодильнике есть молоко?",
+"Скажи, что молока нет.",
+"No, there isn't any milk."
+],
+[
+"And for dinner?",
+"А на ужин?",
+"Предложи курицу и рис.",
+"Some chicken and some rice."
+],
+[
+"Do we need any fruit?",
+"Фрукты нужны?",
+"Скажи, что нужно много бананов и яблок.",
+"Yes, a lot of bananas and apples."
+],
+[
+"What about coffee?",
+"А кофе?",
+"Скажи, что кофе много, не нужно.",
+"We've got a lot of coffee. We don't need any."
+],
+[
+"Anything sweet?",
+"Что-нибудь сладкое?",
+"Предложи немного тёмного шоколада.",
+"Some dark chocolate, please!"
+]
+],
+"b": "Perfect. I'll go to the shop now!"
+}
+},
+"31": {
+"am": {
+"g": "Сегодня ты научишься спрашивать о количестве: how much / how many, и упаковкам: a bottle of, a packet of.",
+"p": [
+[
+"How much water do you drink?",
+"Сколько воды ты пьёшь?",
+"much — для неисчисляемых."
+],
+[
+"How many eggs do we need?",
+"Сколько яиц нужно?",
+"many — для исчисляемых."
+],
+[
+"A bottle of water, please.",
+"Бутылку воды, пожалуйста.",
+"bottle: t мягкое «ботл»."
+],
+[
+"A packet of pasta and a tin of tomatoes.",
+"Пачку пасты и банку томатов.",
+"tin — консервная банка."
+],
+[
+"Not many, just two.",
+"Не много, всего два.",
+""
+],
+[
+"Too much sugar isn't good.",
+"Слишком много сахара вредно.",
+""
+],
+[
+"Are you sure?",
+"Ты уверен?",
+""
+],
+[
+"I'm exhausted after the run.",
+"Я выжат после пробежки.",
+"exhausted: «игЗО:стид»."
+]
+],
+"d": [
+[
+"A",
+"Let's make pancakes! How many eggs do we need?",
+"Давай сделаем блины! Сколько яиц?"
+],
+[
+"B",
+"Three eggs and a carton of milk.",
+"Три яйца и пакет молока."
+],
+[
+"A",
+"How much flour?",
+"Сколько муки?"
+],
+[
+"B",
+"About two cups.",
+"Около двух стаканов."
+],
+[
+"A",
+"How much sugar?",
+"Сколько сахара?"
+],
+[
+"B",
+"Not much. One spoon.",
+"Немного. Одну ложку."
+],
+[
+"A",
+"Are you sure? I like them sweet!",
+"Уверен? Я люблю сладкие!"
+],
+[
+"B",
+"Then add some honey on top.",
+"Тогда добавь мёд сверху."
+]
+],
+"x": [
+[
+"Сколько воды ты пьёшь?",
+"How much water do you drink?"
+],
+[
+"Сколько яиц нам нужно?",
+"How many eggs do we need?"
+],
+[
+"Бутылку воды, пожалуйста.",
+"A bottle of water, please."
+],
+[
+"Пачку пасты и банку томатов.",
+"A packet of pasta and a tin of tomatoes."
+],
+[
+"Ты уверен?",
+"Are you sure?"
+]
+]
+},
+"pm": {
+"s": "Друг Лиам готовит ужин и спрашивает рецепт твоего любимого блюда. Объясни, что и сколько нужно.",
+"u": [
+[
+"How much…?",
+"Сколько (неисч.)…?"
+],
+[
+"How many…?",
+"Сколько (исч.)…?"
+],
+[
+"a packet / a bottle / a tin of…",
+"пачка / бутылка / банка…"
+],
+[
+"Not much / not many",
+"Немного"
+]
+],
+"c": [
+[
+"What's your favourite dish to cook?",
+"Какое твоё любимое блюдо?",
+"Скажи, что паста с курицей.",
+"Pasta with chicken."
+],
+[
+"Yum! How much pasta do I need?",
+"Вкусно! Сколько пасты нужно?",
+"Скажи: одна пачка на двоих.",
+"One packet for two people."
+],
+[
+"How many tomatoes?",
+"Сколько помидоров?",
+"Скажи, что банку томатов или четыре свежих.",
+"A tin of tomatoes or four fresh ones."
+],
+[
+"How much chicken?",
+"Сколько курицы?",
+"Скажи: около трёхсот грамм.",
+"About three hundred grams."
+],
+[
+"Do I need a lot of cheese?",
+"Много сыра нужно?",
+"Скажи, что нет, немного.",
+"No, not much. Just a little."
+],
+[
+"Are you sure it's easy?",
+"Ты уверен, что это просто?",
+"Скажи да, 20 минут, и это отлично после пробежки.",
+"Yes! Twenty minutes. It's perfect after a run."
+]
+],
+"b": "Great, I'm cooking it tonight!"
+}
+},
+"32": {
+"am": {
+"g": "Сегодня ты научишься сравнивать места: bigger, cheaper, more comfortable than.",
+"p": [
+[
+"This café is cheaper than that one.",
+"Это кафе дешевле, чем то.",
+"than: слабое «зэн»."
+],
+[
+"It's bigger and brighter.",
+"Оно больше и светлее.",
+""
+],
+[
+"The coffee here is better.",
+"Кофе здесь лучше.",
+"good → better."
+],
+[
+"The service is worse.",
+"Обслуживание хуже.",
+"bad → worse."
+],
+[
+"It's more comfortable than my office.",
+"Здесь удобнее, чем в моём офисе.",
+"more + длинное прилагательное."
+],
+[
+"The café offers a different menu on weekdays.",
+"В будни в кафе другое меню.",
+""
+],
+[
+"I miss our old café.",
+"Я скучаю по нашему старому кафе.",
+"miss — скучать."
+],
+[
+"I hardly ever eat fast food.",
+"Я почти никогда не ем фастфуд.",
+"hardly ever — почти никогда."
+]
+],
+"d": [
+[
+"A",
+"Which café is better, Coffee Point or Bean Bar?",
+"Какое кафе лучше: Coffee Point или Bean Bar?"
+],
+[
+"B",
+"Bean Bar is cheaper, but Coffee Point is nicer.",
+"Bean Bar дешевле, но Coffee Point приятнее."
+],
+[
+"A",
+"Which one is quieter?",
+"Где тише?"
+],
+[
+"B",
+"Coffee Point. It's more comfortable for work.",
+"В Coffee Point. Там удобнее работать."
+],
+[
+"A",
+"What about the coffee?",
+"А кофе?"
+],
+[
+"B",
+"The coffee is better at Bean Bar.",
+"Кофе лучше в Bean Bar."
+],
+[
+"A",
+"Hmm. And the food?",
+"Хм. А еда?"
+],
+[
+"B",
+"Worse! I hardly ever eat there.",
+"Хуже! Я там почти не ем."
+]
+],
+"x": [
+[
+"Это кафе дешевле, чем то.",
+"This café is cheaper than that one."
+],
+[
+"Кофе здесь лучше.",
+"The coffee here is better."
+],
+[
+"Здесь удобнее, чем в моём офисе.",
+"It's more comfortable than my office."
+],
+[
+"Я скучаю по нашему старому кафе.",
+"I miss our old café."
+],
+[
+"Я почти никогда не ем фастфуд.",
+"I hardly ever eat fast food."
+]
+]
+},
+"pm": {
+"s": "Друг Влад выбирает кафе в Тбилиси, чтобы поработать вместе. Сравни два кафе.",
+"u": [
+[
+"cheaper than",
+"дешевле, чем"
+],
+[
+"better / worse",
+"лучше / хуже"
+],
+[
+"more comfortable",
+"удобнее"
+],
+[
+"I prefer…",
+"Я предпочитаю…"
+]
+],
+"c": [
+[
+"Which café is better for work, Luna or Forest?",
+"Какое кафе лучше, чтобы поработать: Luna или Forest?",
+"Скажи, что Forest больше.",
+"Forest is bigger."
+],
+[
+"Is it more expensive?",
+"Оно дороже?",
+"Скажи, что да, Luna дешевле.",
+"Yes, a little. Luna is cheaper."
+],
+[
+"Which one is quieter?",
+"Где тише?",
+"Скажи, что в Forest тише и удобнее.",
+"Forest is quieter and more comfortable."
+],
+[
+"What about the coffee?",
+"А кофе?",
+"Скажи, что в Luna кофе лучше.",
+"The coffee is better at Luna."
+],
+[
+"Hmm. And the food?",
+"Хм. А еда?",
+"Скажи, что в Forest еда лучше, у них другое меню в будни.",
+"The food is better at Forest. They have a different menu on weekdays."
+],
+[
+"So, which one do you prefer?",
+"Так какое ты выбираешь?",
+"Скажи, что предпочитаешь Forest, там быстрый Wi-Fi.",
+"I prefer Forest. The Wi-Fi is fast there."
+]
+],
+"b": "Great, let's go to Forest tomorrow!"
+}
+},
+"33": {
+"am": {
+"g": "Сегодня ты научишься заказывать в кафе в Тбилиси: кофе, зелёный чай, брауни и попросить поработать за ноутбуком.",
+"p": [
+[
+"I'd like a cup of coffee, please.",
+"Я бы хотел чашку кофе.",
+"I'd like: «айд лайк». cup of: «кап эв»."
+],
+[
+"I'd like a green tea, please.",
+"Я бы хотел зелёный чай.",
+"green tea: «гри:н ти:»."
+],
+[
+"Can I have a brownie, please?",
+"Можно брауни?",
+"brownie: «БРАУни»."
+],
+[
+"Can I work on my laptop here?",
+"Можно я поработаю тут за ноутбуком?",
+"laptop: «ЛЭПтоп»."
+],
+[
+"What's the Wi-Fi password?",
+"Какой пароль от Wi-Fi?",
+"password: «ПА:суё:д»."
+],
+[
+"Is there a socket near this table?",
+"Есть розетка у этого столика?",
+"socket: «СОкит» — розетка."
+],
+[
+"Eat in or take away?",
+"Здесь или с собой?",
+""
+],
+[
+"Could I have the bill, please?",
+"Можно счёт?",
+"bill — счёт."
+]
+],
+"d": [
+[
+"A",
+"Hi! What can I get you?",
+"Здравствуйте! Что вам?"
+],
+[
+"B",
+"I'd like a cup of coffee and a brownie, please.",
+"Чашку кофе и брауни, пожалуйста."
+],
+[
+"A",
+"Sure. Eat in or take away?",
+"Конечно. Здесь или с собой?"
+],
+[
+"B",
+"Eat in. Can I work on my laptop here?",
+"Здесь. Можно поработать за ноутбуком?"
+],
+[
+"A",
+"Of course! There's a socket by the window.",
+"Конечно! У окна есть розетка."
+],
+[
+"B",
+"Great. What's the Wi-Fi password?",
+"Отлично. Какой пароль от Wi-Fi?"
+],
+[
+"A",
+"It's on the receipt.",
+"Он на чеке."
+],
+[
+"B",
+"Thanks! And a green tea later, please.",
+"Спасибо! И потом зелёный чай."
+]
+],
+"x": [
+[
+"Я бы хотел чашку кофе.",
+"I'd like a cup of coffee, please."
+],
+[
+"Я бы хотел зелёный чай и брауни.",
+"I'd like a green tea and a brownie, please."
+],
+[
+"Можно я поработаю тут за ноутбуком?",
+"Can I work on my laptop here?"
+],
+[
+"Какой пароль от Wi-Fi?",
+"What's the Wi-Fi password?"
+],
+[
+"Можно счёт, пожалуйста?",
+"Could I have the bill, please?"
+]
+]
+},
+"pm": {
+"s": "Ты в кафе в Тбилиси и хочешь поработать пару часов. Бариста Нино принимает заказ.",
+"u": [
+[
+"I'd like…",
+"Я бы хотел…"
+],
+[
+"Can I work on my laptop here?",
+"Можно поработать за ноутбуком?"
+],
+[
+"What's the Wi-Fi password?",
+"Какой пароль от Wi-Fi?"
+],
+[
+"Could I have the bill?",
+"Можно счёт?"
+]
+],
+"c": [
+[
+"Gamarjoba! Hi! What can I get you?",
+"Гамарджоба! Привет! Что вам?",
+"Закажи чашку кофе.",
+"Hi! I'd like a cup of coffee, please."
+],
+[
+"Sure. Anything to eat?",
+"Конечно. Что-нибудь поесть?",
+"Закажи брауни.",
+"Yes, can I have a brownie, please?"
+],
+[
+"Eat in or take away?",
+"Здесь или с собой?",
+"Скажи, что здесь, и спроси, можно ли поработать за ноутбуком.",
+"Eat in. Can I work on my laptop here?"
+],
+[
+"Of course! Take any table.",
+"Конечно! Садитесь за любой столик.",
+"Спроси, есть ли розетка и пароль от Wi-Fi.",
+"Is there a socket? And what's the Wi-Fi password?"
+],
+[
+"There's a socket by the window. The password is on the wall.",
+"Розетка у окна. Пароль на стене.",
+"Поблагодари и закажи ещё зелёный чай на потом.",
+"Thanks! I'd like a green tea later, please."
+],
+[
+"No problem. Just call me.",
+"Без проблем. Просто позовите.",
+"Через два часа попроси счёт.",
+"Could I have the bill, please?"
+]
+],
+"b": "Here you are. Madloba! Have a nice day!"
+}
+},
+"34": {
+"am": {
+"g": "Повторяем юнит 7: продукты, количество, сравнение и заказ в кафе.",
+"p": [
+[
+"How many times a week do you run?",
+"Сколько раз в неделю ты бегаешь?",
+""
+],
+[
+"Twice a week.",
+"Дважды в неделю.",
+"twice: «твайс»."
+],
+[
+"This place is nicer than the old one.",
+"Это место приятнее старого.",
+""
+],
+[
+"There isn't much time.",
+"Времени немного.",
+""
+],
+[
+"Can I have some water, please?",
+"Можно воды?",
+""
+],
+[
+"That's not fair!",
+"Это нечестно!",
+"fair: «фээ»."
+],
+[
+"Worse still, it started to rain.",
+"Хуже того, пошёл дождь.",
+"worse still — хуже того."
+],
+[
+"The best part was dessert.",
+"Лучшей частью был десерт.",
+""
+]
+],
+"d": [
+[
+"A",
+"Do you eat out a lot?",
+"Ты часто ешь вне дома?"
+],
+[
+"B",
+"About twice a week.",
+"Где-то дважды в неделю."
+],
+[
+"A",
+"Where's better, the new place or the old one?",
+"Где лучше: новое место или старое?"
+],
+[
+"B",
+"The new one is nicer, but more expensive.",
+"Новое приятнее, но дороже."
+],
+[
+"A",
+"What did you order last time?",
+"Что заказывал в прошлый раз?"
+],
+[
+"B",
+"Fish and a lot of vegetables. Worse still, no dessert!",
+"Рыбу и много овощей. Хуже того, без десерта!"
+],
+[
+"A",
+"That's not fair!",
+"Нечестно!"
+],
+[
+"B",
+"I know! Next time I'll have two desserts.",
+"Знаю! В следующий раз возьму два."
+]
+],
+"x": [
+[
+"Сколько раз в неделю ты бегаешь?",
+"How many times a week do you run?"
+],
+[
+"Дважды в неделю.",
+"Twice a week."
+],
+[
+"Это место приятнее старого.",
+"This place is nicer than the old one."
+],
+[
+"Это нечестно!",
+"That's not fair!"
+],
+[
+"Хуже того, пошёл дождь.",
+"Worse still, it started to rain."
+]
+]
+},
+"pm": {
+"s": "Итоги недели с другом Матвеем: еда, любимые места, что ты заказывал.",
+"u": [
+[
+"How much / how many…?",
+"Сколько…?"
+],
+[
+"…than…",
+"…чем…"
+],
+[
+"Can I have…?",
+"Можно…?"
+],
+[
+"Worse still…",
+"Хуже того…"
+]
+],
+"c": [
+[
+"Hi! What did you eat this week? Anything good?",
+"Привет! Что ел на неделе? Что-нибудь вкусное?",
+"Скажи, что ходил в грузинский ресторан в пятницу.",
+"I went to a Georgian restaurant on Friday."
+],
+[
+"What did you order?",
+"Что заказал?",
+"Скажи: хинкали и салат.",
+"Khinkali and a salad."
+],
+[
+"Was it better than your favourite place?",
+"Лучше, чем твоё любимое место?",
+"Скажи, что еда лучше, но цены выше.",
+"The food was better, but it was more expensive."
+],
+[
+"How much did you pay?",
+"Сколько заплатил?",
+"Скажи: около восьмидесяти лари на двоих, хуже того — без десерта.",
+"About eighty lari for two. Worse still, no dessert!"
+],
+[
+"Ha! How many coffees do you drink a day?",
+"Ха! Сколько чашек кофе в день пьёшь?",
+"Скажи, что две, утром и днём.",
+"Two. One in the morning and one in the afternoon."
+],
+[
+"Only two? I drink four!",
+"Только две? Я пью четыре!",
+"Скажи, что это слишком много кофе.",
+"That's too much coffee!"
+]
+],
+"b": "I know, I know! See you soon."
+}
+}
 }

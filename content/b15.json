@@ -1,62 +1,857 @@
 {
-"15":{"am":{"g":"Сегодня ты расскажешь о своём городе и районе: что там есть, с there is / there are.",
-"p":[["There's a nice park near my house.","Рядом с домом есть хороший парк.","There's: «зэаз», связно с a."],["There are lots of cafés in the centre.","В центре много кафе.","There are: «зэрэ»."],["Is there a gym near here?","Тут рядом есть спортзал?","Is there: «изэа»."],["There isn't a cinema in my area.","В моём районе нет кинотеатра.","isn't: «изнт»."],["The café is between the library and the park.","Кафе между библиотекой и парком.","between: «биТВИ:н»."],["It's close to my running route.","Это близко к моему беговому маршруту.","route: «ру:т»."],["My area is quiet and green.","Мой район тихий и зелёный.","area: «Эариэ»."],["Go ahead.","Давай, вперёд.","Разрешение: «пожалуйста, давай»."]],
-"d":[["A","What's your area like?","Какой у тебя район?"],["B","It's quiet. There's a big park near my house.","Тихий. Рядом с домом большой парк."],["A","Are there any good cafés?","Есть хорошие кафе?"],["B","Yes, there are two. One is between the library and the park.","Да, два. Одно между библиотекой и парком."],["A","Is there a gym?","Есть спортзал?"],["B","No, there isn't. But I run in the park.","Нет. Но я бегаю в парке."],["A","Sounds lovely!","Звучит прекрасно!"],["B","It is. Come and visit!","Так и есть. Приезжай в гости!"]],
-"x":[["Рядом с моим домом есть парк.","There's a park near my house."],["В центре много кафе.","There are lots of cafés in the centre."],["Тут рядом есть спортзал?","Is there a gym near here?"],["В моём районе нет кинотеатра.","There isn't a cinema in my area."],["Кафе между библиотекой и парком.","The café is between the library and the park."]]},
-"pm":{"s":"Британец Дэниел собирается переехать в твой город и спрашивает, что есть в твоём районе.","u":[["There's a…","Есть…"],["There are lots of…","Есть много…"],["Is there a…?","Есть ли…?"],["It's close to…","Это близко к…"]],
-"c":[["Hi! I'm moving to your city. What's your area like?","Привет! Я переезжаю в твой город. Какой у тебя район?","Скажи, что тихий и зелёный.","It's quiet and green."],
-["Is there a park?","Там есть парк?","Скажи, что есть большой парк рядом с домом.","Yes, there's a big park near my house."],
-["Great, I love running! Are there any cafés?","Отлично, я люблю бегать! Есть кафе?","Скажи, что много кафе и твоё любимое возле парка.","There are lots of cafés. My favourite is near the park."],
-["Is there a gym?","А спортзал?","Скажи, что нет, но есть клуб настольного тенниса.","No, there isn't, but there's a table tennis club."],
-["Cool! Is it far from the centre?","Круто! Далеко от центра?","Скажи, что нет, 20 минут на метро.","No, it's twenty minutes by metro."],
-["Can I ask more questions later?","Можно задать ещё вопросы позже?","Скажи: конечно, давай.","Sure, go ahead!"]],
-"b":"Thanks a lot! See you in the park!"}},
-"16":{"am":{"g":"Сегодня ты опишешь свой дом и комнаты, правильно используя a, an, the.",
-"p":[["I live in a flat.","Я живу в квартире.","flat — британское «квартира»."],["The kitchen is small but cosy.","Кухня маленькая, но уютная.","cosy: «КОУзи»."],["There's a big sofa in the living room.","В гостиной большой диван.","living room: «ЛИвин рум»."],["My favourite place is the balcony.","Моё любимое место — балкон.","balcony: «БЭЛкэни»."],["After a long day, nothing beats lying in bed.","После долгого дня нет ничего лучше, чем лежать в кровати.","nothing beats — ничего не сравнится."],["I pulled up a chair and started reading.","Я придвинул стул и начал читать.","pulled up: «пулд ап»."],["My sports bag always has an extra pair of shoes.","В моей сумке всегда запасная пара обуви.","an extra: «энЭкстрэ»."],["I have some ideas for the new design project.","У меня есть идеи для нового дизайн-проекта.","the перед гласной: «зи»."]],
-"d":[["A","Do you live in a house or a flat?","Ты живёшь в доме или квартире?"],["B","In a flat. It's on the fifth floor.","В квартире. На пятом этаже."],["A","How many rooms are there?","Сколько комнат?"],["B","Two rooms, a kitchen and a balcony.","Две комнаты, кухня и балкон."],["A","What's your favourite room?","Какая любимая комната?"],["B","The living room. There's a big sofa.","Гостиная. Там большой диван."],["A","Do you work at home?","Ты работаешь дома?"],["B","Sometimes. I've got a desk by the window.","Иногда. У меня стол у окна."]],
-"x":[["Я живу в квартире на пятом этаже.","I live in a flat on the fifth floor."],["Кухня маленькая, но уютная.","The kitchen is small but cosy."],["В гостиной есть большой диван.","There's a big sofa in the living room."],["Моё любимое место — балкон.","My favourite place is the balcony."],["После долгого дня я люблю лежать в кровати.","After a long day, I love lying in bed."]]},
-"pm":{"s":"Подруга Холли хочет снять квартиру и расспрашивает о твоей. Опиши свой дом.","u":[["I live in a flat.","Я живу в квартире."],["There are two rooms.","Там две комнаты."],["It's small but cosy.","Маленькая, но уютная."],["My favourite place is…","Моё любимое место…"]],
-"c":[["Do you live in a house or a flat?","Ты живёшь в доме или квартире?","Скажи, что в квартире.","I live in a flat."],
-["Is it big?","Она большая?","Скажи, что не очень: две комнаты и кухня.","Not really. There are two rooms and a kitchen."],
-["What's the kitchen like?","Какая кухня?","Скажи, что маленькая, но уютная.","It's small but cosy."],
-["Have you got a balcony?","Есть балкон?","Скажи да, и это твоё любимое место.","Yes, I have. It's my favourite place."],
-["Where do you work from home?","Где ты работаешь из дома?","Скажи, что у тебя стол у окна в гостиной.","I've got a desk by the window in the living room."],
-["Sounds nice! What do you do after a long day?","Мило! Что делаешь после долгого дня?","Скажи, что ничего не сравнится с лежанием на диване.","Nothing beats lying on the sofa!"]],
-"b":"Ha, I agree! Thanks for the tips!"}},
-"17":{"am":{"g":"Сегодня ты обсудишь, что взять в поездку: need + вещь, need to + действие.",
-"p":[["I need a warm jacket.","Мне нужна тёплая куртка.","need: «ни:д», долгое и."],["We need to buy water.","Нам нужно купить воду.","need to: to слабое «тэ»."],["Do we need a map?","Нам нужна карта?",""],["You don't need to bring food.","Еду брать не нужно.","don't need to — не обязательно."],["Don't forget your phone charger.","Не забудь зарядку.","charger: «ЧА:джэ»."],["I poured water into my bottle.","Я налил воду в бутылку.","poured: «по:д»."],["We ran around the lake twice.","Мы оббежали озеро дважды.","around: «эРАУнд»."],["What a nightmare!","Вот кошмар!","nightmare: «НАЙТмээ»."]],
-"d":[["A","We're going hiking on Saturday. What do we need?","В субботу идём в поход. Что нам нужно?"],["B","We need water, food and a map.","Вода, еда и карта."],["A","Do we need a tent?","Палатка нужна?"],["B","No, we don't. We need to come back at six.","Нет. Нужно вернуться в шесть."],["A","What about the weather?","А погода?"],["B","It's cold. You need a warm jacket.","Холодно. Нужна тёплая куртка."],["A","And a phone charger!","И зарядка для телефона!"],["B","Good idea. No charger is a nightmare!","Хорошая идея. Без зарядки — кошмар!"]],
-"x":[["Мне нужна тёплая куртка.","I need a warm jacket."],["Нам нужно купить воду.","We need to buy water."],["Тебе не нужно брать еду.","You don't need to bring food."],["Не забудь зарядку.","Don't forget your charger."],["Мы оббежали озеро дважды.","We ran around the lake twice."]]},
-"pm":{"s":"Вы с другом Крисом едете на трейловый забег в лес. Обсудите, что взять с собой.","u":[["We need…","Нам нужно…"],["We need to…","Нам надо (сделать)…"],["Don't forget…","Не забудь…"],["We don't need…","Нам не нужно…"]],
-"c":[["So, the trail race is on Sunday! What do we need?","Итак, трейл в воскресенье! Что нам нужно?","Скажи, что нужны трейловые кроссовки и вода.","We need trail shoes and water."],
-["Do we need to buy anything?","Нужно что-то купить?","Скажи, что нужно купить энергетические гели.","We need to buy energy gels."],
-["What about a jacket?","А куртка?","Скажи, что да, в лесу холодно.","Yes, we need a jacket. It's cold in the forest."],
-["Do we need a tent?","Палатка нужна?","Скажи нет, вернёмся в тот же день.","No, we don't. We're coming back the same day."],
-["What time do we need to leave?","Во сколько выходить?","Скажи, что нужно выйти в шесть утра.","We need to leave at six in the morning."],
-["Six?! That's early!","В шесть?! Рано!","Скажи: не забудь будильник!","Don't forget your alarm!"]],
-"b":"Ha! OK, see you on Sunday!"}},
-"18":{"am":{"g":"Сегодня ты научишься спрашивать информацию: в отеле, на вокзале, в музее.",
-"p":[["Excuse me, can you help me?","Простите, можете помочь?","Excuse me: «икСКЬЮ:з ми»."],["What time does the museum open?","Во сколько открывается музей?","museum: «мьюЗИ:эм»."],["Is there a cash machine near here?","Здесь рядом есть банкомат?","cash machine — банкомат (UK)."],["How much does it cost?","Сколько это стоит?",""],["Could you say that again, please?","Повторите, пожалуйста?","Could you — вежливо."],["Is breakfast included?","Завтрак включён?","included: «инКЛУ:дид»."],["Sounds perfect!","Звучит идеально!",""],["Thanks, that's really helpful.","Спасибо, очень помогли.","helpful: «ХЭЛПфл»."]],
-"d":[["A","Excuse me, can you help me?","Простите, можете помочь?"],["B","Of course. What do you need?","Конечно. Что нужно?"],["A","What time does the museum open?","Во сколько открывается музей?"],["B","At ten, and it closes at six.","В десять, закрывается в шесть."],["A","How much is a ticket?","Сколько стоит билет?"],["B","It's free on Mondays!","По понедельникам бесплатно!"],["A","Sounds perfect! Is it far?","Идеально! Далеко?"],["B","No, it's five minutes on foot.","Нет, пять минут пешком."]],
-"x":[["Простите, можете помочь?","Excuse me, can you help me?"],["Во сколько открывается музей?","What time does the museum open?"],["Здесь рядом есть банкомат?","Is there a cash machine near here?"],["Повторите, пожалуйста.","Could you say that again, please?"],["Звучит идеально!","Sounds perfect!"]]},
-"pm":{"s":"Ты на ресепшене отеля в Эдинбурге. Администратор Фиона. Узнай про завтрак, Wi-Fi и где побегать.","u":[["What time is…?","Во сколько…?"],["Is … included?","…включён?"],["Is there a … near here?","Тут рядом есть…?"],["Sounds perfect!","Звучит идеально!"]],
-"c":[["Good evening! How can I help?","Добрый вечер! Чем помочь?","Спроси, во сколько завтрак.","Hi! What time is breakfast?"],
-["From seven to ten.","С семи до десяти.","Спроси, включён ли завтрак в цену.","Is breakfast included?"],
-["Yes, it is.","Да, включён.","Спроси, есть ли Wi-Fi и какой пароль.","Great. Is there Wi-Fi? What's the password?"],
-["Yes, the password is on your key card.","Да, пароль на ключ-карте.","Спроси, есть ли рядом парк для пробежки.","Is there a park near here? I want to go running."],
-["Yes, there's a lovely park five minutes away.","Да, отличный парк в пяти минутах.","Скажи: звучит идеально!","Sounds perfect!"],
-["Anything else?","Что-нибудь ещё?","Скажи нет, поблагодари: очень помогли.","No, thanks. That's really helpful."]],
-"b":"Enjoy your stay and your run!"}},
-"19":{"am":{"g":"Повторяем юнит 4: город, дом, что взять с собой и как спросить информацию.",
-"p":[["There's a great café near the station.","Возле вокзала отличное кафе.",""],["We need to prepare for the trip.","Нам нужно подготовиться к поездке.","prepare: «приПЭА»."],["I expect it will be cold.","Думаю, будет холодно.","expect: «икСПЭКТ»."],["Is there a lift in the building?","В здании есть лифт?","lift — британский «лифт»."],["My turn.","Моя очередь.",""],["We've got the same idea!","У нас та же идея!","same: «сейм»."],["Practice helps you pronounce words clearly.","Практика помогает чётко произносить слова.","pronounce: «прэНАУНС»."],["Learning a language takes patience.","Изучение языка требует терпения.","patience: «ПЭЙшнс»."]],
-"d":[["A","Are you ready for the trip?","Готов к поездке?"],["B","Almost. I need to buy a new bag.","Почти. Нужно купить новую сумку."],["A","Is there a shop near your flat?","Возле твоей квартиры есть магазин?"],["B","Yes, there's a big one near the station.","Да, большой у вокзала."],["A","What's the hotel like?","Какой отель?"],["B","It's small, but there's a gym and a café.","Маленький, но есть зал и кафе."],["A","I expect it will rain.","Думаю, будет дождь."],["B","Then we need umbrellas!","Тогда нужны зонты!"]],
-"x":[["Возле вокзала есть отличное кафе.","There's a great café near the station."],["Нам нужно подготовиться к поездке.","We need to prepare for the trip."],["Думаю, будет холодно.","I expect it will be cold."],["Моя очередь.","My turn."],["Изучение языка требует терпения.","Learning a language takes patience."]]},
-"pm":{"s":"Итоги недели с другом Олли: твой район, дом и подготовка к поездке на выходные.","u":[["There's a…","Есть…"],["We need to…","Нам нужно…"],["I expect…","Думаю/ожидаю…"],["My turn!","Моя очередь!"]],
-"c":[["Hi! What's new?","Привет! Что нового?","Скажи, что на выходных едешь в Казань.","I'm going to Kazan at the weekend."],
-["Nice! Where are you staying?","Здорово! Где остановишься?","Скажи, что в маленьком отеле в центре.","In a small hotel in the centre."],
-["Is there a park near the hotel?","У отеля есть парк?","Скажи, что да, большой парк у реки.","Yes, there's a big park near the river."],
-["What do you need to take?","Что нужно взять?","Скажи: беговые кроссовки и тёплую куртку.","I need my running shoes and a warm jacket."],
-["What about the weather?","А погода?","Скажи, что ожидаешь холод и снег.","I expect it will be cold and snowy."],
-["OK, my questions are over. Your turn!","Мои вопросы всё. Твоя очередь!","Спроси Олли о его планах на выходные.","OK! What are your plans for the weekend?"]],
-"b":"Just relaxing at home! Have a great trip!"}}
+"15": {
+"am": {
+"g": "Сегодня ты расскажешь о своём городе и районе: что там есть, с there is / there are.",
+"p": [
+[
+"There's a nice park near my house.",
+"Рядом с домом есть хороший парк.",
+"There's: «зэаз», связно с a."
+],
+[
+"There are lots of cafés in the centre.",
+"В центре много кафе.",
+"There are: «зэрэ»."
+],
+[
+"Is there a gym near here?",
+"Тут рядом есть спортзал?",
+"Is there: «изэа»."
+],
+[
+"There isn't a cinema in my area.",
+"В моём районе нет кинотеатра.",
+"isn't: «изнт»."
+],
+[
+"The café is between the library and the park.",
+"Кафе между библиотекой и парком.",
+"between: «биТВИ:н»."
+],
+[
+"It's close to my running route.",
+"Это близко к моему беговому маршруту.",
+"route: «ру:т»."
+],
+[
+"My area is quiet and green.",
+"Мой район тихий и зелёный.",
+"area: «Эариэ»."
+],
+[
+"Go ahead.",
+"Давай, вперёд.",
+"Разрешение: «пожалуйста, давай»."
+]
+],
+"d": [
+[
+"A",
+"What's your area like?",
+"Какой у тебя район?"
+],
+[
+"B",
+"It's quiet. There's a big park near my house.",
+"Тихий. Рядом с домом большой парк."
+],
+[
+"A",
+"Are there any good cafés?",
+"Есть хорошие кафе?"
+],
+[
+"B",
+"Yes, there are two. One is between the library and the park.",
+"Да, два. Одно между библиотекой и парком."
+],
+[
+"A",
+"Is there a gym?",
+"Есть спортзал?"
+],
+[
+"B",
+"No, there isn't. But I run in the park.",
+"Нет. Но я бегаю в парке."
+],
+[
+"A",
+"Sounds lovely!",
+"Звучит прекрасно!"
+],
+[
+"B",
+"It is. Come and visit!",
+"Так и есть. Приезжай в гости!"
+]
+],
+"x": [
+[
+"Рядом с моим домом есть парк.",
+"There's a park near my house."
+],
+[
+"В центре много кафе.",
+"There are lots of cafés in the centre."
+],
+[
+"Тут рядом есть спортзал?",
+"Is there a gym near here?"
+],
+[
+"В моём районе нет кинотеатра.",
+"There isn't a cinema in my area."
+],
+[
+"Кафе между библиотекой и парком.",
+"The café is between the library and the park."
+]
+]
+},
+"pm": {
+"s": "Британец Дэниел собирается переехать в Дилижан и спрашивает, что есть в твоём районе.",
+"u": [
+[
+"There's a…",
+"Есть…"
+],
+[
+"There are lots of…",
+"Есть много…"
+],
+[
+"Is there a…?",
+"Есть ли…?"
+],
+[
+"It's close to…",
+"Это близко к…"
+]
+],
+"c": [
+[
+"Hi! I'm moving to Dilijan. What's your area like?",
+"Привет! Я переезжаю в Дилижан. Какой у тебя район?",
+"Скажи, что тихий и зелёный, в горах.",
+"It's quiet and green. It's in the mountains."
+],
+[
+"Is there a park?",
+"Там есть парк?",
+"Скажи, что есть большой парк рядом с домом.",
+"Yes, there's a big park near my house."
+],
+[
+"Great, I love walking! Are there any cafés?",
+"Отлично, я люблю гулять! Есть кафе?",
+"Скажи, что много кафе и твоё любимое возле парка.",
+"There are lots of cafés. My favourite is near the park."
+],
+[
+"Is there a gym?",
+"А спортзал?",
+"Скажи, что нет, но есть клуб настольного тенниса.",
+"No, there isn't, but there's a table tennis club."
+],
+[
+"Cool! Is it far from Yerevan?",
+"Круто! Далеко от Еревана?",
+"Скажи, что полтора часа на машине.",
+"It's an hour and a half by car."
+],
+[
+"Can I ask more questions later?",
+"Можно задать ещё вопросы позже?",
+"Скажи: конечно, давай.",
+"Sure, go ahead!"
+]
+],
+"b": "Thanks a lot! See you in the park!"
+}
+},
+"16": {
+"am": {
+"g": "Сегодня ты опишешь свой дом и комнаты, правильно используя a, an, the.",
+"p": [
+[
+"I live in a flat.",
+"Я живу в квартире.",
+"flat — британское «квартира»."
+],
+[
+"The kitchen is small but cosy.",
+"Кухня маленькая, но уютная.",
+"cosy: «КОУзи»."
+],
+[
+"There's a big sofa in the living room.",
+"В гостиной большой диван.",
+"living room: «ЛИвин рум»."
+],
+[
+"My favourite place is the balcony.",
+"Моё любимое место — балкон.",
+"balcony: «БЭЛкэни»."
+],
+[
+"After a long day, nothing beats lying in bed.",
+"После долгого дня нет ничего лучше, чем лежать в кровати.",
+"nothing beats — ничего не сравнится."
+],
+[
+"I pulled up a chair and started reading.",
+"Я придвинул стул и начал читать.",
+"pulled up: «пулд ап»."
+],
+[
+"My sports bag always has an extra pair of shoes.",
+"В моей сумке всегда запасная пара обуви.",
+"an extra: «энЭкстрэ»."
+],
+[
+"I have some ideas for the new ad campaign.",
+"У меня есть идеи для новой рекламной кампании.",
+"the перед гласной: «зи»."
+]
+],
+"d": [
+[
+"A",
+"Do you live in a house or a flat?",
+"Ты живёшь в доме или квартире?"
+],
+[
+"B",
+"In a flat. It's on the fifth floor.",
+"В квартире. На пятом этаже."
+],
+[
+"A",
+"How many rooms are there?",
+"Сколько комнат?"
+],
+[
+"B",
+"Two rooms, a kitchen and a balcony.",
+"Две комнаты, кухня и балкон."
+],
+[
+"A",
+"What's your favourite room?",
+"Какая любимая комната?"
+],
+[
+"B",
+"The living room. There's a big sofa.",
+"Гостиная. Там большой диван."
+],
+[
+"A",
+"Do you work at home?",
+"Ты работаешь дома?"
+],
+[
+"B",
+"Sometimes. I've got a desk by the window.",
+"Иногда. У меня стол у окна."
+]
+],
+"x": [
+[
+"Я живу в квартире на пятом этаже.",
+"I live in a flat on the fifth floor."
+],
+[
+"Кухня маленькая, но уютная.",
+"The kitchen is small but cosy."
+],
+[
+"В гостиной есть большой диван.",
+"There's a big sofa in the living room."
+],
+[
+"Моё любимое место — балкон.",
+"My favourite place is the balcony."
+],
+[
+"После долгого дня я люблю лежать в кровати.",
+"After a long day, I love lying in bed."
+]
+]
+},
+"pm": {
+"s": "Подруга Холли хочет снять квартиру и расспрашивает о твоей. Опиши свой дом.",
+"u": [
+[
+"I live in a flat.",
+"Я живу в квартире."
+],
+[
+"There are two rooms.",
+"Там две комнаты."
+],
+[
+"It's small but cosy.",
+"Маленькая, но уютная."
+],
+[
+"My favourite place is…",
+"Моё любимое место…"
+]
+],
+"c": [
+[
+"Do you live in a house or a flat?",
+"Ты живёшь в доме или квартире?",
+"Скажи, что в квартире.",
+"I live in a flat."
+],
+[
+"Is it big?",
+"Она большая?",
+"Скажи, что не очень: две комнаты и кухня.",
+"Not really. There are two rooms and a kitchen."
+],
+[
+"What's the kitchen like?",
+"Какая кухня?",
+"Скажи, что маленькая, но уютная.",
+"It's small but cosy."
+],
+[
+"Have you got a balcony?",
+"Есть балкон?",
+"Скажи да, и это твоё любимое место.",
+"Yes, I have. It's my favourite place."
+],
+[
+"Where do you work from home?",
+"Где ты работаешь из дома?",
+"Скажи, что у тебя стол у окна в гостиной.",
+"I've got a desk by the window in the living room."
+],
+[
+"Sounds nice! What do you do after a long day?",
+"Мило! Что делаешь после долгого дня?",
+"Скажи, что ничего не сравнится с лежанием на диване.",
+"Nothing beats lying on the sofa!"
+]
+],
+"b": "Ha, I agree! Thanks for the tips!"
+}
+},
+"17": {
+"am": {
+"g": "Сегодня ты обсудишь, что взять в поездку: need + вещь, need to + действие.",
+"p": [
+[
+"I need a warm jacket.",
+"Мне нужна тёплая куртка.",
+"need: «ни:д», долгое и."
+],
+[
+"We need to buy water.",
+"Нам нужно купить воду.",
+"need to: to слабое «тэ»."
+],
+[
+"Do we need a map?",
+"Нам нужна карта?",
+""
+],
+[
+"You don't need to bring food.",
+"Еду брать не нужно.",
+"don't need to — не обязательно."
+],
+[
+"Don't forget your phone charger.",
+"Не забудь зарядку.",
+"charger: «ЧА:джэ»."
+],
+[
+"I poured water into my bottle.",
+"Я налил воду в бутылку.",
+"poured: «по:д»."
+],
+[
+"We ran around the lake twice.",
+"Мы оббежали озеро дважды.",
+"around: «эРАУнд»."
+],
+[
+"What a nightmare!",
+"Вот кошмар!",
+"nightmare: «НАЙТмээ»."
+]
+],
+"d": [
+[
+"A",
+"We're going hiking on Saturday. What do we need?",
+"В субботу идём в поход. Что нам нужно?"
+],
+[
+"B",
+"We need water, food and a map.",
+"Вода, еда и карта."
+],
+[
+"A",
+"Do we need a tent?",
+"Палатка нужна?"
+],
+[
+"B",
+"No, we don't. We need to come back at six.",
+"Нет. Нужно вернуться в шесть."
+],
+[
+"A",
+"What about the weather?",
+"А погода?"
+],
+[
+"B",
+"It's cold. You need a warm jacket.",
+"Холодно. Нужна тёплая куртка."
+],
+[
+"A",
+"And a phone charger!",
+"И зарядка для телефона!"
+],
+[
+"B",
+"Good idea. No charger is a nightmare!",
+"Хорошая идея. Без зарядки — кошмар!"
+]
+],
+"x": [
+[
+"Мне нужна тёплая куртка.",
+"I need a warm jacket."
+],
+[
+"Нам нужно купить воду.",
+"We need to buy water."
+],
+[
+"Тебе не нужно брать еду.",
+"You don't need to bring food."
+],
+[
+"Не забудь зарядку.",
+"Don't forget your charger."
+],
+[
+"Мы оббежали озеро дважды.",
+"We ran around the lake twice."
+]
+]
+},
+"pm": {
+"s": "Вы с другом Матвеем едете на трейловый забег в лес. Обсудите, что взять с собой.",
+"u": [
+[
+"We need…",
+"Нам нужно…"
+],
+[
+"We need to…",
+"Нам надо (сделать)…"
+],
+[
+"Don't forget…",
+"Не забудь…"
+],
+[
+"We don't need…",
+"Нам не нужно…"
+]
+],
+"c": [
+[
+"So, the trail race is on Sunday! What do we need?",
+"Итак, трейл в воскресенье! Что нам нужно?",
+"Скажи, что нужны трейловые кроссовки и вода.",
+"We need trail shoes and water."
+],
+[
+"Do we need to buy anything?",
+"Нужно что-то купить?",
+"Скажи, что нужно купить энергетические гели.",
+"We need to buy energy gels."
+],
+[
+"What about a jacket?",
+"А куртка?",
+"Скажи, что да, в лесу холодно.",
+"Yes, we need a jacket. It's cold in the forest."
+],
+[
+"Do we need a tent?",
+"Палатка нужна?",
+"Скажи нет, вернёмся в тот же день.",
+"No, we don't. We're coming back the same day."
+],
+[
+"What time do we need to leave?",
+"Во сколько выходить?",
+"Скажи, что нужно выйти в шесть утра.",
+"We need to leave at six in the morning."
+],
+[
+"Six?! That's early!",
+"В шесть?! Рано!",
+"Скажи: не забудь будильник!",
+"Don't forget your alarm!"
+]
+],
+"b": "Ha! OK, see you on Sunday!"
+}
+},
+"18": {
+"am": {
+"g": "Сегодня ты научишься спрашивать информацию: в отеле, на вокзале, в музее.",
+"p": [
+[
+"Excuse me, can you help me?",
+"Простите, можете помочь?",
+"Excuse me: «икСКЬЮ:з ми»."
+],
+[
+"What time does the museum open?",
+"Во сколько открывается музей?",
+"museum: «мьюЗИ:эм»."
+],
+[
+"Is there a cash machine near here?",
+"Здесь рядом есть банкомат?",
+"cash machine — банкомат (UK)."
+],
+[
+"How much does it cost?",
+"Сколько это стоит?",
+""
+],
+[
+"Could you say that again, please?",
+"Повторите, пожалуйста?",
+"Could you — вежливо."
+],
+[
+"Is breakfast included?",
+"Завтрак включён?",
+"included: «инКЛУ:дид»."
+],
+[
+"Sounds perfect!",
+"Звучит идеально!",
+""
+],
+[
+"Thanks, that's really helpful.",
+"Спасибо, очень помогли.",
+"helpful: «ХЭЛПфл»."
+]
+],
+"d": [
+[
+"A",
+"Excuse me, can you help me?",
+"Простите, можете помочь?"
+],
+[
+"B",
+"Of course. What do you need?",
+"Конечно. Что нужно?"
+],
+[
+"A",
+"What time does the museum open?",
+"Во сколько открывается музей?"
+],
+[
+"B",
+"At ten, and it closes at six.",
+"В десять, закрывается в шесть."
+],
+[
+"A",
+"How much is a ticket?",
+"Сколько стоит билет?"
+],
+[
+"B",
+"It's free on Mondays!",
+"По понедельникам бесплатно!"
+],
+[
+"A",
+"Sounds perfect! Is it far?",
+"Идеально! Далеко?"
+],
+[
+"B",
+"No, it's five minutes on foot.",
+"Нет, пять минут пешком."
+]
+],
+"x": [
+[
+"Простите, можете помочь?",
+"Excuse me, can you help me?"
+],
+[
+"Во сколько открывается музей?",
+"What time does the museum open?"
+],
+[
+"Здесь рядом есть банкомат?",
+"Is there a cash machine near here?"
+],
+[
+"Повторите, пожалуйста.",
+"Could you say that again, please?"
+],
+[
+"Звучит идеально!",
+"Sounds perfect!"
+]
+]
+},
+"pm": {
+"s": "Ты на ресепшене отеля в Эдинбурге. Администратор Фиона. Узнай про завтрак, Wi-Fi и где побегать.",
+"u": [
+[
+"What time is…?",
+"Во сколько…?"
+],
+[
+"Is … included?",
+"…включён?"
+],
+[
+"Is there a … near here?",
+"Тут рядом есть…?"
+],
+[
+"Sounds perfect!",
+"Звучит идеально!"
+]
+],
+"c": [
+[
+"Good evening! How can I help?",
+"Добрый вечер! Чем помочь?",
+"Спроси, во сколько завтрак.",
+"Hi! What time is breakfast?"
+],
+[
+"From seven to ten.",
+"С семи до десяти.",
+"Спроси, включён ли завтрак в цену.",
+"Is breakfast included?"
+],
+[
+"Yes, it is.",
+"Да, включён.",
+"Спроси, есть ли Wi-Fi и какой пароль.",
+"Great. Is there Wi-Fi? What's the password?"
+],
+[
+"Yes, the password is on your key card.",
+"Да, пароль на ключ-карте.",
+"Спроси, есть ли рядом парк для пробежки.",
+"Is there a park near here? I want to go running."
+],
+[
+"Yes, there's a lovely park five minutes away.",
+"Да, отличный парк в пяти минутах.",
+"Скажи: звучит идеально!",
+"Sounds perfect!"
+],
+[
+"Anything else?",
+"Что-нибудь ещё?",
+"Скажи нет, поблагодари: очень помогли.",
+"No, thanks. That's really helpful."
+]
+],
+"b": "Enjoy your stay and your run!"
+}
+},
+"19": {
+"am": {
+"g": "Повторяем юнит 4: город, дом, что взять с собой и как спросить информацию.",
+"p": [
+[
+"There's a great café near the station.",
+"Возле вокзала отличное кафе.",
+""
+],
+[
+"We need to prepare for the trip.",
+"Нам нужно подготовиться к поездке.",
+"prepare: «приПЭА»."
+],
+[
+"I expect it will be cold.",
+"Думаю, будет холодно.",
+"expect: «икСПЭКТ»."
+],
+[
+"Is there a lift in the building?",
+"В здании есть лифт?",
+"lift — британский «лифт»."
+],
+[
+"My turn.",
+"Моя очередь.",
+""
+],
+[
+"We've got the same idea!",
+"У нас та же идея!",
+"same: «сейм»."
+],
+[
+"Practice helps you pronounce words clearly.",
+"Практика помогает чётко произносить слова.",
+"pronounce: «прэНАУНС»."
+],
+[
+"Learning a language takes patience.",
+"Изучение языка требует терпения.",
+"patience: «ПЭЙшнс»."
+]
+],
+"d": [
+[
+"A",
+"Are you ready for the trip?",
+"Готов к поездке?"
+],
+[
+"B",
+"Almost. I need to buy a new bag.",
+"Почти. Нужно купить новую сумку."
+],
+[
+"A",
+"Is there a shop near your flat?",
+"Возле твоей квартиры есть магазин?"
+],
+[
+"B",
+"Yes, there's a big one near the station.",
+"Да, большой у вокзала."
+],
+[
+"A",
+"What's the hotel like?",
+"Какой отель?"
+],
+[
+"B",
+"It's small, but there's a gym and a café.",
+"Маленький, но есть зал и кафе."
+],
+[
+"A",
+"I expect it will rain.",
+"Думаю, будет дождь."
+],
+[
+"B",
+"Then we need umbrellas!",
+"Тогда нужны зонты!"
+]
+],
+"x": [
+[
+"Возле вокзала есть отличное кафе.",
+"There's a great café near the station."
+],
+[
+"Нам нужно подготовиться к поездке.",
+"We need to prepare for the trip."
+],
+[
+"Думаю, будет холодно.",
+"I expect it will be cold."
+],
+[
+"Моя очередь.",
+"My turn."
+],
+[
+"Изучение языка требует терпения.",
+"Learning a language takes patience."
+]
+]
+},
+"pm": {
+"s": "Итоги недели с другом Владом: твой район, дом и подготовка к поездке на выходные.",
+"u": [
+[
+"There's a…",
+"Есть…"
+],
+[
+"We need to…",
+"Нам нужно…"
+],
+[
+"I expect…",
+"Думаю/ожидаю…"
+],
+[
+"My turn!",
+"Моя очередь!"
+]
+],
+"c": [
+[
+"Hi! What's new?",
+"Привет! Что нового?",
+"Скажи, что на выходных едешь в Тбилиси.",
+"I'm going to Tbilisi at the weekend."
+],
+[
+"Nice! Where are you staying?",
+"Здорово! Где остановишься?",
+"Скажи, что в маленьком отеле в центре.",
+"In a small hotel in the centre."
+],
+[
+"Is there a park near the hotel?",
+"У отеля есть парк?",
+"Скажи, что да, большой парк у реки Куры.",
+"Yes, there's a big park near the Kura river."
+],
+[
+"What do you need to take?",
+"Что нужно взять?",
+"Скажи: ноутбук, ракетку и тёплую куртку.",
+"I need my laptop, my paddle and a warm jacket."
+],
+[
+"What about the weather?",
+"А погода?",
+"Скажи, что ожидаешь холод и дождь.",
+"I expect it will be cold and rainy."
+],
+[
+"OK, my questions are over. Your turn!",
+"Мои вопросы всё. Твоя очередь!",
+"Спроси Олли о его планах на выходные.",
+"OK! What are your plans for the weekend?"
+]
+],
+"b": "Just relaxing at home! Have a great trip!"
+}
+}
 }

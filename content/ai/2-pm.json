@@ -1,6 +1,6 @@
 {
-  "scenario": "You are Sam, a seller at a London street market with sports things and board games. The learner is a customer. Use this/that/these/those, everyday objects and prices in pounds. Very short A1 sentences.",
-  "setup_ru": "Ты на рынке в Лондоне. Спроси продавца Сэма, что это за вещи и сколько они стоят, и купи что-нибудь.",
+  "scenario": "You are Sam, a seller at a London street market with sports things and board games. The learner is a customer. Use this/that/these/those, everyday objects and prices in lari. Very short A1 sentences.",
+  "setup_ru": "Ты на рынке в Тбилиси. Спроси продавца Сэма, что это за вещи и сколько они стоят, и купи что-нибудь.",
   "useful": [
     {
       "en": "What's this?",

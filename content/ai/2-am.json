@@ -21,8 +21,8 @@
       "who": "B"
     },
     {
-      "en": "It's fifteen pounds.",
-      "ru": "Пятнадцать фунтов.",
+      "en": "It's fifteen lari.",
+      "ru": "Пятнадцать лари.",
       "who": "A"
     },
     {
@@ -31,8 +31,8 @@
       "who": "B"
     },
     {
-      "en": "These? They're twenty pounds.",
-      "ru": "Эти? Двадцать фунтов.",
+      "en": "These? They're twenty lari.",
+      "ru": "Эти? Двадцать лари.",
       "who": "A"
     },
     {
@@ -96,9 +96,9 @@
       "ru": "Сколько стоит эта сумка?"
     },
     {
-      "en": "It's ten pounds.",
+      "en": "It's ten lari.",
       "note_ru": "",
-      "ru": "Десять фунтов."
+      "ru": "Десять лари."
     },
     {
       "en": "I'll take it!",

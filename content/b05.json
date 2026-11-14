@@ -1,62 +1,857 @@
 {
-"5":{"am":{"g":"Сегодня ты сможешь рассказать о своей семье: кто есть кто, как их зовут и чем они занимаются.",
-"p":[["This is my wife, Kristina.","Это моя жена, Кристина.","wife: «уайф». my звучит коротко: «май»."],["My parents live in Moscow.","Мои родители живут в Москве.","parents: ударение на первый слог «ПЭрэнтс»."],["My brother's name is Ivan.","Моего брата зовут Иван.","brother's: 's читается как «з»: «БРАзэз»."],["Kristina's mum is a teacher.","Мама Кристины учитель.","'s = чей-то. Kristina's mum = мама Кристины."],["Have you got any brothers or sisters?","У тебя есть братья или сёстры?","В разговоре: «хэв ю гот эни…»."],["I'm an only child.","Я единственный ребёнок.","only: «ОУнли»."],["Their kids are really funny.","Их дети очень забавные.","their звучит как there: «зэа»."],["My family supports me.","Моя семья меня поддерживает.","supports: ударение на второй слог «сэПОтс»."]],
-"d":[["A","Who's that in the photo?","Кто это на фото?"],["B","That's my sister, Olga, and her husband.","Это моя сестра Ольга и её муж."],["A","What's his name?","Как его зовут?"],["B","His name's Pavel. He's a doctor.","Его зовут Павел. Он врач."],["A","And who are the kids?","А кто эти дети?"],["B","They're their children, my niece and nephew.","Это их дети, моя племянница и племянник."],["A","Have you got any brothers?","У тебя есть братья?"],["B","No, I haven't. Just one sister.","Нет. Только одна сестра."]],
-"x":[["Это моя жена. Её зовут Кристина.","This is my wife. Her name's Kristina."],["Мой брат живёт в Москве.","My brother lives in Moscow."],["Папа Кристины очень добрый.","Kristina's dad is very kind."],["У тебя есть сёстры?","Have you got any sisters?"],["Моя семья поддерживает меня в беге.","My family supports me in my running."]]},
-"pm":{"s":"Твоя новая знакомая Эмма показывает фото своей семьи и расспрашивает о твоей. Расскажи о родных.","u":[["This is my…","Это мой/моя…"],["His/Her name's…","Его/её зовут…"],["Have you got any…?","У тебя есть…?"],["My family supports me.","Семья меня поддерживает."]],
-"c":[["Look, this is my family! Have you got a big family?","Смотри, это моя семья! У тебя большая семья?","Скажи, что семья небольшая: жена, родители и сестра.","Not really. I've got a wife, my parents and a sister."],
-["Nice! What's your wife's name?","Здорово! Как зовут твою жену?","Скажи, что её зовут Кристина.","Her name's Kristina."],
-["What does she do?","Чем она занимается?","Придумай: она дизайнер, как ты.","She's a designer, like me."],
-["Where do your parents live?","Где живут твои родители?","Скажи, что они живут в другом городе.","They live in another city."],
-["Is your sister older or younger?","Сестра старше или младше?","Скажи, что она старше и у неё двое детей.","She's older. She's got two kids."],
-["Does your family like sport?","Твоя семья любит спорт?","Скажи, что семья поддерживает тебя в беге.","Yes! My family supports me in my running."]],
-"b":"That's lovely. Family is so important!"}},
-"6":{"am":{"g":"Сегодня ты научишься спрашивать, чья это вещь, и отвечать: it's mine, it's hers, it's theirs.",
-"p":[["Whose phone is this?","Чей это телефон?","whose звучит как who's: «ху:з»."],["It's mine.","Он мой.","mine: «майн», без существительного после."],["Is this yours?","Это твоё?","yours: «йо:з»."],["No, it's not mine. It's his.","Нет, не моё. Это его.","his: «хиз», короткое и."],["These keys are hers.","Эти ключи её.","hers: «хё:з»."],["Whose bag is that?","Чья это сумка?","В вопросе голос идёт вниз."],["I think it's theirs.","Думаю, это их.","theirs: «зэаз»."],["Everybody's things are on the table.","Вещи всех на столе.","everybody's: «Эврибодиз»."]],
-"d":[["A","What a party! Whose glasses are these?","Вот это вечеринка! Чьи это очки?"],["B","I think they're Anna's.","Думаю, они Анны."],["A","And whose jacket is this?","А чья это куртка?"],["B","It's mine! Thanks.","Моя! Спасибо."],["A","Is this umbrella yours too?","Этот зонт тоже твой?"],["B","No, it isn't. Maybe it's Tom's.","Нет. Может, Тома."],["A","There's a horrible mess here!","Тут ужасный беспорядок!"],["B","Don't worry. Everybody can help.","Не переживай. Все помогут."]],
-"x":[["Чей это рюкзак?","Whose backpack is this?"],["Это не моё. Это его.","It's not mine. It's his."],["Эти ключи твои?","Are these keys yours?"],["Думаю, это её телефон.","I think it's her phone."],["Все уже дома.","Everybody's already at home."]]},
-"pm":{"s":"После вечеринки ты помогаешь хозяйке Саре разобрать забытые вещи. Выясняйте, чьи они.","u":[["Whose is this?","Чьё это?"],["It's mine.","Это моё."],["I think it's his.","Думаю, его."],["Is this yours?","Это твоё?"]],
-"c":[["What a mess! Whose phone is this?","Ну и бардак! Чей это телефон?","Скажи, что это твой телефон.","Oh, it's mine! Thank you."],
-["And these glasses? Are they yours?","А эти очки? Твои?","Скажи, что нет, думаю, они Тома.","No, they aren't mine. I think they're Tom's."],
-["OK. Whose is this red bag?","Ладно. Чья эта красная сумка?","Скажи, что это сумка Кристины.","It's Kristina's bag."],
-["And this jacket?","А эта куртка?","Скажи, что не знаешь, может, Анны.","I don't know. Maybe it's Anna's."],
-["There's a table tennis paddle here! Is it yours?","Тут ракетка для настольного тенниса! Твоя?","Скажи, да, твоя, ты всегда её носишь с собой.","Yes, it's mine! I always bring it."],
-["Ha! Thanks for your help!","Ха! Спасибо за помощь!","Скажи, что не за что, и это была классная вечеринка.","No problem. It was a great party!"]],
-"b":"Thanks! See you next time!"}},
-"7":{"am":{"g":"Сегодня ты сможешь описать любимую вещь: какая она, откуда и почему она важна, с have got.",
-"p":[["I've got a new paddle.","У меня новая ракетка.","I've got: «айв гот»."],["She's got a beautiful old watch.","У неё красивые старые часы.","Порядок: beautiful old watch."],["Have you got a favourite thing?","У тебя есть любимая вещь?","favourite: «ФЭЙврит»."],["It's small but really useful.","Она маленькая, но очень полезная.","useful: «Ю:сфл»."],["It's a gift from my family.","Это подарок от моей семьи.","gift: короткое и."],["It's very special to me.","Она для меня очень особенная.","special: «СПЭшл»."],["By the way, it's quite expensive.","Кстати, она довольно дорогая.","By the way — «кстати» в начале фразы."],["My running watch is light and easy to use.","Мои беговые часы лёгкие и удобные.","light: «лайт»."]],
-"d":[["A","Have you got anything special?","У тебя есть что-то особенное?"],["B","Yes, I've got an old running watch.","Да, у меня есть старые беговые часы."],["A","Is it expensive?","Они дорогие?"],["B","No, it's cheap, but it's special to me.","Нет, дешёвые, но для меня особенные."],["A","Why?","Почему?"],["B","It's a gift from my wife.","Это подарок жены."],["A","That's lovely!","Как мило!"],["B","By the way, it's still really useful.","Кстати, они до сих пор очень полезные."]],
-"x":[["У меня есть новые кроссовки.","I've got new trainers."],["У неё есть красивая сумка.","She's got a beautiful bag."],["У тебя есть любимая вещь?","Have you got a favourite thing?"],["Это подарок от моей семьи.","It's a gift from my family."],["Кстати, это было довольно сложно.","By the way, it was quite difficult."]]},
-"pm":{"s":"Подруга Лиза спрашивает о твоей любимой вещи. Опиши её: какая она и почему важна.","u":[["I've got…","У меня есть…"],["It's small but useful.","Маленькая, но полезная."],["It's special to me.","Она мне дорога."],["By the way…","Кстати…"]],
-"c":[["Have you got a favourite thing?","У тебя есть любимая вещь?","Скажи, что это твои беговые часы.","Yes, I have. It's my running watch."],
-["Oh! What's it like?","О! Какие они?","Опиши: чёрные, лёгкие, очень удобные.","It's black and light. It's really easy to use."],
-["Is it new?","Они новые?","Скажи, что нет, им три года.","No, it isn't. It's three years old."],
-["Where's it from?","Откуда они?","Скажи, что это подарок от семьи.","It's a gift from my family."],
-["Why is it special?","Почему они особенные?","Скажи, что ты бегаешь с ними каждое утро.","I run with it every morning."],
-["Cool! Have you got any other special things?","Круто! Есть ещё особенные вещи?","Скажи: кстати, у меня есть хорошая ракетка для настольного тенниса.","By the way, I've got a great table tennis paddle too."]],
-"b":"You really love sport! That's great."}},
-"8":{"am":{"g":"Сегодня ты научишься покупать вещи в магазине: спросить, есть ли размер, цвет и цена.",
-"p":[["Can I help you?","Вам помочь?","Это говорит продавец."],["I'm just looking, thanks.","Я просто смотрю, спасибо.","just looking: «джаст лукин»."],["Have you got this in blue?","Есть такой синего цвета?","in blue = в синем цвете."],["Can I try it on?","Можно примерить?","try it on: связно «трайтон»."],["How much is it?","Сколько стоит?","Голос вниз в конце."],["I'll take it.","Беру.","I'll: «айл»."],["Can I pay by card?","Можно картой?","by card — картой."],["Believe me, it's a good choice.","Поверь, это хороший выбор.","choice: «чойс»."]],
-"d":[["A","Hello, can I help you?","Здравствуйте, вам помочь?"],["B","Yes, have you got these shoes in size 43?","Да, у вас есть эти кроссовки 43 размера?"],["A","Yes, here you are.","Да, вот."],["B","Can I try them on?","Можно примерить?"],["A","Of course. How are they?","Конечно. Как они?"],["B","They're perfect! How much are they?","Идеально! Сколько стоят?"],["A","Sixty pounds.","Шестьдесят фунтов."],["B","Great, I'll take them. Can I pay by card?","Отлично, беру. Можно картой?"]],
-"x":[["Я просто смотрю, спасибо.","I'm just looking, thanks."],["У вас есть это в чёрном?","Have you got this in black?"],["Можно примерить?","Can I try it on?"],["Сколько стоят эти кроссовки?","How much are these trainers?"],["Поверь, они идеальны для бега.","Believe me, they're perfect for running."]]},
-"pm":{"s":"Ты в спортивном магазине. Продавец Марк предлагает помощь. Купи новые беговые кроссовки.","u":[["Have you got these in size 43?","Есть 43 размер?"],["Can I try them on?","Можно примерить?"],["How much are they?","Сколько стоят?"],["Can I pay by card?","Можно картой?"]],
-"c":[["Hi there! Can I help you?","Здравствуйте! Вам помочь?","Скажи, что ищешь беговые кроссовки.","Yes, please. I'm looking for running shoes."],
-["These are very popular. What size are you?","Эти очень популярные. Какой у вас размер?","Скажи, что 43 размер.","I'm a size 43."],
-["Here you are. Do you want to try them on?","Вот. Хотите примерить?","Скажи да, и что они очень удобные.","Yes, please. Oh, they're really comfortable!"],
-["Great. They're good for long runs.","Отлично. Они хороши для длинных пробежек.","Спроси, есть ли такие в синем цвете.","Have you got them in blue?"],
-["Yes, we have. They're seventy pounds.","Да, есть. Семьдесят фунтов.","Скажи, что это дорого, но ты берёшь.","That's a bit expensive, but I'll take them."],
-["Perfect. Cash or card?","Отлично. Наличными или картой?","Скажи, что картой.","By card, please."]],
-"b":"Here's your receipt. Enjoy your runs!"}},
-"9":{"am":{"g":"Повторяем юнит 2: семья, чьи вещи, have got и покупки. Сегодня говоришь свободно, смешивая всё.",
-"p":[["She's got two kids.","У неё двое детей.","She's got = She has got."],["Whose shoes are these? They're dirty!","Чьи это кроссовки? Они грязные!","dirty: «дё:ти»."],["They're mine, sorry!","Мои, извини!","sorry с улыбкой."],["I've already got one.","У меня уже есть одна.","already: «о:лРЭди»."],["That's awful!","Это ужасно!","awful: «О:фл»."],["It makes me laugh.","Это меня смешит.","laugh: «ла:ф», gh = ф."],["Have you got a big family?","У тебя большая семья?","В вопросе голос вверх."],["Can I pay by card?","Можно картой?",""]],
-"d":[["A","Have you got a present for your sister?","У тебя есть подарок для сестры?"],["B","Yes, I've already got one. It's a bag.","Да, уже есть. Это сумка."],["A","Nice! Whose idea was it?","Здорово! Чья это идея?"],["B","It was my wife's idea.","Это идея жены."],["A","Is your sister's birthday soon?","День рождения сестры скоро?"],["B","Yes, it's on the tenth of June.","Да, десятого июня."],["A","Has she got kids?","У неё есть дети?"],["B","Yes, two boys. They always make me laugh.","Да, два мальчика. Они меня всегда смешат."]],
-"x":[["У меня уже есть подарок.","I've already got a present."],["Чьи это грязные кроссовки?","Whose dirty trainers are these?"],["Это ужасно!","That's awful!"],["У моей сестры двое детей.","My sister's got two children."],["Это меня смешит.","It makes me laugh."]]},
-"pm":{"s":"Итоги недели с другом Беном: расскажи о семье, любимой вещи и о покупке на этой неделе.","u":[["I've got…","У меня есть…"],["It's mine.","Это моё."],["I bought…","Я купил…"],["It made me laugh.","Это меня рассмешило."]],
-"c":[["Hey! How's your family?","Привет! Как семья?","Скажи, что все хорошо, спасибо.","They're fine, thanks."],
-["Have you got any news?","Есть новости?","Скажи, что у тебя новые беговые кроссовки.","Yes! I've got new running shoes."],
-["Cool! Whose idea was it?","Круто! Чья это была идея?","Скажи, что это идея Кристины.","It was Kristina's idea."],
-["Are they expensive?","Они дорогие?","Скажи, что да, но они очень удобные.","Yes, but they're really comfortable."],
-["Have you got any brothers or sisters?","У тебя есть братья или сёстры?","Расскажи про сестру и её детей.","I've got a sister. She's got two kids."],
-["Are the kids fun?","Дети весёлые?","Скажи, что они всегда тебя смешат.","Yes! They always make me laugh."]],
-"b":"Sounds like a great family. See you soon!"}}
+"5": {
+"am": {
+"g": "Сегодня ты сможешь рассказать о своей семье: кто есть кто, как их зовут и чем они занимаются.",
+"p": [
+[
+"My sister's name is Katya.",
+"Мою сестру зовут Катя.",
+"sister's: 's читается как «з»: «СИстэз»."
+],
+[
+"My parents are Igor and Marina.",
+"Мои родители — Игорь и Марина.",
+"parents: ударение на первый слог «ПЭрэнтс»."
+],
+[
+"My dad's name is Igor.",
+"Моего папу зовут Игорь.",
+"dad's: «дэдз»."
+],
+[
+"My mum's name is Marina.",
+"Мою маму зовут Марина.",
+"mum — британское «мама»: «мам»."
+],
+[
+"My uncle Ivan is very funny.",
+"Мой дядя Иван очень весёлый.",
+"uncle: «АНкл»."
+],
+[
+"My grandparents are Volodya and Lyuda.",
+"Мои бабушка и дедушка — Володя и Люда.",
+"grandparents: «ГРЭНпэрэнтс»."
+],
+[
+"Have you got any brothers or sisters?",
+"У тебя есть братья или сёстры?",
+"В разговоре: «хэв ю гот эни…»."
+],
+[
+"My family supports me.",
+"Моя семья меня поддерживает.",
+"supports: ударение на второй слог «сэПО:тс»."
+]
+],
+"d": [
+[
+"A",
+"Who's that in the photo?",
+"Кто это на фото?"
+],
+[
+"B",
+"That's my sister, Katya.",
+"Это моя сестра Катя."
+],
+[
+"A",
+"And who's the man next to her?",
+"А кто мужчина рядом с ней?"
+],
+[
+"B",
+"That's my dad. His name's Igor.",
+"Это мой папа. Его зовут Игорь."
+],
+[
+"A",
+"Is that your mum?",
+"Это твоя мама?"
+],
+[
+"B",
+"Yes, her name's Marina.",
+"Да, её зовут Марина."
+],
+[
+"A",
+"And the old man?",
+"А пожилой мужчина?"
+],
+[
+"B",
+"That's my grandad, Volodya. He's great!",
+"Это мой дедушка Володя. Он классный!"
+]
+],
+"x": [
+[
+"Это моя сестра. Её зовут Катя.",
+"This is my sister. Her name's Katya."
+],
+[
+"Мои родители — Игорь и Марина.",
+"My parents are Igor and Marina."
+],
+[
+"Мой дядя Иван очень весёлый.",
+"My uncle Ivan is very funny."
+],
+[
+"Бабушку зовут Люда.",
+"My grandma's name is Lyuda."
+],
+[
+"Моя семья поддерживает меня.",
+"My family supports me."
+]
+]
+},
+"pm": {
+"s": "Твоя новая знакомая Эмма в кафе в Тбилиси показывает фото своей семьи и расспрашивает о твоей. Расскажи о родных.",
+"u": [
+[
+"This is my…",
+"Это мой/моя…"
+],
+[
+"His/Her name's…",
+"Его/её зовут…"
+],
+[
+"Have you got any…?",
+"У тебя есть…?"
+],
+[
+"My family supports me.",
+"Семья меня поддерживает."
+]
+],
+"c": [
+[
+"Look, this is my family! Have you got a big family?",
+"Смотри, это моя семья! У тебя большая семья?",
+"Скажи, что у тебя есть родители, сестра, дядя, бабушка и дедушка.",
+"I've got my parents, a sister, an uncle and my grandparents."
+],
+[
+"Nice! What's your sister's name?",
+"Здорово! Как зовут сестру?",
+"Скажи, что её зовут Катя.",
+"Her name's Katya."
+],
+[
+"And your parents?",
+"А родителей?",
+"Скажи: папу зовут Игорь, маму — Марина.",
+"My dad's name is Igor and my mum's name is Marina."
+],
+[
+"Where do your parents live?",
+"Где живут твои родители?",
+"Скажи, что они живут в России, а ты в Армении.",
+"They live in Russia, and I live in Armenia."
+],
+[
+"Do you see your grandparents?",
+"Ты видишься с бабушкой и дедушкой?",
+"Скажи, что их зовут Володя и Люда и ты звонишь им каждую неделю.",
+"Their names are Volodya and Lyuda. I call them every week."
+],
+[
+"Does your family like sport?",
+"Твоя семья любит спорт?",
+"Скажи, что дядя Иван тоже играет в настольный теннис.",
+"Yes! My uncle Ivan plays table tennis too."
+]
+],
+"b": "That's lovely. Family is so important!"
+}
+},
+"6": {
+"am": {
+"g": "Сегодня ты научишься спрашивать, чья это вещь, и отвечать: it's mine, it's hers, it's theirs.",
+"p": [
+[
+"Whose phone is this?",
+"Чей это телефон?",
+"whose звучит как who's: «ху:з»."
+],
+[
+"It's mine.",
+"Он мой.",
+"mine: «майн», без существительного после."
+],
+[
+"Is this yours?",
+"Это твоё?",
+"yours: «йо:з»."
+],
+[
+"No, it's not mine. It's his.",
+"Нет, не моё. Это его.",
+"his: «хиз», короткое и."
+],
+[
+"These keys are hers.",
+"Эти ключи её.",
+"hers: «хё:з»."
+],
+[
+"Whose bag is that?",
+"Чья это сумка?",
+"В вопросе голос идёт вниз."
+],
+[
+"I think it's theirs.",
+"Думаю, это их.",
+"theirs: «зэаз»."
+],
+[
+"Everybody's things are on the table.",
+"Вещи всех на столе.",
+"everybody's: «Эврибодиз»."
+]
+],
+"d": [
+[
+"A",
+"What a party! Whose glasses are these?",
+"Вот это вечеринка! Чьи это очки?"
+],
+[
+"B",
+"I think they're Anna's.",
+"Думаю, они Анны."
+],
+[
+"A",
+"And whose jacket is this?",
+"А чья это куртка?"
+],
+[
+"B",
+"It's mine! Thanks.",
+"Моя! Спасибо."
+],
+[
+"A",
+"Is this umbrella yours too?",
+"Этот зонт тоже твой?"
+],
+[
+"B",
+"No, it isn't. Maybe it's Tom's.",
+"Нет. Может, Тома."
+],
+[
+"A",
+"There's a horrible mess here!",
+"Тут ужасный беспорядок!"
+],
+[
+"B",
+"Don't worry. Everybody can help.",
+"Не переживай. Все помогут."
+]
+],
+"x": [
+[
+"Чей это рюкзак?",
+"Whose backpack is this?"
+],
+[
+"Это не моё. Это его.",
+"It's not mine. It's his."
+],
+[
+"Эти ключи твои?",
+"Are these keys yours?"
+],
+[
+"Думаю, это её телефон.",
+"I think it's her phone."
+],
+[
+"Все уже дома.",
+"Everybody's already at home."
+]
+]
+},
+"pm": {
+"s": "После вечеринки ты помогаешь хозяйке Саре разобрать забытые вещи. Выясняйте, чьи они.",
+"u": [
+[
+"Whose is this?",
+"Чьё это?"
+],
+[
+"It's mine.",
+"Это моё."
+],
+[
+"I think it's his.",
+"Думаю, его."
+],
+[
+"Is this yours?",
+"Это твоё?"
+]
+],
+"c": [
+[
+"What a mess! Whose phone is this?",
+"Ну и бардак! Чей это телефон?",
+"Скажи, что это твой телефон.",
+"Oh, it's mine! Thank you."
+],
+[
+"And these glasses? Are they yours?",
+"А эти очки? Твои?",
+"Скажи, что нет, думаю, они Тома.",
+"No, they aren't mine. I think they're Tom's."
+],
+[
+"OK. Whose is this red bag?",
+"Ладно. Чья эта красная сумка?",
+"Скажи, что это сумка твоей сестры Кати.",
+"It's Katya's bag."
+],
+[
+"And this jacket?",
+"А эта куртка?",
+"Скажи, что не знаешь, может, Анны.",
+"I don't know. Maybe it's Anna's."
+],
+[
+"There's a table tennis paddle here! Is it yours?",
+"Тут ракетка для настольного тенниса! Твоя?",
+"Скажи, да, твоя, ты всегда её носишь с собой.",
+"Yes, it's mine! I always bring it."
+],
+[
+"Ha! Thanks for your help!",
+"Ха! Спасибо за помощь!",
+"Скажи, что не за что, и это была классная вечеринка.",
+"No problem. It was a great party!"
+]
+],
+"b": "Thanks! See you next time!"
+}
+},
+"7": {
+"am": {
+"g": "Сегодня ты сможешь описать любимую вещь: какая она, откуда и почему она важна, с have got.",
+"p": [
+[
+"I've got a new paddle.",
+"У меня новая ракетка.",
+"I've got: «айв гот»."
+],
+[
+"She's got a beautiful old watch.",
+"У неё красивые старые часы.",
+"Порядок: beautiful old watch."
+],
+[
+"Have you got a favourite thing?",
+"У тебя есть любимая вещь?",
+"favourite: «ФЭЙврит»."
+],
+[
+"It's small but really useful.",
+"Она маленькая, но очень полезная.",
+"useful: «Ю:сфл»."
+],
+[
+"It's a gift from my family.",
+"Это подарок от моей семьи.",
+"gift: короткое и."
+],
+[
+"It's very special to me.",
+"Она для меня очень особенная.",
+"special: «СПЭшл»."
+],
+[
+"By the way, it's quite expensive.",
+"Кстати, она довольно дорогая.",
+"By the way — «кстати» в начале фразы."
+],
+[
+"My running watch is light and easy to use.",
+"Мои беговые часы лёгкие и удобные.",
+"light: «лайт»."
+]
+],
+"d": [
+[
+"A",
+"Have you got anything special?",
+"У тебя есть что-то особенное?"
+],
+[
+"B",
+"Yes, I've got an old running watch.",
+"Да, у меня есть старые беговые часы."
+],
+[
+"A",
+"Is it expensive?",
+"Они дорогие?"
+],
+[
+"B",
+"No, it's cheap, but it's special to me.",
+"Нет, дешёвые, но для меня особенные."
+],
+[
+"A",
+"Why?",
+"Почему?"
+],
+[
+"B",
+"It's a gift from my sister.",
+"Это подарок сестры."
+],
+[
+"A",
+"That's lovely!",
+"Как мило!"
+],
+[
+"B",
+"By the way, it's still really useful.",
+"Кстати, они до сих пор очень полезные."
+]
+],
+"x": [
+[
+"У меня есть новые кроссовки.",
+"I've got new trainers."
+],
+[
+"У неё есть красивая сумка.",
+"She's got a beautiful bag."
+],
+[
+"У тебя есть любимая вещь?",
+"Have you got a favourite thing?"
+],
+[
+"Это подарок от моей семьи.",
+"It's a gift from my family."
+],
+[
+"Кстати, это было довольно сложно.",
+"By the way, it was quite difficult."
+]
+]
+},
+"pm": {
+"s": "Подруга Лиза спрашивает о твоей любимой вещи. Опиши её: какая она и почему важна.",
+"u": [
+[
+"I've got…",
+"У меня есть…"
+],
+[
+"It's small but useful.",
+"Маленькая, но полезная."
+],
+[
+"It's special to me.",
+"Она мне дорога."
+],
+[
+"By the way…",
+"Кстати…"
+]
+],
+"c": [
+[
+"Have you got a favourite thing?",
+"У тебя есть любимая вещь?",
+"Скажи, что это твоя ракетка для настольного тенниса.",
+"Yes, I have. It's my running watch."
+],
+[
+"Oh! What's it like?",
+"О! Какие они?",
+"Опиши: чёрные, лёгкие, очень удобные.",
+"It's black and light. It's really easy to use."
+],
+[
+"Is it new?",
+"Они новые?",
+"Скажи, что нет, им три года.",
+"No, it isn't. It's three years old."
+],
+[
+"Where's it from?",
+"Откуда они?",
+"Скажи, что это подарок от семьи.",
+"It's a gift from my family."
+],
+[
+"Why is it special?",
+"Почему они особенные?",
+"Скажи, что ты бегаешь с ними каждое утро.",
+"I run with it every morning."
+],
+[
+"Cool! Have you got any other special things?",
+"Круто! Есть ещё особенные вещи?",
+"Скажи: кстати, у меня есть хорошая ракетка для настольного тенниса.",
+"By the way, I've got a great table tennis paddle too."
+]
+],
+"b": "You really love sport! That's great."
+}
+},
+"8": {
+"am": {
+"g": "Сегодня ты научишься покупать вещи в магазине: спросить, есть ли размер, цвет и цена.",
+"p": [
+[
+"Can I help you?",
+"Вам помочь?",
+"Это говорит продавец."
+],
+[
+"I'm just looking, thanks.",
+"Я просто смотрю, спасибо.",
+"just looking: «джаст лукин»."
+],
+[
+"Have you got this in blue?",
+"Есть такой синего цвета?",
+"in blue = в синем цвете."
+],
+[
+"Can I try it on?",
+"Можно примерить?",
+"try it on: связно «трайтон»."
+],
+[
+"How much is it?",
+"Сколько стоит?",
+"Голос вниз в конце."
+],
+[
+"I'll take it.",
+"Беру.",
+"I'll: «айл»."
+],
+[
+"Can I pay by card?",
+"Можно картой?",
+"by card — картой."
+],
+[
+"Believe me, it's a good choice.",
+"Поверь, это хороший выбор.",
+"choice: «чойс»."
+]
+],
+"d": [
+[
+"A",
+"Hello, can I help you?",
+"Здравствуйте, вам помочь?"
+],
+[
+"B",
+"Yes, have you got these shoes in size 43?",
+"Да, у вас есть эти кроссовки 43 размера?"
+],
+[
+"A",
+"Yes, here you are.",
+"Да, вот."
+],
+[
+"B",
+"Can I try them on?",
+"Можно примерить?"
+],
+[
+"A",
+"Of course. How are they?",
+"Конечно. Как они?"
+],
+[
+"B",
+"They're perfect! How much are they?",
+"Идеально! Сколько стоят?"
+],
+[
+"A",
+"Sixty pounds.",
+"Шестьдесят фунтов."
+],
+[
+"B",
+"Great, I'll take them. Can I pay by card?",
+"Отлично, беру. Можно картой?"
+]
+],
+"x": [
+[
+"Я просто смотрю, спасибо.",
+"I'm just looking, thanks."
+],
+[
+"У вас есть это в чёрном?",
+"Have you got this in black?"
+],
+[
+"Можно примерить?",
+"Can I try it on?"
+],
+[
+"Сколько стоят эти кроссовки?",
+"How much are these trainers?"
+],
+[
+"Поверь, они идеальны для бега.",
+"Believe me, they're perfect for running."
+]
+]
+},
+"pm": {
+"s": "Ты в спортивном магазине. Продавец Марк предлагает помощь. Купи новые беговые кроссовки.",
+"u": [
+[
+"Have you got these in size 43?",
+"Есть 43 размер?"
+],
+[
+"Can I try them on?",
+"Можно примерить?"
+],
+[
+"How much are they?",
+"Сколько стоят?"
+],
+[
+"Can I pay by card?",
+"Можно картой?"
+]
+],
+"c": [
+[
+"Hi there! Can I help you?",
+"Здравствуйте! Вам помочь?",
+"Скажи, что ищешь беговые кроссовки.",
+"Yes, please. I'm looking for running shoes."
+],
+[
+"These are very popular. What size are you?",
+"Эти очень популярные. Какой у вас размер?",
+"Скажи, что 43 размер.",
+"I'm a size 43."
+],
+[
+"Here you are. Do you want to try them on?",
+"Вот. Хотите примерить?",
+"Скажи да, и что они очень удобные.",
+"Yes, please. Oh, they're really comfortable!"
+],
+[
+"Great. They're good for long runs.",
+"Отлично. Они хороши для длинных пробежек.",
+"Спроси, есть ли такие в синем цвете.",
+"Have you got them in blue?"
+],
+[
+"Yes, we have. They're seventy pounds.",
+"Да, есть. Семьдесят фунтов.",
+"Скажи, что это дорого, но ты берёшь.",
+"That's a bit expensive, but I'll take them."
+],
+[
+"Perfect. Cash or card?",
+"Отлично. Наличными или картой?",
+"Скажи, что картой.",
+"By card, please."
+]
+],
+"b": "Here's your receipt. Enjoy your runs!"
+}
+},
+"9": {
+"am": {
+"g": "Повторяем юнит 2: семья, чьи вещи, have got и покупки. Сегодня говоришь свободно, смешивая всё.",
+"p": [
+[
+"She's got two kids.",
+"У неё двое детей.",
+"She's got = She has got."
+],
+[
+"Whose shoes are these? They're dirty!",
+"Чьи это кроссовки? Они грязные!",
+"dirty: «дё:ти»."
+],
+[
+"They're mine, sorry!",
+"Мои, извини!",
+"sorry с улыбкой."
+],
+[
+"I've already got one.",
+"У меня уже есть одна.",
+"already: «о:лРЭди»."
+],
+[
+"That's awful!",
+"Это ужасно!",
+"awful: «О:фл»."
+],
+[
+"It makes me laugh.",
+"Это меня смешит.",
+"laugh: «ла:ф», gh = ф."
+],
+[
+"Have you got a big family?",
+"У тебя большая семья?",
+"В вопросе голос вверх."
+],
+[
+"Can I pay by card?",
+"Можно картой?",
+""
+]
+],
+"d": [
+[
+"A",
+"Have you got a present for your dad?",
+"У тебя есть подарок для папы?"
+],
+[
+"B",
+"Yes, I've already got one. It's a bag.",
+"Да, уже есть. Это сумка."
+],
+[
+"A",
+"Nice! Whose idea was it?",
+"Здорово! Чья это идея?"
+],
+[
+"B",
+"It was my mum's idea.",
+"Это идея мамы."
+],
+[
+"A",
+"Is your dad's birthday soon?",
+"День рождения папы скоро?"
+],
+[
+"B",
+"Yes, it's on the tenth of June.",
+"Да, десятого июня."
+],
+[
+"A",
+"Has he got a hobby?",
+"У него есть хобби?"
+],
+[
+"B",
+"Yes, fishing. His stories always make me laugh.",
+"Да, рыбалка. Его истории меня всегда смешат."
+]
+],
+"x": [
+[
+"У меня уже есть подарок.",
+"I've already got a present."
+],
+[
+"Чьи это грязные кроссовки?",
+"Whose dirty trainers are these?"
+],
+[
+"Это ужасно!",
+"That's awful!"
+],
+[
+"Мой дядя Иван всегда меня смешит.",
+"My uncle Ivan always makes me laugh."
+],
+[
+"Это меня смешит.",
+"It makes me laugh."
+]
+]
+},
+"pm": {
+"s": "Итоги недели с другом Беном: расскажи о семье, любимой вещи и о покупке на этой неделе.",
+"u": [
+[
+"I've got…",
+"У меня есть…"
+],
+[
+"It's mine.",
+"Это моё."
+],
+[
+"I bought…",
+"Я купил…"
+],
+[
+"It made me laugh.",
+"Это меня рассмешило."
+]
+],
+"c": [
+[
+"Hey! How's your family?",
+"Привет! Как семья?",
+"Скажи, что все хорошо, спасибо.",
+"They're fine, thanks."
+],
+[
+"Have you got any news?",
+"Есть новости?",
+"Скажи, что у тебя новая ракетка для настольного тенниса.",
+"Yes! I've got a new table tennis paddle."
+],
+[
+"Cool! Whose idea was it?",
+"Круто! Чья это была идея?",
+"Скажи, что это идея Кати.",
+"It was Katya's idea."
+],
+[
+"Is it expensive?",
+"Она дорогая?",
+"Скажи, что да, но она очень хорошая.",
+"Yes, but it's really good."
+],
+[
+"Have you got any brothers or sisters?",
+"У тебя есть братья или сёстры?",
+"Расскажи про сестру Катю.",
+"I've got a sister. Her name's Katya."
+],
+[
+"Is she fun?",
+"Она весёлая?",
+"Скажи, что она всегда тебя смешит.",
+"Yes! She always makes me laugh."
+]
+],
+"b": "Sounds like a great family. See you soon!"
+}
+}
 }

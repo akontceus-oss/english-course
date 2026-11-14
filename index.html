@@ -126,6 +126,9 @@ textarea{min-height:64px;resize:vertical}
 @media (prefers-reduced-motion:reduce){.spin::before{animation:none}}
 .tip{font-size:14px;background:var(--accent-soft);border-radius:10px;padding:10px 12px}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:99px;font-size:14px;font-weight:700;z-index:6}
+.pb summary{cursor:pointer;padding:10px 0;border-top:1px solid var(--line);list-style-position:inside}
+.pb:first-of-type summary{border-top:0}
+.pb[open] summary{color:var(--accent)}
 .ex-tag{font-size:12px;font-weight:700;color:var(--warn)}
 </style>
 
@@ -334,7 +337,7 @@ function offWrap(d,msgs){const sc=S.sess.data,c=sc.script||[];const mine=msgs.fi
 const app=document.getElementById("app");
 function setView(v){if(reloadPending&&v!=="session"){location.reload();return}S.view=v;if(v!=="session")S.sess=null;try{history.replaceState(null,"","#"+v)}catch(e){}render();window.scrollTo(0,0)}
 function tabs(){
-  const t=[["today","Сегодня"],["course","Курс"],["words","Слова"],["history","История"]];
+  const t=[["today","Сегодня"],["course","Курс"],["words","Фразы"],["history","История"]];
   document.getElementById("tabs").innerHTML=t.map(([k,n])=>`<button class="tab ${S.view===k||(S.view==="session"&&k==="today")?"on":""}" data-tab="${k}">${ICON[k]}${n}</button>`).join("");
 }
 function weekOf(d){return PLAN[d].week}
@@ -391,10 +394,14 @@ function renderCourse(){
   });
   app.innerHTML=h+`</div>`;
 }
+function phrasebookCard(){const pb=COURSE&&COURSE.phrasebook;if(!pb||!pb.length)return "";
+  return `<div class="card"><div class="label">Разговорник: Тбилиси</div><p class="small muted">Готовые фразы на каждый день. Нажми на тему, чтобы раскрыть.</p>
+  ${pb.map(sec=>`<details class="pb"><summary><b>${esc(sec.t)}</b></summary>${sec.p.map(x=>`<div class="phr"><div class="grow"><div class="en">${esc(x[0])}</div><div class="ru">${esc(x[1])}</div></div>${sayBtns(x[0])}</div>`).join("")}</details>`).join("")}</div>`}
 function renderWords(){
   const due=dueCards();
   const list=[...S.vocab].sort((a,b)=>(b.added||"").localeCompare(a.added||""));
   app.innerHTML=`<div><div class="label">Интервальное повторение</div><h1>Мои фразы</h1></div>
+  ${phrasebookCard()}
   <div class="card"><div class="top"><div><b>${due.length}</b> <span class="muted">к повторению сегодня</span></div>${due.length?`<button class="btn sm" id="review">Повторить</button>`:""}</div></div>
   <div class="card">${list.length?list.map(v=>`<div class="phr"><div class="grow"><div class="en">${esc(v.en)}</div><div class="ru">${esc(v.ru)}</div></div>${sayBtns(v.en)}</div>`).join(""):`<p class="muted">Здесь появятся фразы из утренних уроков и вечерних разборов. Пройди первую утреннюю сессию, и они начнут повторяться по расписанию.</p>`}</div>`;
 }

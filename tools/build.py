@@ -19,7 +19,7 @@ for f in sorted(glob.glob("content/b*.json")):            # prepared lessons, co
             a=v["pm"];assert len(a["c"])>=4,d
             pm[d]={"setup_ru":a["s"],"useful":[{"en":x[0],"ru":x[1]} for x in a["u"]],
               "script":[{"a":x[0],"a_ru":x[1],"q":x[2],"me":x[3]} for x in a["c"]],"bye":a.get("b","")}
-course={"book":plan.get("book"),"days":plan["days"],"am":am,"pm":pm}
+course={"book":plan.get("book"),"days":plan["days"],"am":am,"pm":pm,"phrasebook":json.load(open("content/phrasebook.json"))}
 cj=json.dumps(course,ensure_ascii=False,separators=(",",":"))
 open("course.json","w").write(cj)
 

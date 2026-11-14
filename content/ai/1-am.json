@@ -16,8 +16,8 @@
       "who": "A"
     },
     {
-      "en": "I'm from Russia. I'm from Moscow.",
-      "ru": "Я из России. Из Москвы.",
+      "en": "I'm from Russia. I live in Armenia.",
+      "ru": "Я из России. Живу в Армении.",
       "who": "B"
     },
     {
@@ -26,8 +26,8 @@
       "who": "A"
     },
     {
-      "en": "I'm a designer. And you?",
-      "ru": "Я дизайнер. А ты?",
+      "en": "I'm a marketer. And you?",
+      "ru": "Я маркетолог. А ты?",
       "who": "B"
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "en": "Where are you from?",
-      "note_ru": "Ударение на where и from: «уэа а ю фром».",
+      "note_ru": "Ударение на where и from: «уэа а ю фром», голос вниз.",
       "ru": "Откуда ты?"
     },
     {
@@ -91,9 +91,9 @@
       "ru": "Кем ты работаешь?"
     },
     {
-      "en": "I'm a designer.",
+      "en": "I'm a marketer.",
       "note_ru": "Перед профессией нужен a.",
-      "ru": "Я дизайнер."
+      "ru": "Я маркетолог."
     },
     {
       "en": "Are you married?",
