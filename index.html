@@ -209,12 +209,14 @@ function speakSeq(parts,rate,gap){const g=++sayGen;try{speechSynthesis.cancel()}
 let AUD={};
 const PACKS=new Map();
 function getPack(n){if(!PACKS.has(n)){const p=fetch("packs/"+n+".mp3").then(r=>{if(!r.ok)throw new Error(r.status);return r.arrayBuffer()});PACKS.set(n,p);p.catch(()=>PACKS.delete(n))}return PACKS.get(n)}
-async function loadAudioIndex(){try{const r=await fetch("packs/index.json");if(r.ok){AUD=await r.json();setTimeout(()=>{"0123456789abcdef".split("").forEach((h,i)=>setTimeout(()=>getPack("p"+h).catch(()=>{}),i*150))},1500)}}catch(e){}}
+async function loadAudioIndex(){try{const r=await fetch("packs/index.json",{cache:"no-cache"});if(r.ok){AUD=await r.json();setTimeout(()=>prefetchDay(S.profile.day||0),1200)}}catch(e){}}
+function dayPack(d){return "d"+String(d).padStart(2,"0")}
+function prefetchDay(d){["ui",dayPack(d),dayPack(Math.min(59,d+1)),"pb"].forEach((n,i)=>setTimeout(()=>getPack(n).catch(()=>{}),i*300))}
 const SILENT="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAABIADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA//////////////////////////////////////////////////////////////////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAAAAAAAAAAAASDs90hvAAAAAAAAAAAAAAAAAAAA//sQZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
 function unlockPlayer(){if(!player){player=new Audio();player.setAttribute("playsinline","")}
   try{if(navigator.audioSession)navigator.audioSession.type="playback"}catch(e){}
   if(player.__unlocked)return;try{player.src=SILENT;const p=player.play();if(p&&p.then)p.then(()=>{player.__unlocked=true}).catch(()=>{})}catch(e){}}
-function useRec(){return S.profile.engine!=="device"}
+function useRec(){return true}
 function hasRec(t){return splitSpeech(t).every(p=>AUD[p])}
 let player=null;
 function speakOne(t,rate){return new Promise(res=>{try{const u=new SpeechSynthesisUtterance(t);if(voice){u.voice=voice;u.lang=voice.lang}else u.lang="en-GB";u.rate=rate||S.profile.rate||0.9;u.onend=u.onerror=()=>res();speechSynthesis.speak(u)}catch(e){res()}})}
@@ -230,7 +232,7 @@ async function sayParts(parts,gap,rate){const g=++sayGen;try{speechSynthesis.can
   if(useRec()&&parts.some(p=>AUD[p]))unlockPlayer();
   for(let i=0;i<parts.length;i++){if(g!==sayGen)return;const f=useRec()&&AUD[parts[i]];
     let ok=false;if(f)ok=await playFile(f,rate);
-    if(g!==sayGen)return;if(!ok){await new Promise(r=>setTimeout(r,60));await speakOne(parts[i],rate)}
+    if(g!==sayGen)return;if(!ok){if(IN_CLAUDE){await new Promise(r=>setTimeout(r,60));await speakOne(parts[i],rate)}else console.warn("no Emma clip:",parts[i])}
     if(g!==sayGen)return;if(i<parts.length-1)await new Promise(r=>setTimeout(r,gap))}}
 function say(text,rate){sayParts(splitSpeech(text),550,rate)}
 const ICON={
@@ -377,12 +379,10 @@ ${installTip()}
    <div class="stat"><b>${S.sessions.length}</b><span class="small muted">сессий</span></div>
    <div class="stat"><b>${S.vocab.length}</b><span class="small muted">фраз в запасе</span></div>
   </div>
-  <div class="card"><div class="top"><h3>Голос озвучки</h3><button class="btn soft sm" id="vtest">Проверить</button></div>
-   <div class="row"><button class="btn sm ${useRec()?"":"soft"}" data-engine="rec">Живой голос Emma</button><button class="btn sm ${useRec()?"soft":""}" data-engine="device">Голос телефона</button></div>
-   ${useRec()?`<p class="small muted">Слова из тетради и фразы уроков звучат готовыми записями британского голоса Emma. То, для чего записи ещё нет (например, ответы ИИ в разговоре), читает голос телефона ниже.</p>`:""}
-   <select id="vsel" aria-label="Голос телефона">${enVoices().sort((a,b)=>vScore(b)-vScore(a)).map(x=>`<option value="${esc(x.name)}" ${voice&&voice.name===x.name?"selected":""}>${esc(x.name)} · ${esc(x.lang)}${vScore(x)>=40?" ★":""}</option>`).join("")||`<option>Голоса загружаются…</option>`}</select>
+  <div class="card"><div class="top"><h3>Голос: Emma</h3><button class="btn soft sm" id="vtest">Проверить</button></div>
+   <p class="small muted">Всё в приложении озвучено одним голосом: британская дикторша Emma. Скорость можно выбрать ниже, кнопка с часами читает медленнее.</p>
    <div class="row"><span class="small muted">Скорость</span>${[[0.75,"медленно"],[0.9,"спокойно"],[1,"как носитель"]].map(([v,l])=>`<button class="btn sm ${S.profile.rate==v?"":"soft"}" data-rate-v="${v}">${l}</button>`).join("")}</div>
-   <p class="small muted">Звёздочкой отмечены самые естественные голоса телефона.</p></div>
+</div>
   <div class="tip"><b>Как говорить голосом:</b> в поле ответа нажми на микрофон на клавиатуре телефона и надиктуй фразу по-английски. Так ты тренируешь именно речь, а не печать.</div>`;
 }
 function renderCourse(){
@@ -428,6 +428,7 @@ async function backupLoad(file){try{const j=JSON.parse(await file.text());if(j.a
 let timerId=null;
 function startTimer(){clearInterval(timerId);timerId=setInterval(()=>{const el=document.getElementById("timer");if(el&&S.sess){const m=Math.floor((Date.now()-S.sess.t0)/60000);el.textContent=m+" / 30 мин"}},15000)}
 async function startSession(kind,day){
+  prefetchDay(day??S.profile.day);
   S.sess={kind,day:day??S.profile.day,step:0,t0:Date.now(),data:null,msgs:[],answers:[],results:null,reviewIdx:0,review:null,wrap:null,err:null};
   setView("session");startTimer();
   const key=`lessons/${S.sess.day}-${kind}`;
@@ -544,14 +545,14 @@ document.addEventListener("click",async e=>{
   const s=S.sess;
   if(t.dataset.say){say(t.dataset.say,t.dataset.slow?Math.max(0.6,(S.profile.rate||0.9)-0.2):undefined);return}
   if(t.dataset.rateV){S.profile.rate=+t.dataset.rateV;saveProfile();render();say("Hi! Shall we have a coffee?");return}
-  if(t.dataset.engine){S.profile.engine=t.dataset.engine;saveProfile();render();say("Hello! My name's Hector. Nice to meet you.");return}
+  if(t.dataset.engine){S.profile.engine=t.dataset.engine;saveProfile();render();say("Hello! My name's Andrew. Nice to meet you. Shall we have a coffee?");return}
   if(t.dataset.tab){setView(t.dataset.tab);return}
   if(t.dataset.start){startSession(t.dataset.start,s?.day);return}
   if(t.dataset.go){S.profile.day=+t.dataset.go;saveProfile();setView("today");return}
   if(t.dataset.step&&s){s.step=+t.dataset.step;if(s.kind==="pm"&&s.step===2&&!s.wrap)return toWrap();render();window.scrollTo(0,0);return}
   if(t.dataset.rate&&s){rate(+t.dataset.rate);return}
   switch(t.id){
-    case "vtest":say("Hello! My name's Hector. Nice to meet you. Shall we have a coffee?");break;
+    case "vtest":say("Hello! My name's Andrew. Nice to meet you. Shall we have a coffee?");break;
     case "exit":clearInterval(timerId);setView("today");break;
     case "next":S.profile.day=Math.min(59,S.profile.day+1);saveProfile();render();break;
     case "lvl":{const L=["A1","A2","B1"];S.profile.level=L[(L.indexOf(S.profile.level)+1)%L.length];saveProfile();render();break}
@@ -578,7 +579,7 @@ async function toWrap(){const s=S.sess;s.step=2;render();try{s.wrap=await wrapUp
 // ---------- Boot ----------
 async function loadCourse(){try{const r=await fetch("course.json",{cache:"no-cache"});if(r.ok)COURSE=await r.json()}catch(e){}}
 let reloadPending=false;
-const APP_VER="16.11.2026-afda1b";
+const APP_VER="16.11.2026-dfa911";
 // Safety net for installed iPhone apps: compare with version.json and refresh caches when it changed.
 async function checkVersion(){if(IN_CLAUDE||APP_VER.startsWith("__"))return;
   try{const r=await fetch("version.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const v=(await r.json()).v;

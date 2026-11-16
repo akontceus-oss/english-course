@@ -14,7 +14,7 @@ async function cacheFirst(req,name){const c=await caches.open(name);const m=awai
   const r=await fetch(req);if(r&&(r.ok||r.type==="opaque"))c.put(req,r.clone());return r}
 self.addEventListener("fetch",e=>{const req=e.request;if(req.method!=="GET")return;const u=new URL(req.url);
   if(u.origin===location.origin){
-    if(/\/packs\/p[0-9a-f]\.mp3$/.test(u.pathname)){e.respondWith(cacheFirst(req,AUDIO));return}
+    if(/\/packs\/[a-z0-9]+\.mp3$/.test(u.pathname)){e.respondWith(cacheFirst(req,AUDIO));return}
     if(/\/version\.json$/.test(u.pathname))return;   // always straight from the network
     e.respondWith(networkFirst(req));return}
   if(/fonts\.(googleapis|gstatic)\.com$/.test(u.hostname))e.respondWith(cacheFirst(req,FONTS));});
