@@ -593,6 +593,12 @@ setTimeout(checkVersion,1500);
     const [p,ss,vv,plan]=await Promise.all([store.get("profile/me"),store.list("sessions"),store.list("vocab"),store.get("course/plan")]);
     if(p)S.profile=Object.assign(S.profile,p);pickVoice();
     S.sessions=ss||[];S.vocab=vv||[];
+    // one-off fixes for phrases saved before the course was personalized
+    const FIX=[["Hector","Andrew"],["Гектор","Андрей"],["I'll never find a decent man!","I'll never find a decent coach!"],["Я никогда не найду порядочного мужчину!","Я никогда не найду нормального тренера!"],["Kristina","Katya"],["Кристина","Катя"]];
+    for(const v of S.vocab){let en=v.en||"",ru=v.ru||"";FIX.forEach(([a,b])=>{en=en.split(a).join(b);ru=ru.split(a).join(b)});
+      if(en!==v.en||ru!==v.ru){const oldId=v.id;v.en=en;v.ru=ru;try{localStorage.removeItem(LS+"vocab/"+oldId)}catch(e){}v.id=slug(en);
+        try{await store.set("vocab/"+v.id,{en:v.en,ru:v.ru,box:v.box||0,due:v.due,added:v.added})}catch(e){}}}
+    S.vocab=S.vocab.filter((v,i,a)=>a.findIndex(x=>x.id===v.id)===i);
     const pl=plan&&Array.isArray(plan.days)&&plan.days.length?plan:(COURSE&&COURSE.days?COURSE:null);
     if(pl){pl.days.forEach((x,i)=>{if(PLAN[i])Object.assign(PLAN[i],x)})}
   }catch(e){}
