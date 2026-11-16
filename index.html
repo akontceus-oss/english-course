@@ -410,7 +410,7 @@ function renderHistory(){
   const mins=S.sessions.reduce((a,s)=>a+(s.minutes||0),0);
   app.innerHTML=`<div><div class="label">Всё, что ты прошёл</div><h1>История</h1></div>
   <div class="card stats"><div class="stat"><b>${S.sessions.length}</b><span class="small muted">сессий</span></div><div class="stat"><b>${Math.round(mins/6)/10}</b><span class="small muted">часов практики</span></div><div class="stat"><b>${streak()}</b><span class="small muted">дней подряд</span></div></div>
-  <div class="card">${list.length?list.map(s=>`<div class="hist"><span class="date">${esc(s.date.slice(8,10)+"."+s.date.slice(5,7))}</span><div><b>${s.kind==="am"?"Утро":"Вечер"} · день ${s.day+1}</b> <span class="muted small">${s.minutes||0} мин</span><div class="small">${esc(PLAN[s.day]?.title||"")}</div>${s.summary?`<div class="small muted">${esc(s.summary)}</div>`:""}${(s.mistakes||[]).map(m=>`<div class="small"><s class="muted">${esc(m.said)}</s> → <b>${esc(m.better)}</b></div>`).join("")}</div></div>`).join(""):`<p class="muted">Пока пусто. После каждой сессии здесь сохранятся дата, тема, время и разбор ошибок.</p>`}</div>${backupCard()}`;
+  <div class="card">${list.length?list.map(s=>`<div class="hist"><span class="date">${esc(s.date.slice(8,10)+"."+s.date.slice(5,7))}</span><div><b>${s.kind==="am"?"Утро":"Вечер"} · день ${s.day+1}</b> <span class="muted small">${s.minutes||0} мин</span><div class="small">${esc(PLAN[s.day]?.title||"")}</div>${s.summary?`<div class="small muted">${esc(s.summary)}</div>`:""}${(s.mistakes||[]).map(m=>`<div class="small"><s class="muted">${esc(m.said)}</s> → <b>${esc(m.better)}</b></div>`).join("")}</div></div>`).join(""):`<p class="muted">Пока пусто. После каждой сессии здесь сохранятся дата, тема, время и разбор ошибок.</p>`}</div>${backupCard()}${APP_VER.startsWith("__")?"":`<p class="small muted" style="text-align:center">Версия ${esc(APP_VER)} · <button class="btn ghost sm" id="force-upd">Проверить обновление</button></p>`}`;
 }
 function installTip(){if(IN_CLAUDE)return "";const sa=window.navigator.standalone||matchMedia("(display-mode: standalone)").matches;if(sa)return "";
   const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);if(!ios)return "";
@@ -567,6 +567,7 @@ document.addEventListener("click",async e=>{
     case "ru":s.showRu=!s.showRu;s.draft=document.getElementById("say").value;render();break;
     case "towrap":s.step=2;toWrap();break;
     case "bk-save":backupSave();break;
+    case "force-upd":t.textContent="Обновляю…";hardRefresh();break;
     case "bk-load":document.getElementById("bk-file").click();break;
   }
 });
@@ -577,6 +578,19 @@ async function toWrap(){const s=S.sess;s.step=2;render();try{s.wrap=await wrapUp
 // ---------- Boot ----------
 async function loadCourse(){try{const r=await fetch("course.json",{cache:"no-cache"});if(r.ok)COURSE=await r.json()}catch(e){}}
 let reloadPending=false;
+const APP_VER="16.11.2026-d2bb09";
+// Safety net for installed iPhone apps: compare with version.json and refresh caches when it changed.
+async function checkVersion(){if(IN_CLAUDE||APP_VER.startsWith("__"))return;
+  try{const r=await fetch("version.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const v=(await r.json()).v;
+    if(!v||v===APP_VER)return;
+    let tried="";try{tried=sessionStorage.getItem("speakup-upd")||""}catch(e){}
+    if(tried===v)return;try{sessionStorage.setItem("speakup-upd",v)}catch(e){}
+    if(S.view==="session"){reloadPending=true;return}
+    await hardRefresh()}catch(e){}}
+async function hardRefresh(){try{const reg=await navigator.serviceWorker?.getRegistration();if(reg)await reg.update().catch(()=>{})}catch(e){}
+  try{const ks=await caches.keys();await Promise.all(ks.filter(k=>k.startsWith("core-")).map(k=>caches.delete(k)))}catch(e){}
+  location.reload()}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")checkVersion()});
 function setupSW(){if(IN_CLAUDE||!("serviceWorker" in navigator)||location.protocol!=="https:"&&location.hostname!=="localhost")return;
   const had=!!navigator.serviceWorker.controller;
   navigator.serviceWorker.register("sw.js").then(reg=>{
@@ -584,6 +598,7 @@ function setupSW(){if(IN_CLAUDE||!("serviceWorker" in navigator)||location.proto
     setInterval(()=>reg.update().catch(()=>{}),30*60*1000)}).catch(()=>{});
   navigator.serviceWorker.addEventListener("controllerchange",()=>{if(!had)return;if(S.view==="session"){reloadPending=true}else location.reload()})}
 setupSW();
+setTimeout(checkVersion,1500);
 (async function boot(){
   await Promise.all([initCaps(),loadAudioIndex(),loadCourse()]);
   try{

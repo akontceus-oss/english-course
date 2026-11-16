@@ -53,5 +53,8 @@ json.dump({"name":"Speak Up English","short_name":"Speak Up","lang":"ru","start_
 h=hashlib.sha256()
 for f in ["index.html","course.json","manifest.webmanifest","packs/index.json"]:h.update(open(f,"rb").read())
 ver=h.hexdigest()[:10];pv=hashlib.sha256(open("packs/index.json","rb").read()).hexdigest()[:8]
+import time;appver=time.strftime("%d.%m.%Y")+"-"+ver[:6]
+html=open("index.html").read().replace("__APP_VER__",appver);open("index.html","w").write(html)
+json.dump({"v":appver},open("version.json","w"))
 open("sw.js","w").write(open("src/sw.template.js").read().replace("__VER__",ver).replace("__PACKS__",pv))
 print("built",ver,"am:",sum(x is not None for x in am),"pm:",sum(x is not None for x in pm),"course.json",len(cj)//1024,"KB")
