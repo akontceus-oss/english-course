@@ -345,7 +345,7 @@ function tabs(){
 function weekOf(d){return PLAN[d].week}
 function render(){
   tabs();
-  if(S.view==="session")return renderSession();
+  if(S.view==="session"){const r=renderSession();saveSnapSoon();return r}
   if(S.view==="course")return renderCourse();
   if(S.view==="words")return renderWords();
   if(S.view==="history")return renderHistory();
@@ -427,7 +427,21 @@ async function backupLoad(file){try{const j=JSON.parse(await file.text());if(j.a
 // ---------- Sessions ----------
 let timerId=null;
 function startTimer(){clearInterval(timerId);timerId=setInterval(()=>{const el=document.getElementById("timer");if(el&&S.sess){const m=Math.floor((Date.now()-S.sess.t0)/60000);el.textContent=m+" / 30 мин"}},15000)}
+// ---------- Unfinished lesson: kept on the device so closing the app loses nothing ----------
+const CUR=LS+"current";
+function grabInputs(){const s=S.sess;if(!s)return;const say=document.getElementById("say");if(say)s.draft=say.value;
+  (s.data&&s.data.drill||[]).forEach((x,i)=>{const el=document.getElementById("dr"+i);if(el)s.answers[i]=el.value})}
+function snapSess(open){const s=S.sess;if(!s||!s.data||s.err)return;try{localStorage.setItem(CUR,JSON.stringify({open,ts:Date.now(),s:Object.assign({},s,{review:(s.review||[]).map(c=>c.id),busy:false})}))}catch(e){}}
+function dropSnap(){try{localStorage.removeItem(CUR)}catch(e){}}
+function readSnap(){try{const j=JSON.parse(localStorage.getItem(CUR)||"null");if(j&&j.s&&j.s.data&&Date.now()-j.ts<4*864e5)return j}catch(e){}return null}
+function restoreSess(j){const s=j.s;s.review=(s.review||[]).map(id=>S.vocab.find(v=>v.id===id)).filter(Boolean);
+  if(s.kind==="pm"&&s.step===0&&!s.review.length)s.step=1;s.busy=false;s.err=null;S.sess=s;S.view="session";startTimer();
+  if(s.kind==="pm"&&s.step===2&&!s.wrap)toWrap()}
+function saveSnapSoon(){if(S.view==="session")snapSess(true)}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden"&&S.view==="session"){grabInputs();snapSess(true)}});
+window.addEventListener("pagehide",()=>{if(S.view==="session"){grabInputs();snapSess(true)}});
 async function startSession(kind,day){
+  {const j=readSnap(),d=day??S.profile.day;if(j&&j.s.kind===kind&&j.s.day===d&&!j.s.saved){prefetchDay(d);restoreSess(j);render();return}}
   prefetchDay(day??S.profile.day);
   S.sess={kind,day:day??S.profile.day,step:0,t0:Date.now(),data:null,msgs:[],answers:[],results:null,reviewIdx:0,review:null,wrap:null,err:null};
   setView("session");startTimer();
@@ -521,13 +535,17 @@ async function addVocab(items){
 }
 async function finish(){
   const s=S.sess;const btn=document.getElementById("finish");if(btn){btn.disabled=true;btn.textContent="Сохраняю…"}
+  await record(s);dropSnap();clearInterval(timerId);setView("today");
+}
+async function record(s){
+  if(!s||s.saved)return;s.saved=true;
   const rec={day:s.day,kind:s.kind,date:today(),ts:Date.now(),minutes:Math.max(1,Math.round((Date.now()-s.t0)/60000))};
   if(s.kind==="am"){await addVocab(s.data.phrases);const n=PLAN[s.day].notes||{};await addVocab([...(n.words||[]),...(n.phrases||[])].map(w=>({en:w[0],ru:w[1]})));const r=s.results?.results||[];rec.summary=`Перевод: ${r.filter(x=>x.ok).length} из ${r.length} верно`;rec.mistakes=r.map((x,i)=>x.ok?null:{said:s.answers[i]||"",better:x.natural}).filter(Boolean).slice(0,5)}
   else{await addVocab(s.data.useful);await addVocab(s.wrap?.phrases);rec.summary=s.wrap?.praise_ru||"";rec.mistakes=(s.wrap?.mistakes||[]).map(m=>({said:m.said,better:m.better}));rec.transcript=s.msgs.map(m=>(m.who==="me"?"Me: ":"AI: ")+m.en).join("\n").slice(0,8000)}
   const id=`${rec.date}-${rec.day}-${rec.kind}`;
   try{await store.set("sessions/"+id,rec)}catch(e){}
   S.sessions=S.sessions.filter(x=>x.id!==id);S.sessions.push({id,...rec});
-  clearInterval(timerId);setView("today");
+  if(S.sess===s)snapSess(true);
 }
 const IV=[1,2,4,7,15,30,60];
 async function rate(q){
@@ -553,12 +571,12 @@ document.addEventListener("click",async e=>{
   if(t.dataset.rate&&s){rate(+t.dataset.rate);return}
   switch(t.id){
     case "vtest":say("Hello! My name's Andrew. Nice to meet you. Shall we have a coffee?");break;
-    case "exit":clearInterval(timerId);setView("today");break;
+    case "exit":clearInterval(timerId);grabInputs();snapSess(false);setView("today");break;
     case "next":S.profile.day=Math.min(59,S.profile.day+1);saveProfile();render();break;
     case "lvl":{const L=["A1","A2","B1"];S.profile.level=L[(L.indexOf(S.profile.level)+1)%L.length];saveProfile();render();break}
     case "playall":sayParts((s.data.dialogue||[]).flatMap(l=>splitSpeech(l.en)),800);break;
     case "check":{const items=(s.data.drill||[]).map((x,i)=>{s.answers[i]=document.getElementById("dr"+i).value.trim();return {ru:x.ru,model:x.en,learner:s.answers[i]||"(empty)"}});
-      t.disabled=true;t.textContent="Проверяю…";try{s.results=await checkDrill(items)}catch(err){s.results={results:items.map(x=>({ok:false,natural:x.model,tip_ru:"Проверка недоступна, сравни с образцом."}))}}render();break}
+      t.disabled=true;t.textContent="Проверяю…";try{s.results=await checkDrill(items)}catch(err){s.results={results:items.map(x=>({ok:false,natural:x.model,tip_ru:"Проверка недоступна, сравни с образцом."}))}}await record(s);render();break}
     case "finish":finish();break;
     case "review":startSession("pm");break;
     case "flip":s.flip=true;render();break;
@@ -574,12 +592,12 @@ document.addEventListener("click",async e=>{
 });
 document.addEventListener("change",e=>{if(e.target.id==="bk-file"&&e.target.files[0]){backupLoad(e.target.files[0]);return}if(e.target.id==="vsel"){S.profile.voice=e.target.value;pickVoice();saveProfile();say("Hello! Nice to meet you.")}});
 try{speechSynthesis.onvoiceschanged=()=>{pickVoice();if(S.view==="today")render()}}catch(e){}
-async function toWrap(){const s=S.sess;s.step=2;render();try{s.wrap=await wrapUp(s.day,s.msgs.filter(m=>!m.en.startsWith("(No answer")))}catch(e){s.wrap={praise_ru:"Разговор сохранён. Разбор сейчас недоступен.",mistakes:[],phrases:[],score:3}}render()}
+async function toWrap(){const s=S.sess;s.step=2;render();try{s.wrap=await wrapUp(s.day,s.msgs.filter(m=>!m.en.startsWith("(No answer")))}catch(e){s.wrap={praise_ru:"Разговор сохранён. Разбор сейчас недоступен.",mistakes:[],phrases:[],score:3}}if(S.sess===s)await record(s);render()}
 
 // ---------- Boot ----------
 async function loadCourse(){try{const r=await fetch("course.json",{cache:"no-cache"});if(r.ok)COURSE=await r.json()}catch(e){}}
 let reloadPending=false;
-const APP_VER="16.11.2026-dfa911";
+const APP_VER="17.11.2026-f84a6c";
 // Safety net for installed iPhone apps: compare with version.json and refresh caches when it changed.
 async function checkVersion(){if(IN_CLAUDE||APP_VER.startsWith("__"))return;
   try{const r=await fetch("version.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const v=(await r.json()).v;
@@ -616,6 +634,8 @@ setTimeout(checkVersion,1500);
     if(pl){pl.days.forEach((x,i)=>{if(PLAN[i])Object.assign(PLAN[i],x)})}
   }catch(e){}
   const h=(location.hash||"").slice(1);if(["today","course","words","history"].includes(h))S.view=h;
+  try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+  {const j=readSnap();if(j&&j.s.saved)dropSnap();else if(j&&j.open)try{restoreSess(j)}catch(e){S.sess=null;S.view="today"}}
   render();
 })();
 })();
